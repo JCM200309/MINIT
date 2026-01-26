@@ -1,77 +1,112 @@
-import { db } from "./db";
-import {
-  products,
-  contactMessages,
-  type InsertProduct,
-  type InsertContactMessage,
-  type Product,
-  type ContactMessage
-} from "@shared/schema";
-import { eq } from "drizzle-orm";
+import fs from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
+import type { Product, InsertProduct, ContactMessage, InsertContactMessage } from "@shared/schema";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+const PRODUCTS_FILE = path.join(__dirname, "data", "products.json");
+const MESSAGES_FILE = path.join(__dirname, "data", "messages.json");
+
+function ensureDataDir() {
+  const dataDir = path.join(__dirname, "data");
+  if (!fs.existsSync(dataDir)) {
+    fs.mkdirSync(dataDir, { recursive: true });
+  }
+}
+
+function readProducts(): Product[] {
+  ensureDataDir();
+  if (!fs.existsSync(PRODUCTS_FILE)) {
+    return [];
+  }
+  const data = fs.readFileSync(PRODUCTS_FILE, "utf-8");
+  return JSON.parse(data);
+}
+
+function writeProducts(products: Product[]): void {
+  ensureDataDir();
+  fs.writeFileSync(PRODUCTS_FILE, JSON.stringify(products, null, 2));
+}
+
+function readMessages(): ContactMessage[] {
+  ensureDataDir();
+  if (!fs.existsSync(MESSAGES_FILE)) {
+    return [];
+  }
+  const data = fs.readFileSync(MESSAGES_FILE, "utf-8");
+  return JSON.parse(data);
+}
+
+function writeMessages(messages: ContactMessage[]): void {
+  ensureDataDir();
+  fs.writeFileSync(MESSAGES_FILE, JSON.stringify(messages, null, 2));
+}
 
 export interface IStorage {
   getProducts(): Promise<Product[]>;
   getProduct(id: number): Promise<Product | undefined>;
+  createProduct(product: InsertProduct): Promise<Product>;
+  updateProduct(id: number, updates: Partial<InsertProduct>): Promise<Product | undefined>;
+  deleteProduct(id: number): Promise<boolean>;
   createContactMessage(message: InsertContactMessage): Promise<ContactMessage>;
-  seedProducts(): Promise<void>;
 }
 
-export class DatabaseStorage implements IStorage {
+export class FileStorage implements IStorage {
   async getProducts(): Promise<Product[]> {
-    return await db.select().from(products);
+    return readProducts();
   }
 
   async getProduct(id: number): Promise<Product | undefined> {
-    const [product] = await db.select().from(products).where(eq(products.id, id));
-    return product;
+    const products = readProducts();
+    return products.find(p => p.id === id);
+  }
+
+  async createProduct(product: InsertProduct): Promise<Product> {
+    const products = readProducts();
+    const maxId = products.length > 0 ? Math.max(...products.map(p => p.id)) : 0;
+    const newProduct: Product = {
+      ...product,
+      id: maxId + 1,
+    };
+    products.push(newProduct);
+    writeProducts(products);
+    return newProduct;
+  }
+
+  async updateProduct(id: number, updates: Partial<InsertProduct>): Promise<Product | undefined> {
+    const products = readProducts();
+    const index = products.findIndex(p => p.id === id);
+    if (index === -1) return undefined;
+    
+    products[index] = { ...products[index], ...updates };
+    writeProducts(products);
+    return products[index];
+  }
+
+  async deleteProduct(id: number): Promise<boolean> {
+    const products = readProducts();
+    const index = products.findIndex(p => p.id === id);
+    if (index === -1) return false;
+    
+    products.splice(index, 1);
+    writeProducts(products);
+    return true;
   }
 
   async createContactMessage(message: InsertContactMessage): Promise<ContactMessage> {
-    const [newMessage] = await db.insert(contactMessages).values(message).returning();
+    const messages = readMessages();
+    const maxId = messages.length > 0 ? Math.max(...messages.map(m => m.id)) : 0;
+    const newMessage: ContactMessage = {
+      ...message,
+      id: maxId + 1,
+      createdAt: new Date().toISOString(),
+    };
+    messages.push(newMessage);
+    writeMessages(messages);
     return newMessage;
-  }
-
-  async seedProducts(): Promise<void> {
-    const existing = await this.getProducts();
-    if (existing.length > 0) return;
-
-    const seedData: InsertProduct[] = [
-      {
-        name: "MINIT-WOOD",
-        description: "Retardante de fuego para maderas y derivados. Ideal para construcción y decoración.",
-        category: "Maderas",
-        features: ["Incoloro e inodoro", "No tóxico", "Fácil aplicación", "Certificado ISO 9001"],
-        specifications: { "pH": "7.0", "Densidad": "1.1 g/cm³", "Rendimiento": "3-4 m²/L" },
-        imageUrl: "https://images.unsplash.com/photo-1543854589-32d5e219fb06?auto=format&fit=crop&q=80&w=800" // Wood texture placeholder
-      },
-      {
-        name: "MINIT-TEXTILE",
-        description: "Solución ignífuga para todo tipo de telas y cortinas. Mantiene la textura original.",
-        category: "Textiles",
-        features: ["Lavable", "No mancha", "Hipoalergénico", "Para fibras naturales y sintéticas"],
-        specifications: { "pH": "6.5", "Apariencia": "Líquido transparente", "Secado": "2-4 horas" },
-        imageUrl: "https://images.unsplash.com/photo-1521199326922-bd5a513eb156?auto=format&fit=crop&q=80&w=800" // Fabric placeholder
-      },
-      {
-        name: "MINIT-PAPER",
-        description: "Protección contra fuego para cartón y papel. Esencial para archivos y embalajes.",
-        category: "Papel",
-        features: ["Alta penetración", "No altera colores", "Biodegradable"],
-        specifications: { "pH": "7.2", "Solubilidad": "100% en agua", "Aplicación": "Spray o inmersión" },
-        imageUrl: "https://images.unsplash.com/photo-1586075010925-121d8e3d97d4?auto=format&fit=crop&q=80&w=800" // Paper/Cardboard placeholder
-      },
-      {
-        name: "MINIT-COAT",
-        description: "Recubrimiento intumescente para estructuras metálicas. Protección pasiva industrial.",
-        category: "Industrial",
-        features: ["Resistencia hasta 120 mins", "Acabado liso", "Base agua"],
-        specifications: { "Espesor": "0.5mm - 2mm", "Color": "Blanco mate", "VOC": "< 50 g/L" },
-        imageUrl: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&q=80&w=800" // Industrial structure placeholder
-      }
-    ];
-
-    await db.insert(products).values(seedData);
   }
 }
 
-export const storage = new DatabaseStorage();
+export const storage = new FileStorage();

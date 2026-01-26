@@ -11,6 +11,7 @@ import Products from "@/pages/Products";
 import ProductDetail from "@/pages/ProductDetail";
 import Applications from "@/pages/Applications";
 import Contact from "@/pages/Contact";
+import Admin from "@/pages/admin";
 import NotFound from "@/pages/not-found";
 
 // Scroll to top component
@@ -37,6 +38,7 @@ function Router() {
           <Route path="/products/:id" component={ProductDetail} />
           <Route path="/applications" component={Applications} />
           <Route path="/contact" component={Contact} />
+          <Route path="/admin" component={Admin} />
           <Route component={NotFound} />
         </Switch>
       </main>

@@ -1,0 +1,98 @@
+{
+  "colorScheme": "light",
+  "fonts": [
+    {
+      "family": "sans-serif",
+      "count": 48
+    },
+    {
+      "family": "helvetica-w01-roman",
+      "count": 32
+    },
+    {
+      "family": "Arial",
+      "count": 12
+    },
+    {
+      "family": "Helvetica",
+      "count": 12
+    },
+    {
+      "family": "poppins-extralight",
+      "count": 4
+    },
+    {
+      "family": "poppins",
+      "count": 4
+    },
+    {
+      "family": "montserrat",
+      "count": 2
+    },
+    {
+      "family": "メイリオ",
+      "count": 1
+    },
+    {
+      "family": "meiryo",
+      "count": 1
+    },
+    {
+      "family": "ヒラギノ角ゴ pro w3",
+      "count": 1
+    }
+  ],
+  "colors": {
+    "primary": "#116DFF",
+    "accent": "#0000EE",
+    "background": "#FFFFFF",
+    "textPrimary": "#0000EE",
+    "link": "#0000EE"
+  },
+  "typography": {
+    "fontFamilies": {
+      "primary": "Arial",
+      "heading": "Arial"
+    },
+    "fontStacks": {
+      "body": [
+        "Arial",
+        "Helvetica",
+        "sans-serif"
+      ],
+      "heading": [
+        "Arial",
+        "Helvetica",
+        "sans-serif"
+      ],
+      "paragraph": [
+        "helvetica-w01-roman",
+        "sans-serif"
+      ]
+    },
+    "fontSizes": {
+      "h1": "10px",
+      "h2": "10px",
+      "body": "16px"
+    }
+  },
+  "spacing": {
+    "baseUnit": 4,
+    "borderRadius": "0px"
+  },
+  "components": {},
+  "images": {
+    "logo": null,
+    "favicon": "File saved at: attached_assets/favicon.ico",
+    "ogImage": null
+  },
+  "__framework_hints": [
+    "Wix.com Website Builder",
+    "bootstrap"
+  ],
+  "confidence": {
+    "buttons": 0,
+    "colors": 0,
+    "overall": 0
+  }
+}

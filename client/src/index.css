@@ -8,28 +8,28 @@
   --font-body: 'Inter', sans-serif;
   --font-display: 'Montserrat', sans-serif;
 
-  /* Industrial Blue & Slate Palette */
+  /* Fire Red & Industrial Palette */
   --background: 0 0% 100%;
-  --foreground: 215 28% 17%; /* Dark Slate */
+  --foreground: 0 0% 15%; /* Dark Charcoal */
   
-  --primary: 217 100% 53%; /* Safety Blue #116DFF */
+  --primary: 0 85% 50%; /* Fire Red #E31B1B */
   --primary-foreground: 0 0% 100%;
   
-  --secondary: 210 20% 96%; /* Very light gray */
-  --secondary-foreground: 215 28% 17%;
+  --secondary: 0 10% 96%; /* Very light warm gray */
+  --secondary-foreground: 0 0% 15%;
   
-  --muted: 210 20% 96%;
-  --muted-foreground: 215 16% 47%;
+  --muted: 0 5% 96%;
+  --muted-foreground: 0 5% 45%;
   
-  --accent: 217 100% 97%; /* Very pale blue */
-  --accent-foreground: 217 100% 53%;
+  --accent: 25 100% 97%; /* Very pale orange */
+  --accent-foreground: 0 85% 50%;
   
   --destructive: 0 84% 60%;
   --destructive-foreground: 0 0% 98%;
 
-  --border: 214 32% 91%;
-  --input: 214 32% 91%;
-  --ring: 217 100% 53%;
+  --border: 0 10% 90%;
+  --input: 0 10% 90%;
+  --ring: 0 85% 50%;
   
   --radius: 0.25rem; /* Sharper corners for industrial look */
 }
@@ -52,7 +52,7 @@
 }
 
 .text-gradient {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-700;
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-red-600 to-orange-500;
 }
 
 .industrial-grid {

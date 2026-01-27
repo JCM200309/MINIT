@@ -1,0 +1,5 @@
+TODO
+
+1)Pasar api/productos a json puro como lo que hice con nunca es mucho cakes
+2) Ajustar el navbar no se ve
+3) Ajustar el hero

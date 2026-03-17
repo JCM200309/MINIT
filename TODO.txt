@@ -1,5 +1,3 @@
-TODO
-
-1)Pasar api/productos a json puro como lo que hice con nunca es mucho cakes
-2) Ajustar el navbar no se ve
-3) Ajustar el hero
+Hero:
+1) Cambiar foto
+2) Cuando se toque el boton de ingles se cambie el titulo instantaneamente a ingles y no quede la frase sola en español (la del efecto de react bits)

@@ -3,7 +3,8 @@ export interface Product {
   nameKey: string;
   descKey: string;
   image: string;
-  category: string;
+  categoryEn: string;
+  categoryEs: string;
   detailsEn: {
     about: string;
     uses: string[];
@@ -26,7 +27,9 @@ export const products: Product[] = [
     nameKey: "products.wood.name",
     descKey: "products.wood.desc",
     image: "https://images.unsplash.com/photo-1768783028617-423227f67f86?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3b29kJTIwbWF0ZXJpYWwlMjB0ZXh0dXJlfGVufDF8fHx8MTc3MzY5OTgyN3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-    category: "Wood Protection",
+    categoryEn: "Wood Protection",
+    categoryEs: "Protección de Madera",
+    technicalSheet: "https://listado.mercadolibre.com.ar/pagina/minitignifugos/?item_id=MLA1127759488&category_id=MLA413242&client=recoview-selleritems&recos_listing=true",
     detailsEn: {
       about: "MiniT Wood is a Class A Fire Retardant, made from natural salts, which results in a colorless, odorless liquid that does not leave active fire-fighting agents, dispersants, and penetrants completely absorbent, so it does not modify the toxicity of the smoke of the treated material, only reduces the amount of smoke or reduces fire generation. It prevents fire propagation and at the same time, helps to retard the generation of smoke and gases up to 70%. Does not modify the color or texture of the treated material, only reduces the amount of smoke or reduces the generation of fire. It is a NON-TOXIC product, FRIENDLY WITH THE ENVIRONMENT, BIODEGRADABLE and PET FRIENDLY.",
       uses: [
@@ -67,7 +70,8 @@ export const products: Product[] = [
     nameKey: "products.textile.name",
     descKey: "products.textile.desc",
     image: "https://images.unsplash.com/photo-1731504801830-5b14ac73d7ca?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZXh0aWxlJTIwZmFicmljJTIwbWF0ZXJpYWx8ZW58MXx8fHwxNzczNjk5ODI3fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-    category: "Textile Protection",
+    categoryEn: "Textile Protection",
+    categoryEs: "Protección Textil",
     detailsEn: {
       about: "MiniT Textile is a specialized fire retardant formulation designed specifically for fabrics, textiles, and upholstery. This Class A fire retardant creates an invisible protective barrier that prevents ignition and significantly reduces flame spread in textile materials. The formula is designed to maintain the texture, color, and breathability of fabrics while providing superior fire protection.",
       uses: [
@@ -119,7 +123,8 @@ export const products: Product[] = [
     nameKey: "products.total.name",
     descKey: "products.total.desc",
     image: "https://images.unsplash.com/photo-1704895376514-3938531148f6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3aGl0ZSUyMGNoZW1pY2FsJTIwY29udGFpbmVyJTIwYm90dGxlfGVufDF8fHx8MTc3MzY5OTgyN3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-    category: "Universal Protection",
+    categoryEn: "Universal Protection",
+    categoryEs: "Protección Universal",
     detailsEn: {
       about: "MiniT Total is a universal fire retardant solution designed for multi-material applications. This versatile Class A fire retardant provides comprehensive protection across a wide range of materials including plastics, composites, foams, and mixed materials. The advanced formula creates a protective barrier that prevents ignition and dramatically reduces flame spread and smoke generation.",
       uses: [
@@ -175,7 +180,8 @@ export const products: Product[] = [
     nameKey: "products.building.name",
     descKey: "products.building.desc",
     image: "https://images.unsplash.com/photo-1666285571949-3ee1a4946059?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBmaXJlJTIwcHJvdGVjdGlvbiUyMHRlY2hub2xvZ3l8ZW58MXx8fHwxNzczNjk5MDkwfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-    category: "Building Protection",
+    categoryEn: "Building Protection",
+    categoryEs: "Protección Edificios",
     detailsEn: {
       about: "MiniT Building is a professional-grade fire retardant specifically engineered for construction and structural applications. This high-performance Class A fire retardant provides exceptional protection for building materials, helping to meet stringent building codes and fire safety regulations. The formula creates a durable protective coating that withstands environmental conditions while maintaining fire resistance.",
       uses: [

@@ -6,7 +6,7 @@ import { products } from "../data/products";
 import { ArrowRight } from "lucide-react";
 
 export function ProductPreview() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   return (
     <section id="products" className="py-24 bg-white">
@@ -47,7 +47,7 @@ export function ProductPreview() {
                   />
                   <div className="absolute top-3 right-3">
                     <div className="px-2 py-1 rounded-full bg-red-500 text-white text-xs font-medium">
-                      {product.category}
+                      {language === "es" ? product.categoryEs : product.categoryEn}
                     </div>
                   </div>
                 </div>

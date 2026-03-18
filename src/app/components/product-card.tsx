@@ -11,7 +11,7 @@ interface ProductCardProps {
 }
 
 export function ProductCard({ product, index }: ProductCardProps) {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   return (
     <motion.div
@@ -31,10 +31,10 @@ export function ProductCard({ product, index }: ProductCardProps) {
           />
           <div className="absolute top-4 right-4">
             <div className="px-4 py-1.5 rounded-full bg-primary text-primary-foreground text-xs font-bold uppercase tracking-widest shadow-lg shadow-primary/20">
-              {product.category}
+              {language === "es" ? product.categoryEs : product.categoryEn}
             </div>
           </div>
-          
+
           {/* Iridescent overlay effect on hover */}
           <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 via-transparent to-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
         </div>
@@ -54,7 +54,7 @@ export function ProductCard({ product, index }: ProductCardProps) {
             {/* Action Links - Refined */}
             <div className="grid grid-cols-2 gap-4">
               <a
-                href="#"
+                href="https://listado.mercadolibre.com.ar/pagina/minitignifugos/?item_id=MLA1127759488&category_id=MLA413242&client=recoview-selleritems&recos_listing=true"
                 className="flex items-center gap-3 text-sm text-primary hover:text-primary/80 transition-all group/link"
               >
                 <div className="p-2 rounded-lg bg-primary/10 group-hover/link:bg-primary group-hover/link:text-primary-foreground transition-colors">
@@ -63,7 +63,7 @@ export function ProductCard({ product, index }: ProductCardProps) {
                 <span className="font-semibold">{t("products.buyOnline")}</span>
               </a>
               <a
-                href="#"
+                href={t(product.technicalSheet)}
                 className="flex items-center gap-3 text-sm text-muted-foreground hover:text-foreground transition-all group/link"
               >
                 <div className="p-2 rounded-lg bg-muted group-hover/link:bg-primary group-hover/link:text-primary-foreground transition-colors">

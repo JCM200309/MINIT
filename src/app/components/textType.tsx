@@ -98,6 +98,13 @@ const TextType = ({
     }, [showCursor, cursorBlinkDuration]);
 
     useEffect(() => {
+        setDisplayedText('');
+        setCurrentCharIndex(0);
+        setIsDeleting(false);
+        setCurrentTextIndex(0);
+    }, [text]);
+
+    useEffect(() => {
         if (!isVisible) return;
 
         let timeout: ReturnType<typeof setTimeout>;

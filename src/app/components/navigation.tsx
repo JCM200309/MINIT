@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
 import { Button } from "./ui/button";
-import { Flame, Globe } from "lucide-react";
+import { Globe } from "lucide-react";
 import { motion } from "motion/react";
 import { useLanguage } from "../context/language-context";
 import { Link, useLocation } from "react-router";
+import logo from "../../assets/minitLogo.avif";
 
 export function Navigation() {
   const [scrolled, setScrolled] = useState(false);
@@ -34,12 +35,10 @@ export function Navigation() {
     >
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-2">
-            <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-gradient-to-br from-red-500 to-red-600">
-              <Flame className="w-6 h-6 text-white" />
-            </div>
-            <span className="text-xl font-semibold text-gray-900">
-              MiniT Fire Retardant
+          <Link to="/" className="flex items-center gap-3">
+            <img src={logo} alt="MiniT Logo" className="h-10 w-auto" />
+            <span className="text-xl font-bold text-gray-900 tracking-tight">
+              MiniT
             </span>
           </Link>
 

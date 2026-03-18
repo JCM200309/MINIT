@@ -1,28 +1,31 @@
 import { motion } from "motion/react";
 import { Droplet, AtomIcon, ShieldCheck } from "lucide-react";
-
-const steps = [
-  {
-    icon: Droplet,
-    title: "Application",
-    description: "MiniT Fire Retardant is applied to the material surface using spray, brush, or dip coating methods.",
-    step: "01",
-  },
-  {
-    icon: AtomIcon,
-    title: "Chemical Reaction",
-    description: "The formula penetrates the material and forms molecular bonds, creating a protective layer at the microscopic level.",
-    step: "02",
-  },
-  {
-    icon: ShieldCheck,
-    title: "Fire Protection",
-    description: "When exposed to heat, the retardant creates an insulating barrier that prevents ignition and stops flame spread.",
-    step: "03",
-  },
-];
+import { useLanguage } from "../context/language-context";
 
 export function HowItWorks() {
+  const { t } = useLanguage();
+
+  const steps = [
+    {
+      icon: Droplet,
+      title: t("howItWorks.step1"),
+      description: t("howItWorks.step1.desc"),
+      step: "01",
+    },
+    {
+      icon: AtomIcon,
+      title: t("howItWorks.step2"),
+      description: t("howItWorks.step2.desc"),
+      step: "02",
+    },
+    {
+      icon: ShieldCheck,
+      title: t("howItWorks.step3"),
+      description: t("howItWorks.step3.desc"),
+      step: "03",
+    },
+  ];
+
   return (
     <section id="technology" className="py-24 bg-gradient-to-b from-white to-gray-50">
       <div className="container mx-auto px-6">
@@ -33,11 +36,11 @@ export function HowItWorks() {
           transition={{ duration: 0.6 }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            How It Works
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 font-heading italic">
+            {t("howItWorks.title")}
           </h2>
-          <p className="text-xl text-gray-600">
-            Our advanced fire retardant technology uses a three-stage process to provide comprehensive fire protection.
+          <p className="text-xl text-gray-600 font-body">
+            {t("howItWorks.subtitle")}
           </p>
         </motion.div>
 
@@ -67,7 +70,7 @@ export function HowItWorks() {
               <h3 className="text-2xl font-semibold text-gray-900 mb-4 text-center">
                 {step.title}
               </h3>
-              <p className="text-gray-600 text-center leading-relaxed">
+              <p className="text-gray-600 text-center leading-relaxed font-body">
                 {step.description}
               </p>
             </motion.div>
@@ -91,11 +94,11 @@ export function HowItWorks() {
             <div className="absolute inset-0 bg-gradient-to-r from-red-500/30 to-transparent" />
             <div className="absolute inset-0 flex items-center px-12">
               <div className="bg-white/95 backdrop-blur-sm rounded-xl p-8 max-w-md">
-                <h4 className="text-2xl font-bold text-gray-900 mb-3">
-                  Science-Backed Protection
+                <h4 className="text-2xl font-bold text-gray-900 mb-3 font-heading">
+                  {t("howItWorks.scienceBacked")}
                 </h4>
-                <p className="text-gray-700">
-                  Developed through rigorous laboratory testing and validated by independent safety organizations worldwide.
+                <p className="text-gray-700 font-body">
+                  {t("howItWorks.scienceBacked.desc")}
                 </p>
               </div>
             </div>

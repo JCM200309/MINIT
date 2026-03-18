@@ -1,3 +1,14 @@
 Hero:
 1) Cambiar foto
 2) Cuando se toque el boton de ingles se cambie el titulo instantaneamente a ingles y no quede la frase sola en español (la del efecto de react bits)
+
+
+Secciones:
+1) Seccion con reviews de clientes
+
+Navbar:
+1) Sacar logo
+2) Poner hamburguesa en mobile
+
+Links y QR:
+1) Ver exactamente el link del qr de cada producto para la fecha tecnica

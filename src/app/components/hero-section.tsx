@@ -4,6 +4,7 @@ import { motion } from "motion/react";
 import { useLanguage } from "../context/language-context";
 import { Link } from "react-router";
 import TextType from "./textType";
+import logo from "../../assets/minitLogo.avif";
 
 export function HeroSection() {
   const { t } = useLanguage();
@@ -21,7 +22,7 @@ export function HeroSection() {
       {/* Fire Background Image Overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://images.unsplash.com/photo-1637039749968-3924dae001bc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmaXJlJTIwZmxhbWUlMjBjbG9zZSUyMHVwfGVufDF8fHx8MTc3MzY5OTgyNnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+          src={logo}
           alt="Fire Protection"
           className="w-full h-full object-cover opacity-10"
         />
@@ -51,7 +52,7 @@ export function HeroSection() {
               </div>
             </div>
 
-            <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-foreground leading-[1.1] tracking-tight font-heading">
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-foreground leading-[1.1] tracking-tight font-heading">
               {t("hero.title")}
               <br />
               <span className="text-primary italic">
@@ -107,7 +108,7 @@ export function HeroSection() {
                 className="w-full h-auto grayscale-[0.2] group-hover:grayscale-0 transition-all duration-700 scale-110 group-hover:scale-100"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent mix-blend-multiply" />
-              
+
               {/* Glass Overlay for Image */}
               <div className="absolute inset-0 border-[0.5px] border-white/20 rounded-3xl pointer-events-none" />
             </div>
@@ -115,21 +116,22 @@ export function HeroSection() {
             {/* Floating Stats - Industrial Glass */}
             <motion.div
               initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-              className="absolute -bottom-10 -left-10 lg:-left-20 bg-[var(--glass-background)] backdrop-blur-xl border border-[var(--glass-border)] rounded-2xl shadow-[var(--glass-shadow)] p-8 grid grid-cols-3 gap-8 min-w-[400px]"
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="absolute -bottom-10 left-0 right-0 lg:-left-20 lg:right-auto bg-[var(--glass-background)] backdrop-blur-xl border border-[var(--glass-border)] rounded-2xl shadow-[var(--glass-shadow)] p-6 lg:p-8 grid grid-cols-3 gap-4 lg:gap-8 min-w-full lg:min-w-[400px] z-20"
             >
               <div className="text-center">
-                <div className="text-3xl font-bold text-primary font-heading italic">99.9%</div>
-                <div className="text-xs uppercase tracking-wider text-muted-foreground font-medium mt-1">{t("hero.stat1")}</div>
+                <div className="text-2xl lg:text-3xl font-bold text-primary font-heading italic">99.9%</div>
+                <div className="text-[10px] lg:text-xs uppercase tracking-wider text-muted-foreground font-medium mt-1">{t("hero.stat1")}</div>
               </div>
-              <div className="text-center border-x border-border/50 px-4">
-                <div className="text-3xl font-bold text-primary font-heading italic">24h</div>
-                <div className="text-xs uppercase tracking-wider text-muted-foreground font-medium mt-1">{t("hero.stat2")}</div>
+              <div className="text-center border-x border-border/50 px-2 lg:px-4">
+                <div className="text-2xl lg:text-3xl font-bold text-primary font-heading italic">24h</div>
+                <div className="text-[10px] lg:text-xs uppercase tracking-wider text-muted-foreground font-medium mt-1">{t("hero.stat2")}</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-primary font-heading italic">100+</div>
-                <div className="text-xs uppercase tracking-wider text-muted-foreground font-medium mt-1">{t("hero.stat3")}</div>
+                <div className="text-2xl lg:text-3xl font-bold text-primary font-heading italic">100+</div>
+                <div className="text-[10px] lg:text-xs uppercase tracking-wider text-muted-foreground font-medium mt-1">{t("hero.stat3")}</div>
               </div>
             </motion.div>
           </motion.div>

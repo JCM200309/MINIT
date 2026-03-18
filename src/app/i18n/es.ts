@@ -108,4 +108,7 @@ export const es = {
   "footer.allRights": "Todos los derechos reservados.",
   "footer.privacy": "Política de Privacidad",
   "footer.terms": "Términos de Servicio",
+
+  // Reviews
+  "reviews.title": "Clientes que confiaron en nosotros",
 };

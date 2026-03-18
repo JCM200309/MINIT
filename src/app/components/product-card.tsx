@@ -21,7 +21,7 @@ export function ProductCard({ product, index }: ProductCardProps) {
       transition={{ duration: 0.8, delay: index * 0.1, ease: [0.16, 1, 0.3, 1] }}
       className="group bg-[var(--glass-background)] backdrop-blur-md rounded-3xl shadow-[var(--glass-shadow)] border border-[var(--glass-border)] overflow-hidden hover:border-primary/30 transition-all duration-500"
     >
-      <div className="grid md:grid-cols-2 gap-8 p-8">
+      <div className="flex flex-col p-8">
         {/* Product Image */}
         <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-primary/5 to-muted/20 flex items-center justify-center p-8 group/img">
           <img
@@ -63,7 +63,7 @@ export function ProductCard({ product, index }: ProductCardProps) {
                 <span className="font-semibold">{t("products.buyOnline")}</span>
               </a>
               <a
-                href={t(product.technicalSheet)}
+                href={product.technicalSheet}
                 className="flex items-center gap-3 text-sm text-muted-foreground hover:text-foreground transition-all group/link"
               >
                 <div className="p-2 rounded-lg bg-muted group-hover/link:bg-primary group-hover/link:text-primary-foreground transition-colors">

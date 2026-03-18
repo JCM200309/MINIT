@@ -10,7 +10,7 @@ import { ArrowLeft, Package, CheckCircle, Award, FileText, ExternalLink } from "
 export function ProductDetailPage() {
   const { id } = useParams();
   const { language, t } = useLanguage();
-  
+
   const product = products.find((p) => p.id === id);
 
   if (!product) {
@@ -27,11 +27,12 @@ export function ProductDetailPage() {
   }
 
   const details = language === "en" ? product.detailsEn : product.detailsEs;
+  const productCategory = language === "en" ? product.categoryEn : product.categoryEs;
 
   return (
     <div className="min-h-screen">
       <Navigation />
-      
+
       {/* Product Hero */}
       <section className="pt-32 pb-16 bg-gradient-to-b from-red-50 to-white">
         <div className="container mx-auto px-6">
@@ -68,7 +69,7 @@ export function ProductDetailPage() {
             >
               <div>
                 <div className="inline-block px-4 py-2 rounded-full bg-red-100 text-red-600 text-sm font-medium mb-4">
-                  {product.category}
+                  {productCategory}
                 </div>
                 <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
                   {t(product.nameKey)}
@@ -80,26 +81,30 @@ export function ProductDetailPage() {
 
               {/* Quick Actions */}
               <div className="flex flex-wrap gap-4">
-                <Button className="bg-red-500 hover:bg-red-600">
-                  <ExternalLink className="w-4 h-4 mr-2" />
-                  {t("products.buyOnline")}
-                </Button>
-                <Button variant="outline">
-                  <FileText className="w-4 h-4 mr-2" />
-                  {t("products.technicalSheet")}
-                </Button>
+                <a href={(product.buyOnline)}>
+                  <Button className="bg-red-500 hover:bg-red-600">
+                    <ExternalLink className="w-4 h-4 mr-2" />
+                    {t("products.buyOnline")}
+                  </Button>
+                </a>
+                <a href={product.technicalSheet}>
+                  <Button variant="outline">
+                    <FileText className="w-4 h-4 mr-2" />
+                    {t("products.technicalSheet")}
+                  </Button>
+                </a>
               </div>
 
               <div className="grid grid-cols-2 gap-4 pt-6 border-t border-gray-200">
                 <a
-                  href="#"
+                  href={product.certificateSheet}
                   className="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900 transition-colors"
                 >
                   <Award className="w-4 h-4 text-red-500" />
                   <span>{t("products.certificates")}</span>
                 </a>
                 <a
-                  href="#"
+                  href={product.safetySheet}
                   className="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900 transition-colors"
                 >
                   <FileText className="w-4 h-4 text-red-500" />
@@ -230,8 +235,8 @@ export function ProductDetailPage() {
       <section className="py-16 bg-gradient-to-br from-red-500 to-red-600">
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            {language === "en" 
-              ? "Ready to protect your materials?" 
+            {language === "en"
+              ? "Ready to protect your materials?"
               : "¿Listo para proteger sus materiales?"}
           </h2>
           <p className="text-xl text-white/90 mb-8">

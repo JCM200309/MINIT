@@ -13,7 +13,7 @@ export function AboutPage() {
   return (
     <div className="min-h-screen">
       <Navigation />
-      
+
       {/* Hero Section */}
       <section className="pt-32 pb-16 bg-gradient-to-b from-red-50 to-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-5">
@@ -48,7 +48,7 @@ export function AboutPage() {
       <HowItWorks />
       <ProductAdvantages />
       <Certifications />
-      
+
       <Footer />
     </div>
   );

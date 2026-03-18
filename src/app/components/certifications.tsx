@@ -66,31 +66,6 @@ export function Certifications() {
           ))}
         </div>
 
-        {/* Certification Visual */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="max-w-5xl mx-auto"
-        >
-          <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-            <img
-              src="https://images.unsplash.com/photo-1706517212966-43695534fe88?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzYWZldHklMjBjZXJ0aWZpY2F0aW9uJTIwZG9jdW1lbnR8ZW58MXx8fHwxNzczNjk5MDkwfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-              alt="Safety Certification"
-              className="w-full h-80 object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-            <div className="absolute bottom-0 left-0 right-0 p-8 md:p-12">
-              <h3 className="text-3xl font-bold text-white mb-4">
-                Trusted by Industry Leaders
-              </h3>
-              <p className="text-white/90 text-lg max-w-2xl">
-                Our fire retardant solutions are used by leading companies worldwide, backed by comprehensive safety certifications and continuous quality testing.
-              </p>
-            </div>
-          </div>
-        </motion.div>
 
         {/* Safety Stats */}
         <motion.div

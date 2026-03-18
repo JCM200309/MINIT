@@ -26,7 +26,7 @@ export function ProductPreview() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-2 max-w-5xl mx-auto gap-8 mb-12">
           {products.map((product, index) => (
             <motion.div
               key={product.id}

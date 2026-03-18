@@ -1,14 +1,25 @@
 Hero:
 1) Cambiar foto
-2) Cuando se toque el boton de ingles se cambie el titulo instantaneamente a ingles y no quede la frase sola en español (la del efecto de react bits)
-
 
 Secciones:
-1) Seccion con reviews de clientes
+1) Seccion con reviews de clientes (Actualizar la informacion)
+2) Evitar secciones repetidas, hacer mas chico el home
 
 Navbar:
 1) Sacar logo
 2) Poner hamburguesa en mobile
 
 Links y QR:
-1) Ver exactamente el link del qr de cada producto para la fecha tecnica
+1) Ver exactamente el link del qr de cada producto para la fecha tecnica 
+
+Feedback maxi:
+1)Mezcla ingles español
+2)Falta de identidad (Tonos mas duros y paleta de color de abril) (relacionado con el negro y el fuego)
+3) Logo no se lee
+4) Problemas con tildes 
+5) MINIT en mayusculas
+6) Boton de certificaciones mas grande o mas emphasis
+7) Minit total, cambiar proteccion universal por "Proteccion total"
+8) Minit aditivo en vez de minit edificios, 
+9) Minit hidrolaca?
+10) Mas palabras en negrita

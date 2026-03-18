@@ -89,9 +89,8 @@ export function ProductAdvantages() {
             {comparisons.map((item, index) => (
               <div
                 key={item.feature}
-                className={`grid grid-cols-3 gap-4 p-6 ${
-                  index % 2 === 0 ? "bg-white" : "bg-gray-50"
-                }`}
+                className={`grid grid-cols-3 gap-4 p-6 ${index % 2 === 0 ? "bg-white" : "bg-gray-50"
+                  }`}
               >
                 <div className="text-gray-900 font-medium">{item.feature}</div>
                 <div className="flex justify-center">

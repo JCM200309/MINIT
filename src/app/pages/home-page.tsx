@@ -3,9 +3,8 @@ import { HeroSection } from "../components/hero-section";
 import { ProductPreview } from "../components/product-preview";
 import { ProductOverview } from "../components/product-overview";
 import { HowItWorks } from "../components/how-it-works";
+import { ReviewsCarousel } from "../components/reviews-carousel";
 import { Certifications } from "../components/certifications";
-import { ContactForm } from "../components/contact-form";
-import { FinalCTA } from "../components/final-cta";
 import { Footer } from "../components/footer";
 import { Toaster } from "../components/ui/sonner";
 
@@ -17,9 +16,8 @@ export function HomePage() {
       <ProductPreview />
       <ProductOverview />
       <HowItWorks />
+      <ReviewsCarousel />
       <Certifications />
-      <ContactForm />
-      <FinalCTA />
       <Footer />
       <Toaster />
     </div>

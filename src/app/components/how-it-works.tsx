@@ -77,7 +77,7 @@ export function HowItWorks() {
           ))}
         </div>
 
-        {/* Visual Diagram */}
+        {/* Visual Diagram 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -103,7 +103,7 @@ export function HowItWorks() {
               </div>
             </div>
           </div>
-        </motion.div>
+        </motion.div>*/}
       </div>
     </section>
   );

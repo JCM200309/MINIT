@@ -49,7 +49,7 @@ export function ProductsPage() {
       {/* Products Grid */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-6">
-          <div className="space-y-8">
+          <div className="grid md:grid-cols-2 gap-8">
             {products.map((product, index) => (
               <ProductCard key={product.id} product={product} index={index} />
             ))}

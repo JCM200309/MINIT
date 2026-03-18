@@ -8,7 +8,8 @@
   --card-foreground: oklch(0.15 0.01 30);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.15 0.01 30);
-  --primary: oklch(0.55 0.22 25); /* Rich Safety Red */
+  --primary: oklch(0.55 0.22 25);
+  /* Rich Safety Red */
   --primary-foreground: oklch(1 0 0);
   --secondary: oklch(0.92 0.01 30);
   --secondary-foreground: oklch(0.15 0.01 30);
@@ -22,7 +23,7 @@
   --input: oklch(0.15 0.01 30 / 0.05);
   --ring: oklch(0.55 0.22 25 / 0.5);
   --radius: 1rem;
-  
+
   /* Glassmorphism Utilities */
   --glass-background: rgba(255, 255, 255, 0.7);
   --glass-border: rgba(255, 255, 255, 0.2);
@@ -35,12 +36,13 @@
   --foreground: oklch(0.98 0.005 30);
   --card: oklch(0.15 0.01 30 / 0.8);
   --card-foreground: oklch(0.98 0.005 30);
-  --primary: oklch(0.6 0.25 25); /* Bright Safety Red for Dark Mode */
+  --primary: oklch(0.6 0.25 25);
+  /* Bright Safety Red for Dark Mode */
   --primary-foreground: oklch(0.12 0.01 30);
   --border: oklch(0.98 0.005 30 / 0.1);
   --input: oklch(0.98 0.005 30 / 0.05);
   --ring: oklch(0.6 0.25 25 / 0.5);
-  
+
   /* Dark Glassmorphism */
   --glass-background: rgba(20, 20, 25, 0.7);
   --glass-border: rgba(255, 255, 255, 0.1);
@@ -97,7 +99,11 @@
     font-family: var(--font-body);
   }
 
-  h1, h2, h3, h4, .font-heading {
+  h1,
+  h2,
+  h3,
+  h4,
+  .font-heading {
     font-family: var(--font-heading);
   }
 

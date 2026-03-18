@@ -12,7 +12,7 @@ export function ProductsPage() {
   return (
     <div className="min-h-screen">
       <Navigation />
-      
+
       {/* Hero Section */}
       <section className="pt-40 pb-20 bg-background relative overflow-hidden">
         {/* Fire Pattern Background - Industrial Version */}
@@ -22,7 +22,7 @@ export function ProductsPage() {
             backgroundSize: '32px 32px'
           }} />
         </div>
-        
+
         {/* Ambient Glow */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-gradient-to-b from-primary/5 to-transparent pointer-events-none" />
 

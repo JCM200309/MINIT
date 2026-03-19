@@ -27,8 +27,9 @@ export function HowItWorks() {
   ];
 
   return (
-    <section id="technology" className="py-24 bg-gradient-to-b from-white to-gray-50">
-      <div className="container mx-auto px-6">
+    <section id="technology" className="py-24 bg-[#140c03] relative border-y border-white/5">
+      <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: "radial-gradient(circle at 1px 1px, #fcfaf9 1px, transparent 0)", backgroundSize: "32px 32px" }} />
+      <div className="container mx-auto px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -36,17 +37,17 @@ export function HowItWorks() {
           transition={{ duration: 0.6 }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 font-heading italic">
+          <h2 className="text-4xl md:text-5xl font-bold text-[#fcfaf9] mb-6 font-heading italic">
             {t("howItWorks.title")}
           </h2>
-          <p className="text-xl text-gray-600 font-body">
+          <p className="text-xl text-[#fcfaf9]/70 font-body">
             {t("howItWorks.subtitle")}
           </p>
         </motion.div>
 
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto relative">
           {/* Connection Lines */}
-          <div className="hidden md:block absolute top-24 left-0 right-0 h-0.5 bg-gradient-to-r from-red-200 via-red-400 to-red-200" />
+          <div className="hidden md:block absolute top-24 left-0 right-0 h-[1px] bg-gradient-to-r from-[#140c03] via-white/10 to-[#140c03]" />
 
           {steps.map((step, index) => (
             <motion.div
@@ -58,19 +59,19 @@ export function HowItWorks() {
               className="relative"
             >
               {/* Step Number */}
-              <div className="relative z-10 w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-br from-red-500 to-red-600 flex items-center justify-center text-white text-xl font-bold shadow-lg">
+              <div className="relative z-10 w-16 h-16 mx-auto mb-6 rounded-2xl bg-[#140c03] border border-white/20 flex items-center justify-center text-white text-xl font-bold font-heading italic shadow-[0_0_15px_-3px_rgba(255,255,255,0.05)]">
                 {step.step}
               </div>
 
               {/* Icon Circle */}
-              <div className="relative z-10 w-20 h-20 mx-auto mb-6 rounded-full bg-white border-4 border-red-100 flex items-center justify-center">
-                <step.icon className="w-10 h-10 text-red-500" />
+              <div className="relative z-10 w-20 h-20 mx-auto mb-6 rounded-full bg-[#140c03] border border-white/10 flex items-center justify-center group-hover:border-[#c23b24]/50 transition-colors shadow-lg shadow-black/50">
+                <step.icon className="w-10 h-10 text-white/60 group-hover:text-[#c23b24] transition-colors" />
               </div>
 
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4 text-center">
+              <h3 className="text-2xl font-semibold text-[#fcfaf9] mb-4 text-center">
                 {step.title}
               </h3>
-              <p className="text-gray-600 text-center leading-relaxed font-body">
+              <p className="text-[#fcfaf9]/60 text-center leading-relaxed font-body">
                 {step.description}
               </p>
             </motion.div>

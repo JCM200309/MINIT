@@ -8,8 +8,8 @@ export const en = {
 
   // Hero
   "hero.badge": "Advanced Fire Protection Technology",
-  "hero.title": "Protect ",
-  "hero.titleHighlight": ["what matters", "your Business", "your Family", "your Future"],
+  "hero.title": "Safety for ",
+  "hero.titleHighlight": ["your Business", "your Family", "your Future", "what matters most"],
   "hero.subtitle": "At MINIT Fireproofs we are dedicated to developing and supplying the highest quality passive fire protection solutions, backed by national and international certifications and the recognition of professionals, technical bodies and customers worldwide.",
   "hero.requestQuote": "Request a Quote",
   "hero.learnMore": "Learn More",

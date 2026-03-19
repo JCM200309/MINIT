@@ -28,7 +28,7 @@ export function Navigation() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       className={`fixed top-4 left-4 right-4 z-50 transition-all duration-300 rounded-2xl border ${scrolled
-          ? "bg-[var(--glass-background)] backdrop-blur-md border-[var(--glass-border)] shadow-[var(--glass-shadow)]"
+          ? "bg-[#140c03]/95 backdrop-blur-xl border-white/10 shadow-[0_8px_32px_-8px_rgba(0,0,0,0.5)]"
           : "bg-transparent border-transparent"
         }`}
     >
@@ -36,7 +36,7 @@ export function Navigation() {
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center gap-3">
             <img src={logo} alt="MiniT Logo" className="h-10 w-auto" />
-            <span className="text-xl font-bold text-gray-900 tracking-tight">
+            <span className="text-xl font-bold text-[#fcfaf9] tracking-tight">
               MiniT
             </span>
           </Link>
@@ -44,28 +44,28 @@ export function Navigation() {
           <div className="hidden md:flex items-center gap-8">
             <Link
               to="/"
-              className={`text-gray-600 hover:text-gray-900 transition-colors ${location.pathname === "/" ? "text-red-500 font-medium" : ""
+              className={`text-[#fcfaf9]/70 hover:text-[#fcfaf9] transition-colors ${location.pathname === "/" ? "text-[#c23b24] font-medium" : ""
                 }`}
             >
               {t("nav.home")}
             </Link>
             <Link
               to="/products"
-              className={`text-gray-600 hover:text-gray-900 transition-colors ${location.pathname.includes("/products") ? "text-red-500 font-medium" : ""
+              className={`text-[#fcfaf9]/70 hover:text-[#fcfaf9] transition-colors ${location.pathname.includes("/products") ? "text-[#c23b24] font-medium" : ""
                 }`}
             >
               {t("nav.products")}
             </Link>
             <Link
               to="/about"
-              className={`text-gray-600 hover:text-gray-900 transition-colors ${location.pathname === "/about" ? "text-red-500 font-medium" : ""
+              className={`text-[#fcfaf9]/70 hover:text-[#fcfaf9] transition-colors ${location.pathname === "/about" ? "text-[#c23b24] font-medium" : ""
                 }`}
             >
               {t("nav.about")}
             </Link>
             <Link
               to="/contact"
-              className={`text-gray-600 hover:text-gray-900 transition-colors ${location.pathname === "/contact" ? "text-red-500 font-medium" : ""
+              className={`text-[#fcfaf9]/70 hover:text-[#fcfaf9] transition-colors ${location.pathname === "/contact" ? "text-[#c23b24] font-medium" : ""
                 }`}
             >
               {t("nav.contact")}
@@ -76,7 +76,7 @@ export function Navigation() {
               onClick={toggleLanguage}
               variant="outline"
               size="sm"
-              className="gap-2"
+              className="gap-2 border-white/20 text-[#fcfaf9] hover:bg-white/10 hover:text-white bg-transparent"
             >
               <Globe className="w-4 h-4" />
               {language === "en" ? "ES" : "EN"}
@@ -84,7 +84,7 @@ export function Navigation() {
 
             <Button
               asChild
-              className="bg-red-500 hover:bg-red-600"
+              className="bg-[#c23b24] hover:bg-[#c23b24]/90 text-white"
             >
               <Link to="/contact">{t("nav.getQuote")}</Link>
             </Button>

@@ -55,8 +55,11 @@ const advantages = [
 
 export function ProductAdvantages() {
   return (
-    <section id="about" className="py-24 bg-white">
-      <div className="container mx-auto px-6">
+    <section id="about" className="py-24 bg-[#fcfaf9] border-t border-[#140c03]/10 relative overflow-hidden">
+      {/* Subtle Pattern */}
+      <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: "radial-gradient(circle at 1px 1px, #140c03 1px, transparent 0)", backgroundSize: "32px 32px" }} />
+
+      <div className="container mx-auto px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -64,10 +67,10 @@ export function ProductAdvantages() {
           transition={{ duration: 0.6 }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-[#140c03] mb-6 font-heading tracking-tight italic">
             Why Choose MiniT?
           </h2>
-          <p className="text-xl text-gray-600">
+          <p className="text-xl text-[#140c03]/70 font-body">
             Advanced technology and superior performance set MiniT Fire Retardant apart from traditional solutions.
           </p>
         </motion.div>
@@ -80,31 +83,35 @@ export function ProductAdvantages() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="max-w-4xl mx-auto mb-16"
         >
-          <div className="bg-gradient-to-br from-gray-50 to-white rounded-2xl shadow-lg overflow-hidden border border-gray-200">
-            <div className="grid grid-cols-3 gap-4 p-6 bg-gradient-to-r from-red-500 to-red-600">
-              <div className="text-white font-semibold text-lg">Feature</div>
-              <div className="text-white font-semibold text-lg text-center">MiniT</div>
-              <div className="text-white font-semibold text-lg text-center">Traditional</div>
+          <div className="bg-white rounded-2xl shadow-sm overflow-hidden border border-[#140c03]/10">
+            <div className="grid grid-cols-3 gap-4 p-6 bg-[#140c03] border-b border-[#140c03]/10">
+              <div className="text-[#fcfaf9] font-bold text-lg font-heading tracking-wider uppercase">Feature</div>
+              <div className="text-[#c23b24] font-bold text-lg text-center font-heading tracking-wider uppercase">MiniT</div>
+              <div className="text-[#fcfaf9]/70 font-bold text-lg text-center font-heading tracking-wider uppercase">Traditional</div>
             </div>
             {comparisons.map((item, index) => (
               <div
                 key={item.feature}
-                className={`grid grid-cols-3 gap-4 p-6 ${index % 2 === 0 ? "bg-white" : "bg-gray-50"
+                className={`grid grid-cols-3 gap-4 p-6 items-center ${index % 2 === 0 ? "bg-white" : "bg-[#140c03]/[0.02]"
                   }`}
               >
-                <div className="text-gray-900 font-medium">{item.feature}</div>
+                <div className="text-[#140c03] font-semibold text-sm md:text-base font-body">{item.feature}</div>
                 <div className="flex justify-center">
                   {item.minit ? (
-                    <Check className="w-6 h-6 text-green-500" />
+                    <div className="w-8 h-8 rounded-full bg-[#140c03]/5 flex items-center justify-center border border-[#140c03]/10">
+                      <Check className="w-5 h-5 text-[#c23b24]" strokeWidth={3} />
+                    </div>
                   ) : (
-                    <X className="w-6 h-6 text-gray-300" />
+                    <X className="w-5 h-5 text-[#140c03]/20" />
                   )}
                 </div>
                 <div className="flex justify-center">
                   {item.traditional ? (
-                    <Check className="w-6 h-6 text-green-500" />
+                    <div className="w-8 h-8 rounded-full bg-[#140c03]/5 flex items-center justify-center border border-[#140c03]/10">
+                      <Check className="w-5 h-5 text-[#140c03]/50" strokeWidth={3} />
+                    </div>
                   ) : (
-                    <X className="w-6 h-6 text-gray-300" />
+                    <X className="w-5 h-5 text-[#140c03]/20" />
                   )}
                 </div>
               </div>
@@ -113,7 +120,7 @@ export function ProductAdvantages() {
         </motion.div>
 
         {/* Key Advantages */}
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto pt-8 border-t border-[#140c03]/10">
           {advantages.map((advantage, index) => (
             <motion.div
               key={advantage.title}
@@ -121,18 +128,19 @@ export function ProductAdvantages() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
-              className="flex gap-4"
+              className="flex gap-5"
             >
               <div className="flex-shrink-0">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-red-500 to-red-600 flex items-center justify-center">
-                  <Check className="w-6 h-6 text-white" />
+                <div className="w-14 h-14 rounded-2xl bg-white border border-[#140c03]/10 shadow-sm flex items-center justify-center relative overflow-hidden group">
+                  <div className="absolute inset-0 bg-[#c23b24]/5 group-hover:bg-[#c23b24]/10 transition-colors" />
+                  <Check className="w-7 h-7 text-[#c23b24] relative z-10" strokeWidth={2.5} />
                 </div>
               </div>
-              <div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">
+              <div className="pt-1">
+                <h3 className="text-xl font-bold text-[#140c03] mb-2 font-heading tracking-tight">
                   {advantage.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-[#140c03]/70 leading-relaxed font-body">
                   {advantage.description}
                 </p>
               </div>

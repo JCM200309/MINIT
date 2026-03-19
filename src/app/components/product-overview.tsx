@@ -29,7 +29,7 @@ export function ProductOverview() {
   ];
 
   return (
-    <section id="product" className="py-24 bg-white">
+    <section id="product" className="py-24 bg-[#fcfaf9]">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -38,10 +38,10 @@ export function ProductOverview() {
           transition={{ duration: 0.6 }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 font-heading italic">
+          <h2 className="text-4xl md:text-5xl font-bold text-[#140c03] mb-6 font-heading italic">
             {t("overview.title")}
           </h2>
-          <p className="text-xl text-gray-600 leading-relaxed font-body">
+          <p className="text-xl text-[#140c03]/70 leading-relaxed font-body">
             {t("overview.subtitle")}
           </p>
         </motion.div>
@@ -56,14 +56,14 @@ export function ProductOverview() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="group relative"
             >
-              <div className="p-8 rounded-2xl border border-gray-200 hover:border-red-200 bg-white hover:bg-red-50/50 transition-all duration-300 h-full">
-                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-red-500 to-red-600 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <feature.icon className="w-7 h-7 text-white" />
+              <div className="p-8 rounded-xl border border-[#c23b24]/10 hover:border-[#c23b24]/30 bg-white hover:shadow-lg transition-all duration-300 h-full">
+                <div className="w-14 h-14 rounded-xl bg-[#c23b24] border border-white/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-sm">
+                  <feature.icon className="w-7 h-7 text-[#fcfaf9]" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                <h3 className="text-xl font-bold text-[#140c03] mb-3 group-hover:text-[#c23b24] transition-colors">
                   {feature.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed font-body">
+                <p className="text-[#140c03]/70 leading-relaxed font-body">
                   {feature.description}
                 </p>
               </div>

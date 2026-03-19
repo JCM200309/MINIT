@@ -50,8 +50,9 @@ export function ContactForm() {
   };
 
   return (
-    <section id="contact" className="py-24 bg-gradient-to-b from-white to-gray-50">
-      <div className="container mx-auto px-6">
+    <section id="contact" className="py-24 bg-[#140c03] relative border-t border-white/5">
+      <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: "radial-gradient(circle at 1px 1px, #fcfaf9 1px, transparent 0)", backgroundSize: "32px 32px" }} />
+      <div className="container mx-auto px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -59,10 +60,10 @@ export function ContactForm() {
           transition={{ duration: 0.6 }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-[#fcfaf9] mb-6 font-heading tracking-tight italic">
             {t("contact.title")}
           </h2>
-          <p className="text-xl text-gray-600">
+          <p className="text-xl text-[#fcfaf9]/70 font-body">
             {t("contact.subtitle")}
           </p>
         </motion.div>
@@ -77,17 +78,17 @@ export function ContactForm() {
           >
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="space-y-2">
-                <Label htmlFor="name" className="text-gray-900">
+                <Label htmlFor="name" className="text-[#fcfaf9] font-semibold">
                   {t("contact.name")}
                 </Label>
                 <div className="relative">
-                  <User className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
+                  <User className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-[#fcfaf9]/40" />
                   <Input
                     id="name"
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    className="pl-10"
+                    className="pl-10 border-white/20 focus-visible:ring-[#c23b24] bg-white/5 text-[#fcfaf9] placeholder:text-[#fcfaf9]/30"
                     placeholder="John Doe"
                     required
                   />
@@ -95,17 +96,17 @@ export function ContactForm() {
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="company" className="text-gray-900">
+                <Label htmlFor="company" className="text-[#fcfaf9] font-semibold">
                   {t("contact.company")}
                 </Label>
                 <div className="relative">
-                  <Building2 className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
+                  <Building2 className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-[#fcfaf9]/40" />
                   <Input
                     id="company"
                     name="company"
                     value={formData.company}
                     onChange={handleChange}
-                    className="pl-10"
+                    className="pl-10 border-white/20 focus-visible:ring-[#c23b24] bg-white/5 text-[#fcfaf9] placeholder:text-[#fcfaf9]/30"
                     placeholder="Your Company"
                     required
                   />
@@ -113,18 +114,18 @@ export function ContactForm() {
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="email" className="text-gray-900">
+                <Label htmlFor="email" className="text-[#fcfaf9] font-semibold">
                   {t("contact.email")}
                 </Label>
                 <div className="relative">
-                  <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
+                  <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-[#fcfaf9]/40" />
                   <Input
                     id="email"
                     name="email"
                     type="email"
                     value={formData.email}
                     onChange={handleChange}
-                    className="pl-10"
+                    className="pl-10 border-white/20 focus-visible:ring-[#c23b24] bg-white/5 text-[#fcfaf9] placeholder:text-[#fcfaf9]/30"
                     placeholder="john@company.com"
                     required
                   />
@@ -132,17 +133,17 @@ export function ContactForm() {
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="message" className="text-gray-900">
+                <Label htmlFor="message" className="text-[#fcfaf9] font-semibold">
                   {t("contact.message")}
                 </Label>
                 <div className="relative">
-                  <MessageSquare className="absolute left-3 top-3 w-5 h-5 text-gray-400" />
+                  <MessageSquare className="absolute left-3 top-3 w-5 h-5 text-[#fcfaf9]/40" />
                   <Textarea
                     id="message"
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
-                    className="pl-10 min-h-32"
+                    className="pl-10 min-h-32 border-white/20 focus-visible:ring-[#c23b24] bg-white/5 text-[#fcfaf9] placeholder:text-[#fcfaf9]/30"
                     placeholder={t("contact.messagePlaceholder")}
                     required
                   />
@@ -152,7 +153,7 @@ export function ContactForm() {
               <Button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-red-500 hover:bg-red-600 text-white py-6 text-lg"
+                className="w-full bg-[#c23b24] hover:bg-[#c23b24]/90 text-white font-semibold py-6 text-lg"
               >
                 {isSubmitting ? (
                   t("contact.sending")
@@ -174,32 +175,32 @@ export function ContactForm() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="space-y-8"
           >
-            <div className="bg-gradient-to-br from-red-500 to-red-600 rounded-2xl p-8 text-white">
-              <h3 className="text-2xl font-bold mb-4">{t("contact.whyWorkWithUs")}</h3>
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 text-[#fcfaf9] shadow-lg border border-white/10 ring-1 ring-black/5">
+              <h3 className="text-2xl font-bold mb-4 font-heading">{t("contact.whyWorkWithUs")}</h3>
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <div className="w-2 h-2 rounded-full bg-white" />
+                  <div className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0 mt-0.5 border border-white/20">
+                    <div className="w-2 h-2 rounded-full bg-[#c23b24]" />
                   </div>
-                  <span>{t("contact.reason1")}</span>
+                  <span className="text-[#fcfaf9]/80 font-body">{t("contact.reason1")}</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <div className="w-2 h-2 rounded-full bg-white" />
+                  <div className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0 mt-0.5 border border-white/20">
+                    <div className="w-2 h-2 rounded-full bg-[#c23b24]" />
                   </div>
-                  <span>{t("contact.reason2")}</span>
+                  <span className="text-[#fcfaf9]/80 font-body">{t("contact.reason2")}</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <div className="w-2 h-2 rounded-full bg-white" />
+                  <div className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0 mt-0.5 border border-white/20">
+                    <div className="w-2 h-2 rounded-full bg-[#c23b24]" />
                   </div>
-                  <span>{t("contact.reason3")}</span>
+                  <span className="text-[#fcfaf9]/80 font-body">{t("contact.reason3")}</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <div className="w-2 h-2 rounded-full bg-white" />
+                  <div className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0 mt-0.5 border border-white/20">
+                    <div className="w-2 h-2 rounded-full bg-[#c23b24]" />
                   </div>
-                  <span>{t("contact.reason4")}</span>
+                  <span className="text-[#fcfaf9]/80 font-body">{t("contact.reason4")}</span>
                 </li>
               </ul>
             </div>

@@ -1,4 +1,5 @@
 import { useParams, Link } from "react-router";
+import { useEffect } from "react";
 import { motion } from "motion/react";
 import { Navigation } from "../components/navigation";
 import { Footer } from "../components/footer";
@@ -10,6 +11,10 @@ import { ArrowLeft, Package, CheckCircle, Award, FileText, ExternalLink } from "
 export function ProductDetailPage() {
   const { id } = useParams();
   const { language, t } = useLanguage();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const product = products.find((p) => p.id === id);
 
@@ -34,11 +39,12 @@ export function ProductDetailPage() {
       <Navigation />
 
       {/* Product Hero */}
-      <section className="pt-32 pb-16 bg-gradient-to-b from-red-50 to-white">
-        <div className="container mx-auto px-6">
+      <section className="min-h-screen flex items-center pt-24 pb-12 bg-[#140c03] relative border-b border-white/5 overflow-hidden">
+        <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: "radial-gradient(circle at 1px 1px, #fcfaf9 1px, transparent 0)", backgroundSize: "32px 32px" }} />
+        <div className="container mx-auto px-6 relative z-10">
           <Link
             to="/products"
-            className="inline-flex items-center gap-2 text-red-500 hover:text-red-600 mb-8 transition-colors"
+            className="inline-flex items-center gap-2 text-[#fcfaf9]/60 hover:text-[#fcfaf9] mb-8 transition-colors"
           >
             <ArrowLeft className="w-4 h-4" />
             {t("product.backToProducts")}
@@ -50,14 +56,14 @@ export function ProductDetailPage() {
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
-              className="relative rounded-2xl overflow-hidden shadow-2xl"
+              className="relative rounded-2xl overflow-hidden shadow-2xl bg-[#140c03]/50 ring-1 ring-white/10 max-h-[40vh] md:max-h-[60vh] flex items-center justify-center"
             >
               <img
                 src={product.image}
                 alt={t(product.nameKey)}
-                className="w-full h-auto"
+                className="w-full h-full object-cover brightness-90 contrast-125 grayscale-[0.1]"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-red-500/20 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#140c03]/90 to-transparent" />
             </motion.div>
 
             {/* Product Info */}
@@ -68,13 +74,13 @@ export function ProductDetailPage() {
               className="space-y-6"
             >
               <div>
-                <div className="inline-block px-4 py-2 rounded-full bg-red-100 text-red-600 text-sm font-medium mb-4">
+                <div className="inline-block px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-[#fcfaf9] text-sm font-semibold tracking-wide shadow-sm mb-4">
                   {productCategory}
                 </div>
-                <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                <h1 className="text-4xl md:text-5xl font-bold text-[#fcfaf9] mb-4 font-heading tracking-tight">
                   {t(product.nameKey)}
                 </h1>
-                <p className="text-xl text-gray-600">
+                <p className="text-xl text-[#fcfaf9]/70 font-body">
                   {t(product.descKey)}
                 </p>
               </div>
@@ -82,32 +88,32 @@ export function ProductDetailPage() {
               {/* Quick Actions */}
               <div className="flex flex-wrap gap-4">
                 <a href={(product.buyOnline)}>
-                  <Button className="bg-red-500 hover:bg-red-600">
+                  <Button className="bg-[#c23b24] hover:bg-[#c23b24]/90 text-white font-semibold">
                     <ExternalLink className="w-4 h-4 mr-2" />
                     {t("products.buyOnline")}
                   </Button>
                 </a>
                 <a href={product.technicalSheet}>
-                  <Button variant="outline">
+                  <Button variant="outline" className="border-white/20 text-[#fcfaf9] hover:bg-white/10 bg-transparent font-semibold shadow-none">
                     <FileText className="w-4 h-4 mr-2" />
                     {t("products.technicalSheet")}
                   </Button>
                 </a>
               </div>
 
-              <div className="grid grid-cols-2 gap-4 pt-6 border-t border-gray-200">
+              <div className="grid grid-cols-2 gap-4 pt-6 border-t border-white/10">
                 <a
                   href={product.certificateSheet}
-                  className="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900 transition-colors"
+                  className="flex items-center gap-2 text-sm text-[#fcfaf9]/70 hover:text-[#fcfaf9] transition-colors font-medium"
                 >
-                  <Award className="w-4 h-4 text-red-500" />
+                  <Award className="w-4 h-4 text-[#c23b24]" />
                   <span>{t("products.certificates")}</span>
                 </a>
                 <a
                   href={product.safetySheet}
-                  className="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900 transition-colors"
+                  className="flex items-center gap-2 text-sm text-[#fcfaf9]/70 hover:text-[#fcfaf9] transition-colors font-medium"
                 >
-                  <FileText className="w-4 h-4 text-red-500" />
+                  <FileText className="w-4 h-4 text-[#c23b24]" />
                   <span>{t("products.safetySheet")}</span>
                 </a>
               </div>
@@ -116,138 +122,154 @@ export function ProductDetailPage() {
         </div>
       </section>
 
-      {/* Product Details */}
-      <section className="py-16 bg-white">
+      {/* Product Information Grid */}
+      <section className="py-24 bg-[#fcfaf9]">
         <div className="container mx-auto px-6">
-          <div className="max-w-5xl mx-auto space-y-12">
-            {/* About */}
+          <div className="grid lg:grid-cols-12 gap-8 items-stretch">
+            
+            {/* Left Column: About this product */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
+              className="lg:col-span-4 flex"
             >
-              <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-red-500 to-red-600 flex items-center justify-center">
-                  <FileText className="w-6 h-6 text-white" />
+              <div className="w-full bg-white rounded-3xl border border-[#140c03]/5 shadow-sm p-8 md:p-10 flex flex-col h-full hover:shadow-md transition-shadow">
+                <div className="w-12 h-12 rounded-2xl bg-[#140c03] flex items-center justify-center mb-8 shadow-sm">
+                  <FileText className="w-6 h-6 text-[#fcfaf9]" />
                 </div>
-                {t("product.about")}
-              </h2>
-              <p className="text-gray-700 leading-relaxed text-lg">
-                {details.about}
-              </p>
-            </motion.div>
-
-            {/* Uses */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-            >
-              <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-red-500 to-red-600 flex items-center justify-center">
-                  <CheckCircle className="w-6 h-6 text-white" />
+                <h2 className="text-3xl font-bold text-[#140c03] mb-6 font-heading tracking-tight italic">
+                  {t("product.about")}
+                </h2>
+                <div className="prose prose-slate max-w-none">
+                  <p className="text-[#140c03]/80 leading-relaxed text-lg font-body hyphens-auto">
+                    {details.about}
+                  </p>
                 </div>
-                {t("product.uses")}
-              </h2>
-              <ul className="space-y-3">
-                {details.uses.map((use, index) => (
-                  <li key={index} className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-red-500 flex-shrink-0 mt-1" />
-                    <span className="text-gray-700 text-lg">{use}</span>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
-
-            {/* Packaging */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
-              <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-red-500 to-red-600 flex items-center justify-center">
-                  <Package className="w-6 h-6 text-white" />
-                </div>
-                {t("product.packaging")}
-              </h2>
-              <div className="grid md:grid-cols-2 gap-4">
-                {details.packaging.map((pkg, index) => (
-                  <div
-                    key={index}
-                    className="p-4 rounded-xl border border-gray-200 bg-gray-50"
-                  >
-                    <p className="text-gray-700 text-lg">{pkg}</p>
-                  </div>
-                ))}
               </div>
             </motion.div>
 
-            {/* Chemical Presentation */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="bg-gradient-to-br from-red-50 to-orange-50 p-8 rounded-2xl"
-            >
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">
-                {t("product.chemicalPresentation")}
-              </h2>
-              <p className="text-gray-700 leading-relaxed text-lg">
-                {details.chemicalPresentation}
-              </p>
-            </motion.div>
-
-            {/* Certifications */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-            >
-              <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-red-500 to-red-600 flex items-center justify-center">
-                  <Award className="w-6 h-6 text-white" />
-                </div>
-                {t("product.certifications")}
-              </h2>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {details.certifications.map((cert, index) => (
-                  <div
-                    key={index}
-                    className="p-4 rounded-xl border-2 border-red-200 bg-white text-center"
-                  >
-                    <Award className="w-8 h-8 text-red-500 mx-auto mb-2" />
-                    <p className="text-gray-900 font-medium">{cert}</p>
+            {/* Right Column: Details and Certifications */}
+            <div className="lg:col-span-8 flex flex-col gap-8">
+              
+              {/* Top Block: Uses, Packaging, Chemical Presentation */}
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="bg-white rounded-3xl border border-[#140c03]/5 shadow-sm p-8 md:p-10 flex-grow hover:shadow-md transition-shadow"
+              >
+                <div className="grid md:grid-cols-2 gap-10">
+                  {/* Uses */}
+                  <div className="space-y-6">
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 rounded-xl bg-[#c23b24]/10 flex items-center justify-center text-[#c23b24]">
+                        <CheckCircle className="w-5 h-5" />
+                      </div>
+                      <h3 className="text-xl font-bold text-[#140c03] font-heading">{t("product.uses")}</h3>
+                    </div>
+                    <ul className="grid gap-3">
+                      {details.uses.map((use, index) => (
+                        <li key={index} className="flex items-start gap-3 bg-[#fcfaf9] p-3 rounded-lg border border-[#140c03]/5 group">
+                          <CheckCircle className="w-4 h-4 text-[#c23b24] flex-shrink-0 mt-1" />
+                          <span className="text-[#140c03]/80 text-sm font-medium">{use}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
-                ))}
-              </div>
-            </motion.div>
+
+                  {/* Packaging & Chemical */}
+                  <div className="space-y-10">
+                    {/* Packaging */}
+                    <div className="space-y-6">
+                      <div className="flex items-center gap-3">
+                        <div className="w-10 h-10 rounded-xl bg-[#140c03]/5 flex items-center justify-center text-[#140c03]">
+                          <Package className="w-5 h-5" />
+                        </div>
+                        <h3 className="text-xl font-bold text-[#140c03] font-heading">{t("product.packaging")}</h3>
+                      </div>
+                      <div className="flex flex-wrap gap-2">
+                        {details.packaging.map((pkg, index) => (
+                          <div key={index} className="px-4 py-2 rounded-lg bg-[#140c03] text-[#fcfaf9] text-sm font-semibold shadow-sm">
+                            {pkg}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Chemical Presentation */}
+                    <div className="space-y-4 pt-6 border-t border-[#140c03]/5">
+                      <h4 className="text-sm font-bold uppercase tracking-wider text-[#140c03]/40">
+                        {t("product.chemicalPresentation")}
+                      </h4>
+                      <p className="text-[#140c03]/70 text-sm leading-relaxed italic">
+                        {details.chemicalPresentation}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Bottom Block: Certifications */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                className="bg-[#140c03] rounded-3xl p-8 md:p-10 shadow-xl relative overflow-hidden group"
+              >
+                {/* Background accent */}
+                <div className="absolute top-0 right-0 w-32 h-32 bg-[#c23b24]/20 blur-3xl rounded-full -mr-16 -mt-16 group-hover:bg-[#f6d94b]/20 transition-colors duration-500" />
+                
+                <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-8">
+                  <div className="max-w-xs">
+                    <h2 className="text-2xl font-bold text-[#fcfaf9] mb-2 font-heading tracking-tight flex items-center gap-3 italic">
+                      <Award className="w-6 h-6 text-[#f6d94b]" />
+                      {t("product.certifications")}
+                    </h2>
+                    <p className="text-[#fcfaf9]/50 text-sm">
+                      {language === "en" ? "Tested and approved by international standards." : "Testeado y aprobado bajo estándares internacionales."}
+                    </p>
+                  </div>
+                  
+                  <div className="flex flex-wrap items-center gap-4">
+                    {details.certifications.map((cert, index) => (
+                      <div 
+                        key={index}
+                        className="px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-white text-sm font-bold backdrop-blur-sm hover:bg-white/10 hover:border-[#f6d94b]/30 transition-all cursor-default"
+                      >
+                        {cert}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </motion.div>
+
+            </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-br from-red-500 to-red-600">
-        <div className="container mx-auto px-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+      <section className="py-24 bg-[#140c03] relative border-t border-white/5">
+        <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: "radial-gradient(circle at 1px 1px, #fcfaf9 1px, transparent 0)", backgroundSize: "32px 32px" }} />
+        <div className="container mx-auto px-6 text-center relative z-10">
+          <h2 className="text-3xl md:text-5xl font-bold text-[#fcfaf9] mb-6 font-heading tracking-tight italic">
             {language === "en"
               ? "Ready to protect your materials?"
               : "¿Listo para proteger sus materiales?"}
           </h2>
-          <p className="text-xl text-white/90 mb-8">
+          <p className="text-xl text-[#fcfaf9]/70 mb-10 max-w-2xl mx-auto font-body">
             {language === "en"
-              ? "Contact us for a personalized quote"
-              : "Contáctenos para una cotización personalizada"}
+              ? "Contact us for a personalized quote and technical advice."
+              : "Contáctenos para una cotización personalizada y asesoramiento técnico."}
           </p>
           <Button
             asChild
             size="lg"
-            className="bg-white text-red-500 hover:bg-gray-100"
+            className="bg-[#c23b24] hover:bg-[#c23b24]/90 text-white font-semibold tracking-wide px-8 py-6 text-lg"
           >
             <Link to="/contact">
               {t("nav.getQuote")}

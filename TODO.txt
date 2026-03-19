@@ -2,7 +2,7 @@ Hero:
 1) Cambiar foto
 
 Secciones:
-1) Seccion con reviews de clientes (Actualizar la informacion)
+1) Seccion con reviews de clientes (Actualizar la informacion) (Arreglar)
 2) Evitar secciones repetidas, hacer mas chico el home
 
 Navbar:

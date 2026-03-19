@@ -8,8 +8,8 @@ export const es = {
 
   // Hero
   "hero.badge": "Tecnología Avanzada de Protección contra Incendios",
-  "hero.title": "Protege ",
-  "hero.titleHighlight": ["lo que más importa", "tu Empresa", "tu Familia", "tu Futuro"],
+  "hero.title": "Seguridad para  ",
+  "hero.titleHighlight": ["tu Empresa", "tu Familia", "tu Futuro", "lo que más importa"],
   "hero.subtitle": "En MINIT Ignífugos nos dedicamos a desarrollar y suministrar soluciones de protección pasiva contra incendios de la más alta calidad, respaldadas por certificaciones nacionales e internacionales y el reconocimiento de profesionales, organismos técnicos y clientes en todo el mundo.",
   "hero.requestQuote": "Solicitar Cotización",
   "hero.learnMore": "Más Información",

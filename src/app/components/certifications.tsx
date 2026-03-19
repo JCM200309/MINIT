@@ -1,92 +1,97 @@
 import { motion } from "motion/react";
-import { Award, FileCheck, Globe, Microscope } from "lucide-react";
-
-const certifications = [
-  {
-    icon: Award,
-    title: "ISO 9001 Certified",
-    description: "Quality management systems certification",
-  },
-  {
-    icon: FileCheck,
-    title: "UL Tested",
-    description: "Underwriters Laboratories safety testing",
-  },
-  {
-    icon: Globe,
-    title: "International Standards",
-    description: "Meets EN, ASTM, and NFPA standards",
-  },
-  {
-    icon: Microscope,
-    title: "Laboratory Validated",
-    description: "Independent third-party testing",
-  },
-];
+import { Award, ShieldCheck, FileCheck, CheckCircle2 } from "lucide-react";
+import { useLanguage } from "../context/language-context";
 
 export function Certifications() {
+  const { t, language } = useLanguage();
+
+  const certs = [
+    {
+      name: "INTI",
+      fullName: "Instituto Nacional de Tecnología Industrial",
+      desc: language === "en" ? "National Institute of Industrial Technology" : "Instituto Nacional de Tecnología Industrial",
+      icon: <Award className="w-8 h-8" />
+    },
+    {
+      name: "IRAM",
+      fullName: "Instituto Argentino de Normalización y Certificación",
+      desc: "Normas 11910-3",
+      icon: <ShieldCheck className="w-8 h-8" />
+    },
+    {
+      name: "NFPA",
+      fullName: "National Fire Protection Association",
+      desc: "Standard 701",
+      icon: <FileCheck className="w-8 h-8" />
+    },
+    {
+      name: "ASTM",
+      fullName: "American Society for Testing and Materials",
+      desc: "E 162:1994",
+      icon: <CheckCircle2 className="w-8 h-8" />
+    }
+  ];
+
   return (
-    <section id="safety" className="py-24 bg-gradient-to-b from-gray-50 to-white">
-      <div className="container mx-auto px-6">
+    <section className="py-24 bg-[#140c03] relative overflow-hidden border-y border-white/5">
+      {/* Background decoration */}
+      <div className="absolute inset-0 z-0 opacity-[0.02] pointer-events-none" style={{
+        backgroundImage: `radial-gradient(circle at 10% 20%, #f6d94b 0%, transparent 40%)`,
+      }} />
+
+      <div className="container mx-auto px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center max-w-3xl mx-auto mb-16"
+          className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Certifications & Safety
+          <h2 className="text-3xl md:text-5xl font-bold text-[#fcfaf9] mb-4 font-heading tracking-tight italic">
+            {language === "en" ? "Our Certifications" : "Nuestras Certificaciones"}
           </h2>
-          <p className="text-xl text-gray-600">
-            MiniT Fire Retardant meets the highest international safety standards and has been rigorously tested by independent laboratories.
+          <p className="text-lg text-[#fcfaf9]/60 max-w-2xl mx-auto font-body">
+            {language === "en" 
+              ? "All our products are rigorously tested and certified by leading national and international organizations."
+              : "Todos nuestros productos son rigurosamente probados y certificados por organismos líderes nacionales e internacionales."}
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {certifications.map((cert, index) => (
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+          {certs.map((cert, index) => (
             <motion.div
-              key={cert.title}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              key={cert.name}
+              initial={{ opacity: 0, scale: 0.9, y: 20 }}
+              whileInView={{ opacity: 1, scale: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="text-center"
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              whileHover={{ y: -5 }}
+              className="bg-white/[0.03] backdrop-blur-md border border-white/10 p-8 rounded-2xl flex flex-col items-center text-center group hover:bg-white/[0.05] hover:border-[#f6d94b]/30 transition-all duration-300"
             >
-              <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-br from-red-500 to-red-600 flex items-center justify-center">
-                <cert.icon className="w-10 h-10 text-white" />
+              <div className="w-16 h-16 rounded-xl bg-[#c23b24]/10 flex items-center justify-center text-[#c23b24] mb-6 group-hover:scale-110 group-hover:bg-[#c23b24]/20 transition-all shadow-[0_0_20px_-5px_rgba(194,59,36,0.2)]">
+                {cert.icon}
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                {cert.title}
+              <h3 className="text-2xl font-bold text-[#fcfaf9] mb-2 font-heading tracking-tight">
+                {cert.name}
               </h3>
-              <p className="text-gray-600 text-sm">
-                {cert.description}
+              <p className="text-sm text-[#fcfaf9]/40 font-semibold mb-3 uppercase tracking-wider">
+                {cert.desc}
+              </p>
+              <p className="text-xs text-[#fcfaf9]/30 font-body leading-tight">
+                {cert.fullName}
               </p>
             </motion.div>
           ))}
         </div>
 
-
-        {/* Safety Stats */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto mt-16"
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="mt-16 flex flex-wrap justify-center gap-8 opacity-40 grayscale group-hover:grayscale-0 transition-all duration-700"
         >
-          <div className="text-center p-6 rounded-xl bg-white border border-gray-200 shadow-sm">
-            <div className="text-4xl font-bold text-red-500 mb-2">10+</div>
-            <div className="text-gray-600">Years of Testing</div>
-          </div>
-          <div className="text-center p-6 rounded-xl bg-white border border-gray-200 shadow-sm">
-            <div className="text-4xl font-bold text-red-500 mb-2">50+</div>
-            <div className="text-gray-600">Certifications</div>
-          </div>
-          <div className="text-center p-6 rounded-xl bg-white border border-gray-200 shadow-sm">
-            <div className="text-4xl font-bold text-red-500 mb-2">100%</div>
-            <div className="text-gray-600">Compliance</div>
-          </div>
+          {/* Subtexts or logos could go here */}
         </motion.div>
       </div>
     </section>

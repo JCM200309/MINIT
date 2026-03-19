@@ -5,6 +5,7 @@ import { ProductAdvantages } from "../components/product-advantages";
 import { useLanguage } from "../context/language-context";
 import { Flame } from "lucide-react";
 import { FireIllusion } from "../components/fire-illusion";
+import { MediaGallery } from "../components/media-gallery";
 
 export function AboutPage() {
   const { language } = useLanguage();
@@ -42,6 +43,8 @@ export function AboutPage() {
       </section>
 
       <ProductAdvantages />
+      
+      <MediaGallery />
 
       <Footer />
     </div>

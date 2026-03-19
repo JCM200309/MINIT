@@ -27,7 +27,7 @@ export function ProductCard({ product, index }: ProductCardProps) {
           <img
             src={product.image}
             alt={t(product.nameKey)}
-            className="w-full h-52 object-cover rounded-lg group-hover/img:scale-105 transition-transform duration-700 ease-out"
+            className="w-full h-full object-contain rounded-lg group-hover/img:scale-105 transition-transform duration-700 ease-out"
           />
           <div className="absolute top-4 right-4 z-10">
             <div className="px-4 py-1.5 rounded-full bg-[#c23b24] text-white text-xs font-bold uppercase tracking-widest shadow-sm">
@@ -72,7 +72,7 @@ export function ProductCard({ product, index }: ProductCardProps) {
                 <span className="font-medium">{t("products.technicalSheet")}</span>
               </a>
               <a
-                href="#"
+                href={product.certificateSheet}
                 className="flex items-center gap-3 text-sm text-[#140c03]/60 hover:text-[#140c03] transition-all group/link font-body"
               >
                 <div className="p-2 rounded-lg bg-[#140c03]/5 group-hover/link:bg-[#140c03] group-hover/link:text-white transition-colors border border-[#140c03]/10 group-hover/link:border-transparent">
@@ -81,7 +81,7 @@ export function ProductCard({ product, index }: ProductCardProps) {
                 <span className="font-medium">{t("products.certificates")}</span>
               </a>
               <a
-                href="#"
+                href={product.safetySheet}
                 className="flex items-center gap-3 text-sm text-[#140c03]/60 hover:text-[#140c03] transition-all group/link font-body"
               >
                 <div className="p-2 rounded-lg bg-[#140c03]/5 group-hover/link:bg-[#140c03] group-hover/link:text-white transition-colors border border-[#140c03]/10 group-hover/link:border-transparent">

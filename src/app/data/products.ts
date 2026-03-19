@@ -27,7 +27,7 @@ export interface Product {
 
 export const products: Product[] = [
   {
-    id: "minit-wood",
+    id: "MINIT-wood",
     nameKey: "products.wood.name",
     descKey: "products.wood.desc",
     image: "https://images.unsplash.com/photo-1768783028617-423227f67f86?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3b29kJTIwbWF0ZXJpYWwlMjB0ZXh0dXJlfGVufDF8fHx8MTc3MzY5OTgyN3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
@@ -36,9 +36,9 @@ export const products: Product[] = [
     technicalSheet: "/_files/ugd/a6f64e_fe6fa83310c94891a0e1eb536b2680c9.pdf",
     certificateSheet: "/_files/ugd/a6f64e_9463d6f04a474d90aad59e3c5611d105.pdf",
     safetySheet: "/_files/ugd/a6f64e_419101391f5049dd8286218ebbdabfc3.pdf",
-    buyOnline: "https://listado.mercadolibre.com.ar/pagina/minitignifugos/?item_id=MLA1127759488&category_id=MLA413242&client=recoview-selleritems&recos_listing=true",
+    buyOnline: "https://listado.mercadolibre.com.ar/pagina/MINITignifugos/?item_id=MLA1127759488&category_id=MLA413242&client=recoview-selleritems&recos_listing=true",
     detailsEn: {
-      about: "MiniT Wood is a Class A Fire Retardant, made from natural salts, which results in a colorless, odorless liquid that does not leave active fire-fighting agents, dispersants, and penetrants completely absorbent, so it does not modify the toxicity of the smoke of the treated material, only reduces the amount of smoke or reduces fire generation. It prevents fire propagation and at the same time, helps to retard the generation of smoke and gases up to 70%. Does not modify the color or texture of the treated material, only reduces the amount of smoke or reduces the generation of fire. It is a NON-TOXIC product, FRIENDLY WITH THE ENVIRONMENT, BIODEGRADABLE and PET FRIENDLY.",
+      about: "MINIT Wood is a Class A Fire Retardant, made from natural salts, which results in a colorless, odorless liquid that does not leave active fire-fighting agents, dispersants, and penetrants completely absorbent, so it does not modify the toxicity of the smoke of the treated material, only reduces the amount of smoke or reduces fire generation. It prevents fire propagation and at the same time, helps to retard the generation of smoke and gases up to 70%. Does not modify the color or texture of the treated material, only reduces the amount of smoke or reduces the generation of fire. It is a NON-TOXIC product, FRIENDLY WITH THE ENVIRONMENT, BIODEGRADABLE and PET FRIENDLY.",
       uses: [
         "Wood",
         "Cardboard",
@@ -86,7 +86,7 @@ export const products: Product[] = [
     },
   },
   {
-    id: "minit-textile",
+    id: "MINIT-textile",
     nameKey: "products.textile.name",
     descKey: "products.textile.desc",
     image: "https://images.unsplash.com/photo-1731504801830-5b14ac73d7ca?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZXh0aWxlJTIwZmFicmljJTIwbWF0ZXJpYWx8ZW58MXx8fHwxNzczNjk5ODI3fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
@@ -95,9 +95,9 @@ export const products: Product[] = [
     technicalSheet: "/_files/ugd/a6f64e_15a3d525c37e4ecabed564684280507c.pdf",
     certificateSheet: "/_files/ugd/a6f64e_e764055b184d4052a47c68eaa788e818.pdf",
     safetySheet: "/_files/ugd/a6f64e_71a9f25e031f45b1ad53fc366461864c.pdf",
-    buyOnline: "https://listado.mercadolibre.com.ar/pagina/minitignifugos/?item_id=MLA1127759488&category_id=MLA413242&client=recoview-selleritems&recos_listing=true",
+    buyOnline: "https://listado.mercadolibre.com.ar/pagina/MINITignifugos/?item_id=MLA1127759488&category_id=MLA413242&client=recoview-selleritems&recos_listing=true",
     detailsEn: {
-      about: "MiniT Textile is a specialized fire retardant formulation designed specifically for fabrics, textiles, and upholstery. This Class A fire retardant creates an invisible protective barrier that prevents ignition and significantly reduces flame spread in textile materials. The formula is designed to maintain the texture, color, and breathability of fabrics while providing superior fire protection.",
+      about: "MINIT Textile is a specialized fire retardant formulation designed specifically for fabrics, textiles, and upholstery. This Class A fire retardant creates an invisible protective barrier that prevents ignition and significantly reduces flame spread in textile materials. The formula is designed to maintain the texture, color, and breathability of fabrics while providing superior fire protection.",
       uses: [
         "Natural and synthetic fabrics",
         "Curtains and drapes",
@@ -119,7 +119,7 @@ export const products: Product[] = [
       chemicalPresentation: "Ready-to-use liquid formulation. Can be applied by spraying, dipping, or padding methods. One liter covers approximately 3-5 square meters depending on fabric type and application method.",
     },
     detailsEs: {
-      about: "MiniT Textil es una formulación retardante de fuego especializada diseñada específicamente para telas, textiles y tapicería. Este retardante de fuego Clase A crea una barrera protectora invisible que previene la ignición y reduce significativamente la propagación de llamas en materiales textiles. La fórmula está diseñada para mantener la textura, color y transpirabilidad de las telas mientras proporciona protección superior contra incendios.",
+      about: "MINIT Textil es una formulación retardante de fuego especializada diseñada específicamente para telas, textiles y tapicería. Este retardante de fuego Clase A crea una barrera protectora invisible que previene la ignición y reduce significativamente la propagación de llamas en materiales textiles. La fórmula está diseñada para mantener la textura, color y transpirabilidad de las telas mientras proporciona protección superior contra incendios.",
       uses: [
         "Telas naturales y sintéticas",
         "Cortinas y cortinados",
@@ -143,7 +143,7 @@ export const products: Product[] = [
     },
   },
   {
-    id: "minit-total",
+    id: "MINIT-total",
     nameKey: "products.total.name",
     descKey: "products.total.desc",
     image: "https://images.unsplash.com/photo-1704895376514-3938531148f6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3aGl0ZSUyMGNoZW1pY2FsJTIwY29udGFpbmVyJTIwYm90dGxlfGVufDF8fHx8MTc3MzY5OTgyN3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
@@ -152,9 +152,9 @@ export const products: Product[] = [
     technicalSheet: "/_files/ugd/a6f64e_fe6fa83310c94891a0e1eb536b2680c9.pdf",
     certificateSheet: "/_files/ugd/a6f64e_9463d6f04a474d90aad59e3c5611d105.pdf",
     safetySheet: "/_files/ugd/a6f64e_419101391f5049dd8286218ebbdabfc3.pdf",
-    buyOnline: "https://listado.mercadolibre.com.ar/pagina/minitignifugos/?item_id=MLA1127759488&category_id=MLA413242&client=recoview-selleritems&recos_listing=true",
+    buyOnline: "https://listado.mercadolibre.com.ar/pagina/MINITignifugos/?item_id=MLA1127759488&category_id=MLA413242&client=recoview-selleritems&recos_listing=true",
     detailsEn: {
-      about: "MiniT Total is a universal fire retardant solution designed for multi-material applications. This versatile Class A fire retardant provides comprehensive protection across a wide range of materials including plastics, composites, foams, and mixed materials. The advanced formula creates a protective barrier that prevents ignition and dramatically reduces flame spread and smoke generation.",
+      about: "MINIT Total is a universal fire retardant solution designed for multi-material applications. This versatile Class A fire retardant provides comprehensive protection across a wide range of materials including plastics, composites, foams, and mixed materials. The advanced formula creates a protective barrier that prevents ignition and dramatically reduces flame spread and smoke generation.",
       uses: [
         "Plastics and polymers",
         "Composite materials",
@@ -178,7 +178,7 @@ export const products: Product[] = [
       chemicalPresentation: "Available in ready-to-use liquid form or concentrated powder for dilution. The powder format provides maximum flexibility and cost-effectiveness for large-scale applications. Dilution ratio: 1 part powder to 4 parts water.",
     },
     detailsEs: {
-      about: "MiniT Total es una solución retardante de fuego universal diseñada para aplicaciones multi-material. Este versátil retardante de fuego Clase A proporciona protección integral en una amplia gama de materiales incluyendo plásticos, compuestos, espumas y materiales mixtos. La fórmula avanzada crea una barrera protectora que previene la ignición y reduce dramáticamente la propagación de llamas y generación de humo.",
+      about: "MINIT Total es una solución retardante de fuego universal diseñada para aplicaciones multi-material. Este versátil retardante de fuego Clase A proporciona protección integral en una amplia gama de materiales incluyendo plásticos, compuestos, espumas y materiales mixtos. La fórmula avanzada crea una barrera protectora que previene la ignición y reduce dramáticamente la propagación de llamas y generación de humo.",
       uses: [
         "Plásticos y polímeros",
         "Materiales compuestos",
@@ -204,7 +204,7 @@ export const products: Product[] = [
     },
   },
   {
-    id: "minit-building",
+    id: "MINIT-building",
     nameKey: "products.building.name",
     descKey: "products.building.desc",
     image: "https://images.unsplash.com/photo-1666285571949-3ee1a4946059?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBmaXJlJTIwcHJvdGVjdGlvbiUyMHRlY2hub2xvZ3l8ZW58MXx8fHwxNzczNjk5MDkwfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
@@ -213,9 +213,9 @@ export const products: Product[] = [
     technicalSheet: "/_files/ugd/a6f64e_89045a73c2724135afe20e709cf11514.pdf",
     certificateSheet: "/_files/ugd/a6f64e_8c3603ac62e748c3969e6f808cf8b259.pdf",
     safetySheet: "/_files/ugd/a6f64e_940db778f0e744e89f968adfd5f29868.pdf",
-    buyOnline: "https://listado.mercadolibre.com.ar/pagina/minitignifugos/?item_id=MLA1127759488&category_id=MLA413242&client=recoview-selleritems&recos_listing=true",
+    buyOnline: "https://listado.mercadolibre.com.ar/pagina/MINITignifugos/?item_id=MLA1127759488&category_id=MLA413242&client=recoview-selleritems&recos_listing=true",
     detailsEn: {
-      about: "MiniT Building is a professional-grade fire retardant specifically engineered for construction and structural applications. This high-performance Class A fire retardant provides exceptional protection for building materials, helping to meet stringent building codes and fire safety regulations. The formula creates a durable protective coating that withstands environmental conditions while maintaining fire resistance.",
+      about: "MINIT Building is a professional-grade fire retardant specifically engineered for construction and structural applications. This high-performance Class A fire retardant provides exceptional protection for building materials, helping to meet stringent building codes and fire safety regulations. The formula creates a durable protective coating that withstands environmental conditions while maintaining fire resistance.",
       uses: [
         "Structural wood and timber",
         "Drywall and gypsum board",
@@ -240,7 +240,7 @@ export const products: Product[] = [
       chemicalPresentation: "Professional-grade powder formulation for maximum coverage and economy. Mix with water at job site for immediate use. Coverage: approximately 4-6 square meters per liter depending on substrate porosity. Two-coat application recommended for optimal protection.",
     },
     detailsEs: {
-      about: "MiniT Edificios es un retardante de fuego de grado profesional específicamente diseñado para aplicaciones de construcción y estructurales. Este retardante de fuego Clase A de alto rendimiento proporciona protección excepcional para materiales de construcción, ayudando a cumplir con estrictos códigos de construcción y regulaciones de seguridad contra incendios. La fórmula crea un recubrimiento protector duradero que resiste condiciones ambientales mientras mantiene la resistencia al fuego.",
+      about: "MINIT Edificios es un retardante de fuego de grado profesional específicamente diseñado para aplicaciones de construcción y estructurales. Este retardante de fuego Clase A de alto rendimiento proporciona protección excepcional para materiales de construcción, ayudando a cumplir con estrictos códigos de construcción y regulaciones de seguridad contra incendios. La fórmula crea un recubrimiento protector duradero que resiste condiciones ambientales mientras mantiene la resistencia al fuego.",
       uses: [
         "Madera estructural y vigas",
         "Paneles de yeso y cartón yeso",

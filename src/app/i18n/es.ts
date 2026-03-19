@@ -59,9 +59,10 @@ export const es = {
 
   // How It Works
   "howItWorks.title": "Cómo Funciona",
+  "howItWorks.stepLabel": "PASO",
   "howItWorks.subtitle": "Nuestra tecnología avanzada de retardante de fuego utiliza un proceso de tres etapas para proporcionar protección integral contra incendios.",
   "howItWorks.step1": "Aplicación",
-  "howItWorks.step1.desc": "MiniT Retardante de Fuego se aplica a la superficie del material usando métodos de rociado, brocha o inmersión.",
+  "howItWorks.step1.desc": "MINIT Retardante de Fuego se aplica a la superficie del material usando métodos de rociado, brocha o inmersión.",
   "howItWorks.step2": "Reacción Química",
   "howItWorks.step2.desc": "La fórmula penetra el material y forma enlaces moleculares, creando una capa protectora a nivel microscópico.",
   "howItWorks.step3": "Protección contra Incendios",
@@ -71,7 +72,7 @@ export const es = {
 
   // Contact
   "contact.title": "Solicitar Cotización",
-  "contact.subtitle": "Póngase en contacto con nuestro equipo para obtener más información sobre MiniT Retardante de Fuego y recibir una cotización personalizada para su proyecto.",
+  "contact.subtitle": "Póngase en contacto con nuestro equipo para obtener más información sobre MINIT Retardante de Fuego y recibir una cotización personalizada para su proyecto.",
   "contact.name": "Nombre Completó",
   "contact.company": "Empresa",
   "contact.email": "Correo Electrónico",
@@ -89,7 +90,7 @@ export const es = {
 
   // CTA
   "cta.title": "¿Listo para Proteger sus Materiales?",
-  "cta.subtitle": "Únase al creciente número de empresas que eligen MiniT Retardante de Fuego para una protección superior contra incendios. Comience hoy con una consulta gratuita.",
+  "cta.subtitle": "Únase al creciente número de empresas que eligen MINIT Retardante de Fuego para una protección superior contra incendios. Comience hoy con una consulta gratuita.",
   "cta.getQuote": "Obtener Cotización",
   "cta.learnMore": "Más Información",
 
@@ -113,10 +114,10 @@ export const es = {
   "reviews.title": "Clientes que confiaron en nosotros",
 
   // Advantages
-  "advantages.title": "¿Por qué elegir MiniT?",
-  "advantages.subtitle": "La tecnología avanzada y el rendimiento superior diferencian a MiniT de las soluciones tradicionales.",
+  "advantages.title": "¿Por qué elegir MINIT?",
+  "advantages.subtitle": "La tecnología avanzada y el rendimiento superior diferencian a MINIT de las soluciones tradicionales.",
   "advantages.feature": "Característica",
-  "advantages.minit": "MiniT",
+  "advantages.MINIT": "MINIT",
   "advantages.traditional": "Tradicional",
   "advantages.comp1": "Protección duradera",
   "advantages.comp2": "Aplicación invisible",

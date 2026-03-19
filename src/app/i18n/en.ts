@@ -25,13 +25,13 @@ export const en = {
   // Products
   "products.title": "Our Products",
   "products.subtitle": "Choose the right fire retardant solution for your specific needs",
-  "products.wood.name": "MiniT Wood",
+  "products.wood.name": "MINIT Wood",
   "products.wood.desc": "Fire retardant for wood and cellulose materials",
-  "products.textile.name": "MiniT Textile",
+  "products.textile.name": "MINIT Textile",
   "products.textile.desc": "Specialized protection for fabrics and textiles",
-  "products.total.name": "MiniT Total",
+  "products.total.name": "MINIT Total",
   "products.total.desc": "Universal fire retardant for multiple materials",
-  "products.building.name": "MiniT Building",
+  "products.building.name": "MINIT Building",
   "products.building.desc": "Construction and structural fire protection",
   "products.viewDetails": "View Details",
   "products.buyOnline": "Buy Online",
@@ -59,9 +59,10 @@ export const en = {
 
   // How It Works
   "howItWorks.title": "How It Works",
+  "howItWorks.stepLabel": "PHASE",
   "howItWorks.subtitle": "Our advanced fire retardant technology uses a three-stage process to provide comprehensive fire protection.",
   "howItWorks.step1": "Application",
-  "howItWorks.step1.desc": "MiniT Fire Retardant is applied to the material surface using spray, brush, or dip coating methods.",
+  "howItWorks.step1.desc": "MINIT Fire Retardant is applied to the material surface using spray, brush, or dip coating methods.",
   "howItWorks.step2": "Chemical Reaction",
   "howItWorks.step2.desc": "The formula penetrates the material and forms molecular bonds, creating a protective layer at the microscopic level.",
   "howItWorks.step3": "Fire Protection",
@@ -71,7 +72,7 @@ export const en = {
 
   // Contact
   "contact.title": "Request a Quote",
-  "contact.subtitle": "Get in touch with our team to learn more about MiniT Fire Retardant and receive a customized quote for your project.",
+  "contact.subtitle": "Get in touch with our team to learn more about MINIT Fire Retardant and receive a customized quote for your project.",
   "contact.name": "Full Name",
   "contact.company": "Company",
   "contact.email": "Email Address",
@@ -89,7 +90,7 @@ export const en = {
 
   // CTA
   "cta.title": "Ready to Protect Your Materials?",
-  "cta.subtitle": "Join the growing number of businesses choosing MiniT Fire Retardant for superior fire protection. Get started today with a free consultation.",
+  "cta.subtitle": "Join the growing number of businesses choosing MINIT Fire Retardant for superior fire protection. Get started today with a free consultation.",
   "cta.getQuote": "Get Your Quote",
   "cta.learnMore": "Learn More",
 
@@ -113,10 +114,10 @@ export const en = {
   "reviews.title": "Customers Who Trusted Us",
 
   // Advantages
-  "advantages.title": "Why Choose MiniT?",
-  "advantages.subtitle": "Advanced technology and superior performance set MiniT Fire Retardant apart from traditional solutions.",
+  "advantages.title": "Why Choose MINIT?",
+  "advantages.subtitle": "Advanced technology and superior performance set MINIT Fire Retardant apart from traditional solutions.",
   "advantages.feature": "Feature",
-  "advantages.minit": "MiniT",
+  "advantages.MINIT": "MINIT",
   "advantages.traditional": "Traditional",
   "advantages.comp1": "Long-lasting protection",
   "advantages.comp2": "Invisible application",

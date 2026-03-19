@@ -27,6 +27,7 @@ export function AboutPage() {
             transition={{ duration: 0.6 }}
             className="text-center max-w-3xl mx-auto"
           >
+
             <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-[#f6d94b]/10 backdrop-blur-xl border border-[#f6d94b]/20 shadow-xl shadow-[#f6d94b]/10 mb-6 group-hover:scale-110 transition-transform">
               <Flame className="w-10 h-10 text-[#f6d94b]" />
             </div>
@@ -41,10 +42,9 @@ export function AboutPage() {
           </motion.div>
         </div>
       </section>
+      <MediaGallery />
 
       <ProductAdvantages />
-      
-      <MediaGallery />
 
       <Footer />
     </div>

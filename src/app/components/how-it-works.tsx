@@ -2,6 +2,7 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform, useSpring } from "motion/react";
 import { Droplet, AtomIcon, ShieldCheck } from "lucide-react";
 import { useLanguage } from "../context/language-context";
+import { Link } from "react-router";
 import { en } from "../i18n/en";
 
 export function HowItWorks() {
@@ -151,6 +152,23 @@ function StepItem({ step, index }: { step: any, index: number }) {
             }`}>
             {step.description}
           </p>
+
+          {index === 0 && (
+            <div className={`mt-6 flex ${isEven ? "justify-start" : "justify-end"}`}>
+              <Link
+                to="/about?video=6"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#c23b24] text-white font-bold text-sm hover:bg-[#c23b24]/90 transition-all shadow-lg shadow-[#c23b24]/20 group/btn"
+              >
+                {t("howItWorks.applicationGuide")}
+                <motion.span
+                  animate={{ x: [0, 5, 0] }}
+                  transition={{ repeat: Infinity, duration: 1.5 }}
+                >
+                  →
+                </motion.span>
+              </Link>
+            </div>
+          )}
         </motion.div>
       </div>
     </motion.div>

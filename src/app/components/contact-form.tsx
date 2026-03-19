@@ -89,7 +89,7 @@ export function ContactForm() {
                     value={formData.name}
                     onChange={handleChange}
                     className="pl-10 border-white/20 focus-visible:ring-[#c23b24] bg-white/5 text-[#fcfaf9] placeholder:text-[#fcfaf9]/30"
-                    placeholder="John Doe"
+                    placeholder="Juan Perez"
                     required
                   />
                 </div>
@@ -107,7 +107,7 @@ export function ContactForm() {
                     value={formData.company}
                     onChange={handleChange}
                     className="pl-10 border-white/20 focus-visible:ring-[#c23b24] bg-white/5 text-[#fcfaf9] placeholder:text-[#fcfaf9]/30"
-                    placeholder="Your Company"
+                    placeholder="Nombre de la Empresa"
                     required
                   />
                 </div>
@@ -126,7 +126,7 @@ export function ContactForm() {
                     value={formData.email}
                     onChange={handleChange}
                     className="pl-10 border-white/20 focus-visible:ring-[#c23b24] bg-white/5 text-[#fcfaf9] placeholder:text-[#fcfaf9]/30"
-                    placeholder="john@company.com"
+                    placeholder="juanperez@gmail.com"
                     required
                   />
                 </div>
@@ -205,22 +205,7 @@ export function ContactForm() {
               </ul>
             </div>
 
-            <div className="relative rounded-2xl overflow-hidden shadow-lg">
-              <img
-                src="https://images.unsplash.com/photo-1763289685121-21c4e3f03aff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbm5vdmF0aW9uJTIwYWJzdHJhY3QlMjBkZXNpZ258ZW58MXx8fHwxNzczNjgxMDIxfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                alt="Innovation"
-                className="w-full h-64 object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 p-6">
-                <h4 className="text-xl font-bold text-white mb-2">
-                  Innovation Meets Safety
-                </h4>
-                <p className="text-white/90 text-sm">
-                  Join hundreds of satisfied customers protecting what matters most.
-                </p>
-              </div>
-            </div>
+
           </motion.div>
         </div>
       </div>

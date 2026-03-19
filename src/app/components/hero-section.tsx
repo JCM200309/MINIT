@@ -5,7 +5,7 @@ import { useLanguage } from "../context/language-context";
 import { Link } from "react-router";
 import TextType from "./textType";
 import { FireIllusion } from "./fire-illusion";
-import logo from "../../assets/minitLogo.avif";
+import logoNew from "../../assets/minitLogo_v2.png";
 
 export function HeroSection() {
   const { t } = useLanguage();
@@ -96,7 +96,7 @@ export function HeroSection() {
           >
             <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-white/10 group hover:shadow-[0_0_80px_-20px_rgba(246,217,75,0.25)] hover:border-[#f6d94b]/40 transition-all duration-700">
               <img
-                src={logo}
+                src={logoNew}
                 alt="Fire Protection Technology"
                 className="w-full h-auto grayscale-[0.3] group-hover:grayscale-[0.1] transition-all duration-700 scale-105 group-hover:scale-100"
               />

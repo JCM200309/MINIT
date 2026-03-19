@@ -61,7 +61,8 @@ export const en = {
   "howItWorks.title": "How It Works",
   "howItWorks.stepLabel": "PHASE",
   "howItWorks.subtitle": "Our advanced fire retardant technology uses a three-stage process to provide comprehensive fire protection.",
-  "howItWorks.step1": "Application",
+  "howItWorks.applicationGuide": "Application Guide",
+  "howItWorks.step1": "APPLICATION",
   "howItWorks.step1.desc": "MINIT Fire Retardant is applied to the material surface using spray, brush, or dip coating methods.",
   "howItWorks.step2": "Chemical Reaction",
   "howItWorks.step2.desc": "The formula penetrates the material and forms molecular bonds, creating a protective layer at the microscopic level.",
@@ -99,7 +100,7 @@ export const en = {
   "footer.product": "Product",
   "footer.company": "Company",
   "footer.getInTouch": "Get in Touch",
-  "footer.overview": "Overview",
+  "footer.overview": "Catalog",
   "footer.howItWorks": "How It Works",
   "footer.advantages": "Advantages",
   "footer.certifications": "Certifications",
@@ -109,6 +110,7 @@ export const en = {
   "footer.allRights": "All rights reserved.",
   "footer.privacy": "Privacy Policy",
   "footer.terms": "Terms of Service",
+  "footer.contact": "Contact",
 
   // Reviews
   "reviews.title": "Customers Who Trusted Us",

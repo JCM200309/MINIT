@@ -19,7 +19,7 @@ export function Footer() {
   return (
     <footer className="bg-[#0a0602] border-t border-white/5 text-[#fcfaf9]/70">
       <div className="container mx-auto px-6 py-16">
-        <div className="grid md:grid-cols-4 gap-12 mb-12">
+        <div className="grid md:grid-cols-3 gap-12 mb-12">
           {/* Brand */}
           <div className="md:col-span-1">
             <Link to="/" className="flex items-center gap-2 mb-4">
@@ -27,7 +27,7 @@ export function Footer() {
                 <Flame className="w-6 h-6 text-[#c23b24]" />
               </div>
               <span className="text-xl font-bold text-[#fcfaf9]">
-                MiniT
+                MINIT
               </span>
             </Link>
             <p className="text-[#fcfaf9]/60 leading-relaxed font-body">
@@ -65,47 +65,16 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  to="/about"
+                  to="/contact"
                   className="text-[#fcfaf9]/60 hover:text-[#fcfaf9] transition-colors font-body"
                 >
-                  {t("footer.certifications")}
+                  {t("footer.contact")}
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Company */}
-          <div>
-            <h3 className="text-[#fcfaf9] font-bold mb-4 font-heading">{t("footer.company")}</h3>
-            <ul className="space-y-3">
-              <li>
-                <Link
-                  to="/about"
-                  className="text-[#fcfaf9]/60 hover:text-[#fcfaf9] transition-colors font-body"
-                >
-                  {t("footer.aboutUs")}
-                </Link>
-              </li>
-              <li>
-                <a href="#" className="text-[#fcfaf9]/60 hover:text-[#fcfaf9] transition-colors font-body">
-                  {t("footer.caseStudies")}
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-[#fcfaf9]/60 hover:text-[#fcfaf9] transition-colors font-body">
-                  {t("footer.resources")}
-                </a>
-              </li>
-              <li>
-                <Link
-                  to="/contact"
-                  className="text-[#fcfaf9]/60 hover:text-[#fcfaf9] transition-colors font-body"
-                >
-                  {t("nav.contact")}
-                </Link>
-              </li>
-            </ul>
-          </div>
+
 
           {/* Contact */}
           <div>
@@ -136,14 +105,7 @@ export function Footer() {
             <p className="text-[#fcfaf9]/60 text-sm font-body">
               © 2026 MiniT Fire Retardant. {t("footer.allRights")}
             </p>
-            <div className="flex gap-6">
-              <a href="#" className="text-[#fcfaf9]/60 hover:text-[#fcfaf9] text-sm transition-colors font-body">
-                {t("footer.privacy")}
-              </a>
-              <a href="#" className="text-[#fcfaf9]/60 hover:text-[#fcfaf9] text-sm transition-colors font-body">
-                {t("footer.terms")}
-              </a>
-            </div>
+
           </div>
         </div>
       </div>

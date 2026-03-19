@@ -58,10 +58,11 @@ export const es = {
   "features.compatibility.desc": "Compatible con una amplia gama de materiales incluyendo textiles, madera, plásticos y compuestos.",
 
   // How It Works
-  "howItWorks.title": "Cómo Funciona",
+  "howItWorks.title": "Cómo funciona",
   "howItWorks.stepLabel": "PASO",
   "howItWorks.subtitle": "Nuestra tecnología avanzada de retardante de fuego utiliza un proceso de tres etapas para proporcionar protección integral contra incendios.",
-  "howItWorks.step1": "Aplicación",
+  "howItWorks.applicationGuide": "Guía de aplicación",
+  "howItWorks.step1": "APLICACIÓN",
   "howItWorks.step1.desc": "MINIT Retardante de Fuego se aplica a la superficie del material usando métodos de rociado, brocha o inmersión.",
   "howItWorks.step2": "Reacción Química",
   "howItWorks.step2.desc": "La fórmula penetra el material y forma enlaces moleculares, creando una capa protectora a nivel microscópico.",
@@ -99,7 +100,7 @@ export const es = {
   "footer.product": "Producto",
   "footer.company": "Empresa",
   "footer.getInTouch": "Contáctenos",
-  "footer.overview": "Resumen",
+  "footer.overview": "Catálogo",
   "footer.howItWorks": "Cómo Funciona",
   "footer.advantages": "Ventajas",
   "footer.certifications": "Certificaciones",
@@ -109,6 +110,7 @@ export const es = {
   "footer.allRights": "Todos los derechos reservados.",
   "footer.privacy": "Política de Privacidad",
   "footer.terms": "Términos de Servicio",
+  "footer.contact": "Contacto",
 
   // Reviews
   "reviews.title": "Clientes que confiaron en nosotros",

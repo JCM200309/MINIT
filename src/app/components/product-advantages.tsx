@@ -89,7 +89,7 @@ export function ProductAdvantages() {
           <div className="bg-white rounded-2xl shadow-sm overflow-hidden border border-[#140c03]/10">
             <div className="grid grid-cols-3 gap-4 p-6 bg-[#140c03] border-b border-[#140c03]/10">
               <div className="text-[#fcfaf9] font-bold text-lg font-heading tracking-wider uppercase">{t("advantages.feature")}</div>
-              <div className="text-[#c23b24] font-bold text-lg text-center font-heading tracking-wider uppercase">{t("advantages.minit")}</div>
+              <div className="text-[#c23b24] font-bold text-lg text-center font-heading tracking-wider uppercase">{t("advantages.MINIT")}</div>
               <div className="text-[#fcfaf9]/70 font-bold text-lg text-center font-heading tracking-wider uppercase">{t("advantages.traditional")}</div>
             </div>
             {comparisons.map((item, index) => (

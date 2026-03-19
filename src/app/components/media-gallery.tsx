@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { X, Play, Maximize2, Image as ImageIcon, Film } from "lucide-react";
 import { useLanguage } from "../context/language-context";
+import { useLocation, useNavigate } from "react-router";
 
 interface MediaItem {
   id: number;
@@ -12,6 +13,7 @@ interface MediaItem {
   titleEs: string;
   categoryEn: string;
   categoryEs: string;
+  aspectRatio?: "vertical" | "horizontal";
 }
 
 const mediaItems: MediaItem[] = [
@@ -45,37 +47,63 @@ const mediaItems: MediaItem[] = [
   {
     id: 4,
     type: "video",
-    url: "https://www.youtube.com/embed/dQw4w9WgXcQ", // Placeholder video
-    thumbnail: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop",
-    titleEn: "MINIT Building Application Guide",
-    titleEs: "Guía de Aplicación MINIT Edificios",
-    categoryEn: "Tutorial",
-    categoryEs: "Tutorial",
+    url: "/gallery/video1.mp4",
+    thumbnail: "/gallery/thumb_video1.png",
+    titleEn: "Flame Retardant Test MINIT Wood",
+    titleEs: "Prueba de Ignifugación MINIT Madera",
+    categoryEn: "Tests",
+    categoryEs: "Pruebas",
+    aspectRatio: "vertical",
   },
   {
     id: 5,
-    type: "image",
-    url: "https://images.unsplash.com/photo-1504917595217-d4dc5f583006?q=80&w=2070&auto=format&fit=crop",
-    titleEn: "Steel Protection in Construction",
-    titleEs: "Protección de Acero en Construcción",
-    categoryEn: "Case Study",
-    categoryEs: "Caso de Estudio",
+    type: "video",
+    url: "/gallery/video2.mp4",
+    thumbnail: "/gallery/thumb_video2.png",
+    titleEn: "Description of MINIT Products",
+    titleEs: "Descripción de los productos MINIT",
+    categoryEn: "Products",
+    categoryEs: "Productos",
+    aspectRatio: "vertical",
   },
   {
     id: 6,
     type: "video",
-    url: "https://www.youtube.com/embed/dQw4w9WgXcQ", // Placeholder video
-    thumbnail: "https://images.unsplash.com/photo-1534398079543-7ae6d016b86a?q=80&w=2070&auto=format&fit=crop",
-    titleEn: "Flame Propagation Test - MINIT Total",
-    titleEs: "Prueba de Propagación de Llama - MINIT Total",
-    categoryEn: "Certification",
-    categoryEs: "Certificación",
+    url: "/gallery/video3.mp4",
+    thumbnail: "/gallery/thumb_video3.png",
+    titleEn: "How to apply MINIT textiles",
+    titleEs: "Como aplicar MINIT textiles",
+    categoryEn: "Tutorial",
+    categoryEs: "Tutorial",
+    aspectRatio: "vertical",
   },
 ];
 
 export function MediaGallery() {
   const { language } = useLanguage();
+  const location = useLocation();
+  const navigate = useNavigate();
   const [selectedItem, setSelectedItem] = useState<MediaItem | null>(null);
+
+  const handleClose = () => {
+    const params = new URLSearchParams(location.search);
+    if (params.get("video")) {
+      navigate(-1);
+    } else {
+      setSelectedItem(null);
+    }
+  };
+
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const videoId = params.get("video");
+    if (videoId) {
+      const item = mediaItems.find((m) => m.id === parseInt(videoId));
+      if (item) {
+        setSelectedItem(item);
+      }
+    }
+  }, [location]);
 
   return (
     <section className="py-24 bg-[#fcfaf9] relative overflow-hidden">
@@ -89,7 +117,7 @@ export function MediaGallery() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-[#140c03] mb-6 font-heading italic">
-            {language === "en" ? "Media Gallery" : "Galería Multimedia"}
+            {language === "en" ? "Our work" : "Nuestros trabajos"}
           </h2>
           <p className="text-lg text-[#140c03]/70 max-w-2xl mx-auto font-body">
             {language === "en"
@@ -107,7 +135,7 @@ export function MediaGallery() {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
               onClick={() => setSelectedItem(item)}
-              className="relative aspect-[4/3] group cursor-pointer overflow-hidden rounded-2xl bg-[#140c03] border border-[#140c03]/10"
+              className="relative group cursor-pointer overflow-hidden rounded-2xl bg-[#140c03] border border-[#140c03]/10 mx-auto w-full aspect-[4/5]"
             >
               <img
                 src={item.type === "image" ? item.url : item.thumbnail}
@@ -146,27 +174,37 @@ export function MediaGallery() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[100] bg-[#140c03]/95 backdrop-blur-xl flex items-center justify-center p-4 md:p-12"
+            onClick={handleClose}
+            className="fixed inset-0 z-[60] bg-[#140c03]/95 backdrop-blur-xl flex items-center justify-center p-4 md:p-8"
           >
-            <button
-              onClick={() => setSelectedItem(null)}
-              className="absolute top-8 right-8 text-[#fcfaf9]/50 hover:text-[#f6d94b] transition-colors p-2"
-            >
-              <X className="w-8 h-8" />
-            </button>
-
             <motion.div
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
-              className="relative max-w-6xl w-full aspect-video rounded-3xl overflow-hidden shadow-2xl border border-white/10"
               onClick={(e) => e.stopPropagation()}
+              className={`relative mx-auto rounded-3xl overflow-hidden shadow-2xl border border-white/10 flex items-center justify-center bg-black ${selectedItem.aspectRatio === "vertical" ? "h-[85vh] aspect-[9/16]" : "w-full max-w-6xl aspect-video md:aspect-[16/9] lg:aspect-video"
+                }`}
             >
+              <div className="absolute top-6 right-6 z-10">
+                <button
+                  onClick={handleClose}
+                  className="p-2 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors shadow-lg"
+                >
+                  <X className="w-8 h-8" />
+                </button>
+              </div>
               {selectedItem.type === "image" ? (
                 <img
                   src={selectedItem.url}
                   alt={language === "en" ? selectedItem.titleEn : selectedItem.titleEs}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
+                />
+              ) : selectedItem.url.endsWith(".mp4") ? (
+                <video
+                  src={selectedItem.url}
+                  className="w-full h-full object-contain"
+                  controls
+                  autoPlay
                 />
               ) : (
                 <iframe
@@ -177,7 +215,7 @@ export function MediaGallery() {
                 />
               )}
 
-              <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-[#140c03] to-transparent">
+              <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-[#140c03] to-transparent pointer-events-none">
                 <p className="text-[#f6d94b] text-sm font-bold uppercase tracking-widest mb-2 font-body">
                   {language === "en" ? selectedItem.categoryEn : selectedItem.categoryEs}
                 </p>

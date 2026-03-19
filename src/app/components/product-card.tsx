@@ -19,15 +19,15 @@ export function ProductCard({ product, index }: ProductCardProps) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.8, delay: index * 0.1, ease: [0.16, 1, 0.3, 1] }}
-      className="group bg-white rounded-3xl shadow-sm border border-[#140c03]/10 overflow-hidden hover:border-[#c23b24]/40 hover:shadow-md transition-all duration-500"
+      className="group bg-white rounded-2xl shadow-sm border border-[#140c03]/10 overflow-hidden hover:border-[#c23b24]/40 hover:shadow-md transition-all duration-500"
     >
-      <div className="flex flex-col p-8">
+      <div className="flex flex-col p-6">
         {/* Product Image */}
-        <div className="relative rounded-2xl overflow-hidden bg-[#140c03]/5 border border-[#140c03]/5 flex items-center justify-center p-8 group/img">
+        <div className="relative rounded-xl overflow-hidden bg-[#140c03]/5 border border-[#140c03]/5 flex items-center justify-center p-6 group/img">
           <img
             src={product.image}
             alt={t(product.nameKey)}
-            className="w-full h-72 object-cover rounded-xl group-hover/img:scale-105 transition-transform duration-700 ease-out"
+            className="w-full h-52 object-cover rounded-lg group-hover/img:scale-105 transition-transform duration-700 ease-out"
           />
           <div className="absolute top-4 right-4 z-10">
             <div className="px-4 py-1.5 rounded-full bg-[#c23b24] text-white text-xs font-bold uppercase tracking-widest shadow-sm">
@@ -41,12 +41,12 @@ export function ProductCard({ product, index }: ProductCardProps) {
 
         {/* Product Details */}
         <div className="flex flex-col justify-between py-2">
-          <div className="space-y-6">
+          <div className="space-y-4">
             <div>
-              <h3 className="text-3xl font-bold text-[#140c03] mb-3 font-heading tracking-tight italic group-hover:text-[#c23b24] transition-colors">
+              <h3 className="text-2xl font-bold text-[#140c03] mb-2 font-heading tracking-tight italic group-hover:text-[#c23b24] transition-colors">
                 {t(product.nameKey)}
               </h3>
-              <p className="text-[#140c03]/70 font-body leading-relaxed text-lg">
+              <p className="text-[#140c03]/70 font-body leading-relaxed text-base line-clamp-2">
                 {t(product.descKey)}
               </p>
             </div>
@@ -92,14 +92,14 @@ export function ProductCard({ product, index }: ProductCardProps) {
             </div>
           </div>
 
-          <div className="mt-8">
+          <div className="mt-6">
             <Button
               asChild
-              className="w-full bg-[#c23b24] hover:bg-[#c23b24]/90 text-white group/btn py-6 text-lg rounded-xl shadow-lg shadow-[#c23b24]/20 border-none relative overflow-hidden"
+              className="w-full bg-[#c23b24] hover:bg-[#c23b24]/90 text-white group/btn py-5 text-base rounded-xl shadow-lg shadow-[#c23b24]/20 border-none relative overflow-hidden"
             >
               <Link to={`/products/${product.id}`}>
                 <span className="relative z-10 font-bold tracking-wide">{t("products.viewDetails")}</span>
-                <ArrowRight className="ml-2 w-5 h-5 relative z-10 group-hover/btn:translate-x-1 transition-transform" />
+                <ArrowRight className="ml-2 w-4 h-4 relative z-10 group-hover/btn:translate-x-1 transition-transform" />
               </Link>
             </Button>
           </div>

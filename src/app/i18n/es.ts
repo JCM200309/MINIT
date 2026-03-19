@@ -25,13 +25,13 @@ export const es = {
   // Products
   "products.title": "Nuestros Productos",
   "products.subtitle": "Elija la solución retardante de fuego adecuada para sus necesidades específicas",
-  "products.wood.name": "MiniT Maderas",
+  "products.wood.name": "MINIT Maderas",
   "products.wood.desc": "Retardante de fuego para maderas y materiales celulósicos",
-  "products.textile.name": "MiniT Textil",
+  "products.textile.name": "MINIT Textil",
   "products.textile.desc": "Protección especializada para telas y textiles",
-  "products.total.name": "MiniT Total",
+  "products.total.name": "MINIT Total",
   "products.total.desc": "Retardante de fuego universal para múltiples materiales",
-  "products.building.name": "MiniT Edificios",
+  "products.building.name": "MINIT Edificios",
   "products.building.desc": "Protección contra incendios para construcción y estructuras",
   "products.viewDetails": "Ver Detalles",
   "products.buyOnline": "Compre en Línea",
@@ -111,4 +111,25 @@ export const es = {
 
   // Reviews
   "reviews.title": "Clientes que confiaron en nosotros",
+
+  // Advantages
+  "advantages.title": "¿Por qué elegir MiniT?",
+  "advantages.subtitle": "La tecnología avanzada y el rendimiento superior diferencian a MiniT de las soluciones tradicionales.",
+  "advantages.feature": "Característica",
+  "advantages.minit": "MiniT",
+  "advantages.traditional": "Tradicional",
+  "advantages.comp1": "Protección duradera",
+  "advantages.comp2": "Aplicación invisible",
+  "advantages.comp3": "Fórmula no tóxica",
+  "advantages.comp4": "Amplia compatibilidad de materiales",
+  "advantages.comp5": "Aplicación rápida",
+  "advantages.comp6": "Sin residuos ni olores",
+  "advantages.card1.title": "Protección Superior",
+  "advantages.card1.desc": "Hasta un 99.9% de efectividad en la prevención de la ignición y propagación de llamas en materiales probados.",
+  "advantages.card2.title": "Fórmula Ecológica",
+  "advantages.card2.desc": "Formulación no tóxica y segura para el medio ambiente que cumple con todos los estándares internacionales.",
+  "advantages.card3.title": "Rentable",
+  "advantages.card3.desc": "La protección duradera reduce los costos de reaplicación y proporciona un excelente valor a lo largo del tiempo.",
+  "advantages.card4.title": "Aplicación Fácil",
+  "advantages.card4.desc": "El proceso de aplicación simple no requiere equipo especializado ni capacitación extensa.",
 };

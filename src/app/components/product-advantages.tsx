@@ -1,59 +1,62 @@
 import { motion } from "motion/react";
 import { Check, X } from "lucide-react";
-
-const comparisons = [
-  {
-    feature: "Long-lasting protection",
-    minit: true,
-    traditional: false,
-  },
-  {
-    feature: "Invisible application",
-    minit: true,
-    traditional: false,
-  },
-  {
-    feature: "Non-toxic formula",
-    minit: true,
-    traditional: false,
-  },
-  {
-    feature: "Wide material compatibility",
-    minit: true,
-    traditional: true,
-  },
-  {
-    feature: "Quick application",
-    minit: true,
-    traditional: false,
-  },
-  {
-    feature: "No residue or odor",
-    minit: true,
-    traditional: false,
-  },
-];
-
-const advantages = [
-  {
-    title: "Superior Protection",
-    description: "Up to 99.9% effectiveness in preventing ignition and flame spread across tested materials.",
-  },
-  {
-    title: "Eco-Friendly Formula",
-    description: "Non-toxic, environmentally safe formulation that meets all international environmental standards.",
-  },
-  {
-    title: "Cost-Effective",
-    description: "Long-lasting protection reduces reapplication costs and provides excellent value over time.",
-  },
-  {
-    title: "Easy Application",
-    description: "Simple application process requires no specialized equipment or extensive training.",
-  },
-];
+import { useLanguage } from "../context/language-context";
 
 export function ProductAdvantages() {
+  const { t } = useLanguage();
+
+  const comparisons = [
+    {
+      feature: t("advantages.comp1"),
+      minit: true,
+      traditional: false,
+    },
+    {
+      feature: t("advantages.comp2"),
+      minit: true,
+      traditional: false,
+    },
+    {
+      feature: t("advantages.comp3"),
+      minit: true,
+      traditional: false,
+    },
+    {
+      feature: t("advantages.comp4"),
+      minit: true,
+      traditional: true,
+    },
+    {
+      feature: t("advantages.comp5"),
+      minit: true,
+      traditional: false,
+    },
+    {
+      feature: t("advantages.comp6"),
+      minit: true,
+      traditional: false,
+    },
+  ];
+
+  const advantages = [
+    {
+      title: t("advantages.card1.title"),
+      description: t("advantages.card1.desc"),
+    },
+    {
+      title: t("advantages.card2.title"),
+      description: t("advantages.card2.desc"),
+    },
+    {
+      title: t("advantages.card3.title"),
+      description: t("advantages.card3.desc"),
+    },
+    {
+      title: t("advantages.card4.title"),
+      description: t("advantages.card4.desc"),
+    },
+  ];
+
   return (
     <section id="about" className="py-24 bg-[#fcfaf9] border-t border-[#140c03]/10 relative overflow-hidden">
       {/* Subtle Pattern */}
@@ -68,10 +71,10 @@ export function ProductAdvantages() {
           className="text-center max-w-3xl mx-auto mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-[#140c03] mb-6 font-heading tracking-tight italic">
-            Why Choose MiniT?
+            {t("advantages.title")}
           </h2>
           <p className="text-xl text-[#140c03]/70 font-body">
-            Advanced technology and superior performance set MiniT Fire Retardant apart from traditional solutions.
+            {t("advantages.subtitle")}
           </p>
         </motion.div>
 
@@ -85,13 +88,13 @@ export function ProductAdvantages() {
         >
           <div className="bg-white rounded-2xl shadow-sm overflow-hidden border border-[#140c03]/10">
             <div className="grid grid-cols-3 gap-4 p-6 bg-[#140c03] border-b border-[#140c03]/10">
-              <div className="text-[#fcfaf9] font-bold text-lg font-heading tracking-wider uppercase">Feature</div>
-              <div className="text-[#c23b24] font-bold text-lg text-center font-heading tracking-wider uppercase">MiniT</div>
-              <div className="text-[#fcfaf9]/70 font-bold text-lg text-center font-heading tracking-wider uppercase">Traditional</div>
+              <div className="text-[#fcfaf9] font-bold text-lg font-heading tracking-wider uppercase">{t("advantages.feature")}</div>
+              <div className="text-[#c23b24] font-bold text-lg text-center font-heading tracking-wider uppercase">{t("advantages.minit")}</div>
+              <div className="text-[#fcfaf9]/70 font-bold text-lg text-center font-heading tracking-wider uppercase">{t("advantages.traditional")}</div>
             </div>
             {comparisons.map((item, index) => (
               <div
-                key={item.feature}
+                key={index}
                 className={`grid grid-cols-3 gap-4 p-6 items-center ${index % 2 === 0 ? "bg-white" : "bg-[#140c03]/[0.02]"
                   }`}
               >

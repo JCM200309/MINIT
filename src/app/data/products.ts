@@ -40,7 +40,13 @@ export const products: Product[] = [
     detailsEn: {
       about: "MiniT Wood is a Class A Fire Retardant, made from natural salts, which results in a colorless, odorless liquid that does not leave active fire-fighting agents, dispersants, and penetrants completely absorbent, so it does not modify the toxicity of the smoke of the treated material, only reduces the amount of smoke or reduces fire generation. It prevents fire propagation and at the same time, helps to retard the generation of smoke and gases up to 70%. Does not modify the color or texture of the treated material, only reduces the amount of smoke or reduces the generation of fire. It is a NON-TOXIC product, FRIENDLY WITH THE ENVIRONMENT, BIODEGRADABLE and PET FRIENDLY.",
       uses: [
-        "Permeable materials such as: wood, cardboard, straw, paper, mdf, osb, agglomerate, etc.",
+        "Wood",
+        "Cardboard",
+        "Straw",
+        "Paper",
+        "MDF",
+        "OSB",
+        "Agglomerate",
         "In the case of use on wood, it also prevents the attack of fungi, bacteria, moths and termites.",
       ],
       packaging: [
@@ -55,16 +61,23 @@ export const products: Product[] = [
       chemicalPresentation: "The chemical comes in a powder inside a bag with the exact amount for its dilution with regular water until the bag is completely filled. (The bag should not be diluted more than indicated on the bag, as it will lose its fire retardant properties).",
     },
     detailsEs: {
-      about: "Acerca de MiniT MADERAS (IGNÍFUGO Y PRESERVADOR). Es Retardante de Fuego Clase A, elaborado a partir de sales naturales, que de como resultado un líquido incoloro, inodoro, no tóxico que posee agentes activos contra el fuego, dispersantes y penetrantes completamente absorbentes, por lo que no modifica la toxicidad del humo del material tratado, solo disminuye la cantidad de humo o reduce la generación de fuego. Evita la propagación del fuego y, al mismo tiempo, contribuye a retardar la generación de humo y gases hasta en un 70%. No modifica el color ni la textura del material tratado, solo disminuye la cantidad de humo o reduce la generación de fuego. Es un producto NO TÓXICO, AMIGABLE CON EL MEDIO AMBIENTE, BIODEGRADABLE y PET FRIENDLY.",
+      about: "Acerca de MINIT MADERAS (IGNÍFUGO Y PRESERVADOR). Es Retardante de Fuego Clase A, elaborado a partir de sales naturales, que de como resultado un líquido incoloro, inodoro, no tóxico que posee agentes activos contra el fuego, dispersantes y penetrantes completamente absorbentes, por lo que no modifica la toxicidad del humo del material tratado, solo disminuye la cantidad de humo o reduce la generación de fuego. Evita la propagación del fuego y, al mismo tiempo, contribuye a retardar la generación de humo y gases hasta en un 70%. No modifica el color ni la textura del material tratado, solo disminuye la cantidad de humo o reduce la generación de fuego. Es un producto NO TÓXICO, AMIGABLE CON EL MEDIO AMBIENTE, BIODEGRADABLE y PET FRIENDLY.",
       uses: [
-        "Se utiliza en materiales permeables tales como: maderas, cartón, paja, papel, mdf, osb, aglomerados, etc. En el caso del uso en madera, también previene el ataque de hongos, bacterias, polillas y termitas.",
+        "Maderas",
+        "Cartón",
+        "Paja",
+        "Papel",
+        "MDF",
+        "OSB",
+        "Aglomerados",
+        "En el caso del uso en madera, también previene el ataque de hongos, bacterias, polillas y termitas.",
       ],
       packaging: [
         "Granel: bolsas de 25 kg.",
         "Bidón: 5 y 10 litros.",
       ],
       certifications: [
-        "El RETARDANTE DE FUEGO MINIT está certificado y ensayado por el Instituto Nacional de Tecnología e Industria (INTI) y por laboratorios autorizados en EE. UU. Cumple con los más altos estándares de las siguientes normas:",
+        "Certificado y ensayado por el Instituto Nacional de Tecnología e Industria (INTI) y por laboratorios autorizados en EE. UU. Cumple con los más altos estándares de las siguientes normas:",
         "IRAM 11910-3",
         "NBR 9442:1986",
         "ASTM E 162:1994",

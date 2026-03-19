@@ -5,11 +5,10 @@ import { FinalCTA } from "../components/final-cta";
 
 export function ContactPage() {
   return (
-    <div className="min-h-screen">
-      <Navigation />
+    <div className="min-h-screen bg-[#140c03]">
+      <Navigation forceDark={true} />
       <div className="pt-20">
         <ContactForm />
-        <FinalCTA />
       </div>
       <Footer />
     </div>

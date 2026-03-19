@@ -111,4 +111,25 @@ export const en = {
 
   // Reviews
   "reviews.title": "Customers Who Trusted Us",
+
+  // Advantages
+  "advantages.title": "Why Choose MiniT?",
+  "advantages.subtitle": "Advanced technology and superior performance set MiniT Fire Retardant apart from traditional solutions.",
+  "advantages.feature": "Feature",
+  "advantages.minit": "MiniT",
+  "advantages.traditional": "Traditional",
+  "advantages.comp1": "Long-lasting protection",
+  "advantages.comp2": "Invisible application",
+  "advantages.comp3": "Non-toxic formula",
+  "advantages.comp4": "Wide material compatibility",
+  "advantages.comp5": "Quick application",
+  "advantages.comp6": "No residue or odor",
+  "advantages.card1.title": "Superior Protection",
+  "advantages.card1.desc": "Up to 99.9% effectiveness in preventing ignition and flame spread across tested materials.",
+  "advantages.card2.title": "Eco-Friendly Formula",
+  "advantages.card2.desc": "Non-toxic, environmentally safe formulation that meets all international environmental standards.",
+  "advantages.card3.title": "Cost-Effective",
+  "advantages.card3.desc": "Long-lasting protection reduces reapplication costs and provides excellent value over time.",
+  "advantages.card4.title": "Easy Application",
+  "advantages.card4.desc": "Simple application process requires no specialized equipment or extensive training.",
 };

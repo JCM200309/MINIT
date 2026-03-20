@@ -32,7 +32,7 @@ export function AboutPage() {
               <Flame className="w-10 h-10 text-[#f6d94b]" />
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-[#fcfaf9] mb-6 font-heading tracking-tight italic">
-              {language === "en" ? "About MiniT" : "Acerca de MiniT"}
+              {language === "en" ? "About MINIT" : "Acerca de MINIT"}
             </h1>
             <p className="text-xl text-[#fcfaf9]/70 font-body">
               {language === "en"

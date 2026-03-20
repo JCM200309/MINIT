@@ -43,7 +43,7 @@ export function ProductPreview() {
                   <img
                     src={product.image}
                     alt={t(product.nameKey)}
-                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500 p-2"
                   />
                   <div className="absolute top-3 right-3">
                     <div className="px-3 py-1 rounded-full bg-[#140c03] text-white text-xs font-semibold tracking-wide shadow-sm border border-white/10">

@@ -55,15 +55,16 @@ export function ProductDetailPage() {
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              className="relative rounded-2xl overflow-hidden shadow-2xl bg-[#140c03]/50 ring-1 ring-white/10 max-h-[40vh] md:max-h-[60vh] flex items-center justify-center"
+              whileHover={{ scale: 1.01 }}
+              transition={{ duration: 0.6, type: "spring", stiffness: 400, damping: 25 }}
+              className="relative flex items-center justify-center group cursor-pointer"
             >
+              <div className="absolute inset-0 bg-[#c23b24]/5 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
               <img
                 src={product.image}
                 alt={t(product.nameKey)}
-                className="w-full h-full object-cover brightness-90 contrast-125 grayscale-[0.1]"
+                className="w-full h-auto max-h-[70vh] object-contain rounded-2xl shadow-2xl ring-1 ring-white/10 relative z-10 transition-all duration-500 group-hover:shadow-[0_30px_60px_-15px_rgba(0,0,0,0.7)] group-hover:ring-white/20"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#140c03]/90 to-transparent" />
             </motion.div>
 
             {/* Product Info */}
@@ -126,7 +127,7 @@ export function ProductDetailPage() {
       <section className="py-24 bg-[#fcfaf9]">
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-12 gap-8 items-stretch">
-            
+
             {/* Left Column: About this product */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
@@ -152,7 +153,7 @@ export function ProductDetailPage() {
 
             {/* Right Column: Details and Certifications */}
             <div className="lg:col-span-8 flex flex-col gap-8">
-              
+
               {/* Top Block: Uses, Packaging, Chemical Presentation */}
               <motion.div
                 initial={{ opacity: 0, x: 20 }}
@@ -222,7 +223,7 @@ export function ProductDetailPage() {
               >
                 {/* Background accent */}
                 <div className="absolute top-0 right-0 w-32 h-32 bg-[#c23b24]/20 blur-3xl rounded-full -mr-16 -mt-16 group-hover:bg-[#f6d94b]/20 transition-colors duration-500" />
-                
+
                 <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-8">
                   <div className="max-w-xs">
                     <h2 className="text-2xl font-bold text-[#fcfaf9] mb-2 font-heading tracking-tight flex items-center gap-3 italic">
@@ -233,14 +234,23 @@ export function ProductDetailPage() {
                       {language === "en" ? "Tested and approved by international standards." : "Testeado y aprobado bajo estándares internacionales."}
                     </p>
                   </div>
-                  
-                  <div className="flex flex-wrap items-center gap-4">
+
+                  <div className="flex flex-wrap items-center gap-6">
                     {details.certifications.map((cert, index) => (
-                      <div 
+                      <div
                         key={index}
-                        className="px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-white text-sm font-bold backdrop-blur-sm hover:bg-white/10 hover:border-[#f6d94b]/30 transition-all cursor-default"
+                        className="relative w-24 h-24 flex items-center justify-center group/seal"
                       >
-                        {cert}
+                        <div className="absolute inset-0 rounded-full border-2 border-dashed border-[#f6d94b]/30 group-hover/seal:border-[#f6d94b] transition-all duration-300 scale-100 group-hover/seal:scale-110" />
+                        <div className="absolute inset-1.5 rounded-full bg-white/5 backdrop-blur-sm border border-white/10" />
+                        <div className="relative z-10 flex flex-col items-center">
+                          <span className="text-[10px] font-bold text-white text-center leading-tight">
+                            {cert}
+                          </span>
+                          <div className="h-0.5 w-4 bg-[#f6d94b] mt-1 opacity-50" />
+                        </div>
+                        {/* Ribbon effect */}
+                        <div className="absolute -bottom-1 right-2 w-4 h-6 bg-[#f6d94b]/80 clip-path-ribbon opacity-0 group-hover/seal:opacity-100 transition-opacity" />
                       </div>
                     ))}
                   </div>

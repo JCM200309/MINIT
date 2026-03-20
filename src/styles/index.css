@@ -1,3 +1,9 @@
 @import "./fonts.css";
 @import "./theme.css";
 @import "./tailwind.css";
+
+@layer utilities {
+  .clip-path-ribbon {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% 85%, 0% 100%);
+  }
+}

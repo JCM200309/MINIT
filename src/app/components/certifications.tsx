@@ -57,29 +57,45 @@ export function Certifications() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
           {certs.map((cert, index) => (
             <motion.div
               key={cert.name}
-              initial={{ opacity: 0, scale: 0.9, y: 20 }}
-              whileInView={{ opacity: 1, scale: 1, y: 0 }}
+              initial={{ opacity: 0, scale: 0.8, rotate: -10 }}
+              whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              whileHover={{ y: -5 }}
-              className="bg-white/[0.03] backdrop-blur-md border border-white/10 p-8 rounded-2xl flex flex-col items-center text-center group hover:bg-white/[0.05] hover:border-[#f6d94b]/30 transition-all duration-300"
+              transition={{ 
+                type: "spring",
+                stiffness: 260,
+                damping: 20,
+                delay: index * 0.1 
+              }}
+              whileHover={{ scale: 1.05, rotate: 2 }}
+              className="relative aspect-square flex flex-col items-center justify-center p-8 text-center group"
             >
-              <div className="w-16 h-16 rounded-xl bg-[#c23b24]/10 flex items-center justify-center text-[#c23b24] mb-6 group-hover:scale-110 group-hover:bg-[#c23b24]/20 transition-all shadow-[0_0_20px_-5px_rgba(194,59,36,0.2)]">
-                {cert.icon}
+              {/* Seal Background */}
+              <div className="absolute inset-0 rounded-full bg-white/[0.03] backdrop-blur-xl border-2 border-dashed border-white/20 group-hover:border-[#f6d94b]/50 transition-all duration-500 scale-95 group-hover:scale-105" />
+              <div className="absolute inset-2 rounded-full border border-white/10 group-hover:border-[#f6d94b]/20 transition-colors" />
+              
+              <div className="relative z-10">
+                <div className="w-16 h-16 rounded-full bg-[#c23b24]/20 flex items-center justify-center text-[#c23b24] mb-4 mx-auto group-hover:bg-[#f6d94b]/20 group-hover:text-[#f6d94b] transition-all shadow-[0_0_30px_-5px_rgba(194,59,36,0.3)]">
+                  {cert.icon}
+                </div>
+                <h3 className="text-2xl font-bold text-[#fcfaf9] mb-1 font-heading tracking-tight drop-shadow-md">
+                  {cert.name}
+                </h3>
+                <p className="text-[10px] text-[#f6d94b] font-bold uppercase tracking-[0.2em] mb-2 opacity-60 group-hover:opacity-100 transition-opacity">
+                  {cert.desc}
+                </p>
+                <p className="text-[10px] text-[#fcfaf9]/40 font-medium leading-tight max-w-[120px] mx-auto uppercase">
+                  {cert.fullName}
+                </p>
               </div>
-              <h3 className="text-2xl font-bold text-[#fcfaf9] mb-2 font-heading tracking-tight">
-                {cert.name}
-              </h3>
-              <p className="text-sm text-[#fcfaf9]/40 font-semibold mb-3 uppercase tracking-wider">
-                {cert.desc}
-              </p>
-              <p className="text-xs text-[#fcfaf9]/30 font-body leading-tight">
-                {cert.fullName}
-              </p>
+
+              {/* Verified Badge/Tag */}
+              <div className="absolute top-0 right-4 w-8 h-10 bg-[#f6d94b] clip-path-ribbon transform -translate-y-2 opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center">
+                 <div className="w-4 h-4 rounded-full border border-[#140c03]/20" />
+              </div>
             </motion.div>
           ))}
         </div>

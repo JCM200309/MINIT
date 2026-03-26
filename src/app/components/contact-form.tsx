@@ -7,6 +7,8 @@ import { Label } from "./ui/label";
 import { Mail, Building2, User, MessageSquare, Send } from "lucide-react";
 import { toast } from "sonner";
 import { useLanguage } from "../context/language-context";
+import ReCAPTCHA from "react-google-recaptcha";
+import { useRef } from "react";
 
 export function ContactForm() {
   const { t } = useLanguage();
@@ -18,26 +20,58 @@ export function ContactForm() {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const recaptchaRef = useRef<ReCAPTCHA>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    const captchaToken = recaptchaRef.current?.getValue();
+    if (!captchaToken) {
+      toast.error(t("contact.captchaRequired") || "Please verify the CAPTCHA");
+      return;
+    }
+
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    try {
+      const response = await fetch("/api/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          ...formData,
+          captchaToken,
+        }),
+      });
 
-    toast.success(t("contact.success"), {
-      description: t("contact.successDesc"),
-    });
+      const result = await response.json();
 
-    setFormData({
-      name: "",
-      company: "",
-      email: "",
-      message: "",
-    });
+      if (response.ok) {
+        toast.success(t("contact.success"), {
+          description: t("contact.successDesc"),
+        });
 
-    setIsSubmitting(false);
+        setFormData({
+          name: "",
+          company: "",
+          email: "",
+          message: "",
+        });
+        
+        recaptchaRef.current?.reset();
+      } else {
+        toast.error(t("contact.error") || "Error sending message", {
+          description: result.error || "Please try again later",
+        });
+      }
+    } catch (error) {
+      toast.error(t("contact.error") || "Error sending message", {
+        description: "Network error. Please check your connection.",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (
@@ -148,6 +182,14 @@ export function ContactForm() {
                     required
                   />
                 </div>
+              </div>
+
+              <div className="flex justify-center py-2">
+                <ReCAPTCHA
+                  ref={recaptchaRef}
+                  sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
+                  theme="dark"
+                />
               </div>
 
               <Button

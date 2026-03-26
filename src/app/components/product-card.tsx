@@ -55,6 +55,8 @@ export function ProductCard({ product, index }: ProductCardProps) {
             <div className="grid grid-cols-2 gap-4">
               <a
                 href="https://listado.mercadolibre.com.ar/pagina/minitignifugos/?item_id=MLA1127759488&category_id=MLA413242&client=recoview-selleritems&recos_listing=true"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center gap-3 text-sm text-[#c23b24] hover:text-[#c23b24]/80 transition-all group/link font-body"
               >
                 <div className="p-2 rounded-lg bg-[#c23b24]/10 group-hover/link:bg-[#c23b24] group-hover/link:text-white transition-colors border border-[#c23b24]/20 group-hover/link:border-transparent">
@@ -64,6 +66,8 @@ export function ProductCard({ product, index }: ProductCardProps) {
               </a>
               <a
                 href={product.technicalSheet}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center gap-3 text-sm text-[#140c03]/60 hover:text-[#140c03] transition-all group/link font-body"
               >
                 <div className="p-2 rounded-lg bg-[#140c03]/5 group-hover/link:bg-[#140c03] group-hover/link:text-white transition-colors border border-[#140c03]/10 group-hover/link:border-transparent">
@@ -73,6 +77,8 @@ export function ProductCard({ product, index }: ProductCardProps) {
               </a>
               <a
                 href={product.certificateSheet}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center gap-3 text-sm text-[#140c03]/60 hover:text-[#140c03] transition-all group/link font-body"
               >
                 <div className="p-2 rounded-lg bg-[#140c03]/5 group-hover/link:bg-[#140c03] group-hover/link:text-white transition-colors border border-[#140c03]/10 group-hover/link:border-transparent">
@@ -82,6 +88,8 @@ export function ProductCard({ product, index }: ProductCardProps) {
               </a>
               <a
                 href={product.safetySheet}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center gap-3 text-sm text-[#140c03]/60 hover:text-[#140c03] transition-all group/link font-body"
               >
                 <div className="p-2 rounded-lg bg-[#140c03]/5 group-hover/link:bg-[#140c03] group-hover/link:text-white transition-colors border border-[#140c03]/10 group-hover/link:border-transparent">

@@ -77,6 +77,40 @@ const mediaItems: MediaItem[] = [
     categoryEs: "Tutorial",
     aspectRatio: "vertical",
   },
+  {
+    id: 7,
+    type: "video",
+    url: "/gallery/videoCertificacion.mp4",
+    thumbnail: "/gallery/thumb_videoCertificacion.png",
+    titleEn: "Official Certifications of MINIT products",
+    titleEs: "Certificaciones Oficiales de productos MINIT",
+    categoryEn: "Certifications",
+    categoryEs: "Certificaciones",
+    aspectRatio: "vertical",
+  },
+  {
+    id: 8,
+    type: "video",
+    url: "/gallery/tutorialCortinas.mp4",
+    thumbnail: "/gallery/thumb_tutorialCortinas.png",
+    titleEn: "How to apply MINIT textiles in curtains",
+    titleEs: "Como aplicar MINIT textiles en cortinas",
+    categoryEn: "Tutorial",
+    categoryEs: "Tutorial",
+    aspectRatio: "vertical",
+  },
+  {
+    id: 9,
+    type: "video",
+    url: "/gallery/videoMadera.mp4",
+    thumbnail: "/gallery/thumb_videoMadera.png",
+    titleEn: "PONER TITULO",
+    titleEs: "PONER TITULO",
+    categoryEn: "Tutorial",
+    categoryEs: "Tutorial",
+    aspectRatio: "vertical",
+  },
+
 ];
 
 export function MediaGallery() {

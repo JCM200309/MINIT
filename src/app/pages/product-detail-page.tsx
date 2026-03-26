@@ -88,13 +88,13 @@ export function ProductDetailPage() {
 
               {/* Quick Actions */}
               <div className="flex flex-wrap gap-4">
-                <a href={(product.buyOnline)}>
+                <a href={(product.buyOnline)} target="_blank" rel="noopener noreferrer">
                   <Button className="bg-[#c23b24] hover:bg-[#c23b24]/90 text-white font-semibold">
                     <ExternalLink className="w-4 h-4 mr-2" />
                     {t("products.buyOnline")}
                   </Button>
                 </a>
-                <a href={product.technicalSheet}>
+                <a href={product.technicalSheet} target="_blank" rel="noopener noreferrer">
                   <Button variant="outline" className="border-white/20 text-[#fcfaf9] hover:bg-white/10 bg-transparent font-semibold shadow-none">
                     <FileText className="w-4 h-4 mr-2" />
                     {t("products.technicalSheet")}
@@ -105,6 +105,8 @@ export function ProductDetailPage() {
               <div className="grid grid-cols-2 gap-4 pt-6 border-t border-white/10">
                 <a
                   href={product.certificateSheet}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex items-center gap-2 text-sm text-[#fcfaf9]/70 hover:text-[#fcfaf9] transition-colors font-medium"
                 >
                   <Award className="w-4 h-4 text-[#c23b24]" />
@@ -112,6 +114,8 @@ export function ProductDetailPage() {
                 </a>
                 <a
                   href={product.safetySheet}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex items-center gap-2 text-sm text-[#fcfaf9]/70 hover:text-[#fcfaf9] transition-colors font-medium"
                 >
                   <FileText className="w-4 h-4 text-[#c23b24]" />

@@ -38,6 +38,8 @@ export const es = {
   "products.technicalSheet": "Ficha Técnica",
   "products.certificates": "Certificados",
   "products.safetySheet": "Hoja de Seguridad",
+  "products.lacas.name": "MINIT Lacas",
+  "products.lacas.desc": "Retardante de fuego para lacas",
 
   // Product Details
   "product.about": "Acerca de este producto",

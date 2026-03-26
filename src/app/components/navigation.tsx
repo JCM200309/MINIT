@@ -4,7 +4,7 @@ import { Globe, Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import { useLanguage } from "../context/language-context";
 import { Link, useLocation } from "react-router";
-import logoNew from "../../assets/minitLogo_v2.png";
+
 
 interface NavigationProps {
   forceDark?: boolean;
@@ -63,7 +63,7 @@ export function Navigation({ forceDark = false }: NavigationProps) {
         <div className="container mx-auto px-4 md:px-6 py-4">
           <div className="flex items-center justify-between">
             <Link to="/" className="flex items-center gap-3">
-              <img src={logoNew} alt="MINIT Logo" className="h-12 md:h-16 w-auto" />
+              <img src="/Logos/minitLogo3.jpeg" alt="MINIT Logo" className="h-12 md:h-16 w-auto" />
               <span className="text-lg md:text-xl font-bold text-[#fcfaf9] tracking-tight">
                 MINIT
               </span>

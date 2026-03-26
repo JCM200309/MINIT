@@ -38,6 +38,8 @@ export const en = {
   "products.technicalSheet": "Technical Sheet",
   "products.certificates": "Certificates",
   "products.safetySheet": "Safety Sheet",
+  "products.lacas.name": "MINIT Lacas",
+  "products.lacas.desc": "Fire retardant for lacas",
 
   // Product Details
   "product.about": "About this product",

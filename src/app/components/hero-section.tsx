@@ -60,9 +60,10 @@ export function HeroSection() {
               </span>
             </h1>
 
-            <p className="text-xl text-[#fcfaf9]/80 leading-relaxed max-w-xl font-body">
-              {t("hero.subtitle")}
-            </p>
+            <p 
+              className="text-xl text-[#fcfaf9]/80 leading-relaxed max-w-xl font-body"
+              dangerouslySetInnerHTML={{ __html: t("hero.subtitle") }}
+            />
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4 relative z-10">
               <Button

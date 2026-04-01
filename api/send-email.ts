@@ -27,6 +27,7 @@ export default async function handler(req: Request) {
     );
 
     const recaptchaData = await recaptchaRes.json();
+    console.log(recaptchaData)
 
     if (!recaptchaData.success) {
       return new Response(JSON.stringify({ error: 'Invalid CAPTCHA' }), {

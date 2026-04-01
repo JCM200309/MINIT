@@ -151,12 +151,12 @@ export function MediaGallery() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-[#140c03] mb-6 font-heading italic">
-            {language === "en" ? "Our work" : "Nuestros trabajos"}
+            {language === "en" ? "Our experience at your service" : "Nuestra experiencia a su servicio"}
           </h2>
           <p className="text-lg text-[#140c03]/70 max-w-2xl mx-auto font-body">
             {language === "en"
-              ? "Witness the power of MINIT technology through our collection of tests, applications, and industrial success stories."
-              : "Sea testigo del poder de la tecnología MINIT a través de nuestra colección de pruebas, aplicaciones e historias de éxito industrial."}
+              ? "Witness the power of MINIT technology through our trials, applications, and success stories."
+              : "Sea testigo del poder de la tecnología MINIT a través de nuestros ensayos, aplicaciones e historias de éxito."}
           </p>
         </motion.div>
 

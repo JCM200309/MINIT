@@ -10,7 +10,7 @@ export const es = {
   "hero.badge": "Tecnología Avanzada de Protección contra Incendios",
   "hero.title": "Seguridad para  ",
   "hero.titleHighlight": ["tu Empresa", "tu Familia", "tu Futuro", "lo que más importa"],
-  "hero.subtitle": "En MINIT Ignífugos nos dedicamos a desarrollar y suministrar soluciones de protección pasiva contra incendios de la más alta calidad, respaldadas por certificaciones nacionales e internacionales y el reconocimiento de profesionales, organismos técnicos y clientes en todo el mundo.",
+  "hero.subtitle": "En <strong>MINIT Ignífugos</strong> nos dedicamos a desarrollar soluciones de protección contra incendios de la más alta calidad, respaldadas por certificaciones nacionales e internacionales y el reconocimiento de profesionales, organismos técnicos y clientes en todo el mundo.",
   "hero.requestQuote": "Solicitar Cotización",
   "hero.learnMore": "Más Información",
   "hero.stat1": "Efectivo",
@@ -18,9 +18,14 @@ export const es = {
   "hero.stat3": "Materiales",
 
   // Product Overview
-  "overview.title": "Nuestras Soluciones Retardantes de Fuego",
+  "overview.title": "Productos",
   "overview.subtitle": "Productos retardantes de fuego de grado profesional diseñados para proteger diversos materiales. Cada formulación está específicamente diseñada para un rendimiento y seguridad óptimos.",
   "overview.viewAll": "Ver Todos los Productos",
+
+
+  //Product characteristics
+  "product.characteristics.title": "Nuestras Soluciones Retardantes de Fuego",
+  "product.characteristics.subtitle": "Nuestros productos retardantes de fuego están diseñados para inhibir la ignición y retardar el desarrollo del fuego y propagación del fuego, protegiendo tanto a personas como bienes. ",
 
   // Products
   "products.title": "Nuestros Productos",
@@ -46,6 +51,15 @@ export const es = {
   "product.uses": "Usos",
   "product.packaging": "Presentación",
   "product.certifications": "Certificaciones",
+  "certifications.title": "Nuestras Certificaciones",
+  "certifications.subtitle": "Todos nuestros productos son rigurosamente probados y certificados por organismos líderes nacionales e internacionales.",
+  "memberships.title": "Organizaciones de las que formamos parte",
+  "memberships.cemera.name": "CEMERA",
+  "memberships.cemera.fullName": "Cámara de Ejecutores de Medidas contra Incendios",
+  "memberships.cemera.desc": "Socio Activo",
+  "memberships.nfa.name": "NFPA",
+  "memberships.nfa.fullName": "National Fire Protection Association",
+  "memberships.nfa.desc": "Miembro Internacional",
   "product.chemicalPresentation": "Presentación del Químico",
   "product.backToProducts": "Volver a Productos",
 
@@ -130,11 +144,11 @@ export const es = {
   "advantages.comp5": "Aplicación rápida",
   "advantages.comp6": "Sin residuos ni olores",
   "advantages.card1.title": "Protección Superior",
-  "advantages.card1.desc": "Hasta un 99.9% de efectividad en la prevención de la ignición y propagación de llamas en materiales probados.",
+  "advantages.card1.desc": "Alta efectividad certificada en el retardo de ignición y propagación de llamas en materiales probados.",
   "advantages.card2.title": "Fórmula Ecológica",
   "advantages.card2.desc": "Formulación no tóxica y segura para el medio ambiente que cumple con todos los estándares internacionales.",
   "advantages.card3.title": "Rentable",
-  "advantages.card3.desc": "La protección duradera reduce los costos de reaplicación y proporciona un excelente valor a lo largo del tiempo.",
+  "advantages.card3.desc": "Bajo costo de aplicación y proporciona un alto valor agregado en la seguridad de su espacio.",
   "advantages.card4.title": "Aplicación Fácil",
   "advantages.card4.desc": "El proceso de aplicación simple no requiere equipo especializado ni capacitación extensa.",
 };

@@ -39,10 +39,10 @@ export function ProductOverview() {
           className="text-center max-w-3xl mx-auto mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-[#140c03] mb-6 font-heading italic">
-            {t("overview.title")}
+            {t("product.characteristics.title")}
           </h2>
           <p className="text-xl text-[#140c03]/70 leading-relaxed font-body">
-            {t("overview.subtitle")}
+            {t("product.characteristics.subtitle")}
           </p>
         </motion.div>
 

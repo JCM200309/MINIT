@@ -10,7 +10,7 @@ export const en = {
   "hero.badge": "Advanced Fire Protection Technology",
   "hero.title": "Safety for ",
   "hero.titleHighlight": ["your Business", "your Family", "your Future", "what matters most"],
-  "hero.subtitle": "At MINIT Fireproofs we are dedicated to developing and supplying the highest quality passive fire protection solutions, backed by national and international certifications and the recognition of professionals, technical bodies and customers worldwide.",
+  "hero.subtitle": "At <strong>MINIT Fireproofs</strong> we are dedicated to developing and supplying the highest quality passive fire protection solutions, backed by national and international certifications and the recognition of professionals, technical bodies and customers worldwide.",
   "hero.requestQuote": "Request a Quote",
   "hero.learnMore": "Learn More",
   "hero.stat1": "Effective",
@@ -18,9 +18,14 @@ export const en = {
   "hero.stat3": "Materials",
 
   // Product Overview
-  "overview.title": "Our Fire Retardant Solutions",
-  "overview.subtitle": "Professional-grade fire retardant products designed to protect various materials. Each formulation is specifically engineered for optimal performance and safety.",
+  "overview.title": "Our Products",
+  "overview.subtitle": "Professional-grade fire retardant products designed to protect a variety of materials. Each formulation is specifically designed for optimal performance and safety.",
   "overview.viewAll": "View All Products",
+
+  //Product Characteristics
+
+  "product.characteristics.title": "Our Fire Retardant Solutions",
+  "product.characteristics.subtitle": "Our fire retardant products are designed to inhibit ignition and slow the development and spread of fire, protecting both people and property.",
 
   // Products
   "products.title": "Our Products",
@@ -46,6 +51,15 @@ export const en = {
   "product.uses": "Uses",
   "product.packaging": "Packaging",
   "product.certifications": "Certifications",
+  "certifications.title": "Our Certifications",
+  "certifications.subtitle": "All our products are rigorously tested and certified by leading national and international organizations.",
+  "memberships.title": "Organizations we are part of",
+  "memberships.cemera.name": "CEMERA",
+  "memberships.cemera.fullName": "Cámara de Ejecutores de Medidas contra Incendios",
+  "memberships.cemera.desc": "Active Member",
+  "memberships.nfa.name": "NFPA",
+  "memberships.nfa.fullName": "National Fire Protection Association",
+  "memberships.nfa.desc": "International Member",
   "product.chemicalPresentation": "Chemical Presentation",
   "product.backToProducts": "Back to Products",
 
@@ -130,11 +144,11 @@ export const en = {
   "advantages.comp5": "Quick application",
   "advantages.comp6": "No residue or odor",
   "advantages.card1.title": "Superior Protection",
-  "advantages.card1.desc": "Up to 99.9% effectiveness in preventing ignition and flame spread across tested materials.",
+  "advantages.card1.desc": "Certified high effectiveness in delaying ignition and flame spread in tested materials.",
   "advantages.card2.title": "Eco-Friendly Formula",
   "advantages.card2.desc": "Non-toxic, environmentally safe formulation that meets all international environmental standards.",
   "advantages.card3.title": "Cost-Effective",
-  "advantages.card3.desc": "Long-lasting protection reduces reapplication costs and provides excellent value over time.",
+  "advantages.card3.desc": "Low application cost and provides high added value in the security of your space.",
   "advantages.card4.title": "Easy Application",
   "advantages.card4.desc": "Simple application process requires no specialized equipment or extensive training.",
 };

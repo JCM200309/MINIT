@@ -36,8 +36,9 @@ export function AboutPage() {
             </h1>
             <p className="text-xl text-[#fcfaf9]/70 font-body">
               {language === "en"
-                ? "Leading the way in fire protection technology with innovative solutions that save lives and protect property."
-                : "Liderando el camino en tecnología de protección contra incendios con soluciones innovadoras que salvan vidas y protegen propiedades."}
+                ?
+                "At MINIT Fireproof Products, we combine high-quality products with expert advice and comprehensive solutions to protect each of your projects."
+                : "En MINIT Ignífugos combinamos productos de alta calidad con asesoramiento experto y soluciones integrales para proteger cada uno de tus proyectos."}
             </p>
           </motion.div>
         </div>

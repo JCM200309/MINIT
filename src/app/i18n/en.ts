@@ -39,6 +39,8 @@ export const en = {
   "products.paintings.name": "MINIT Paintings",
   "products.paintings.desc": "Fire retardant for paintings",
   "products.viewDetails": "View Details",
+  "about.moreVideos": "More videos and tutorials",
+  "about.followInstagram": "Follow us on Instagram",
   "products.buyOnline": "Buy Online",
   "products.technicalSheet": "Technical Sheet",
   "products.certificates": "Certificates",

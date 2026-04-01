@@ -1,33 +1,12 @@
-Hero:
-1) Cambiar foto
-
-Secciones:
-1) Seccion con reviews de clientes (Actualizar la informacion) (Arreglar)
-2) Evitar secciones repetidas, hacer mas chico el home
-
-Navbar:
-1) Sacar logo
-2) Poner hamburguesa en mobile
 
 Links y QR:
-1) Ver exactamente el link del qr de cada producto para la fecha tecnica 
+1) Ver exactamente el link del qr de cada producto para la fecha tecnica
+2) Poner las nuevas fichas tecnicas y demas documento
 
-Feedback maxi:
-3) Logo no se lee
-4) Problemas con tildes 
-7) Minit total, cambiar proteccion universal por "Proteccion total"
-8) Minit aditivo en vez de minit edificios, 
-9) Minit hidrolaca?
-10) Mas palabras en negrita
-
-
-Cosas a hablar:
-1) Fuente, queda mejor la actual
-2) Tema carga de nuevos productos
-
-Cambios de pablo:
-5) Mas videos de tutoriales
-6) Producto nuevo, tenemos para pinturas y para lacas
+Cosas que faltan:
+1) Integrar mails automaticos
+2) Modificar el texto dentro de los productos
+3) Configurar mensaje de WPP
 
 
 Textos Pablo:

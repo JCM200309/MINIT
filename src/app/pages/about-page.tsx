@@ -4,11 +4,13 @@ import { Footer } from "../components/footer";
 import { ProductAdvantages } from "../components/product-advantages";
 import { useLanguage } from "../context/language-context";
 import { Flame } from "lucide-react";
+
+
 import { FireIllusion } from "../components/fire-illusion";
 import { MediaGallery } from "../components/media-gallery";
 
 export function AboutPage() {
-  const { language } = useLanguage();
+  const { language, t } = useLanguage();
 
   return (
     <div className="min-h-screen">
@@ -44,6 +46,79 @@ export function AboutPage() {
         </div>
       </section>
       <MediaGallery />
+
+      {/* Social Links Section */}
+      <section className="pb-24 bg-[#fcfaf9] relative z-10">
+        <div className="container mx-auto px-6">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-12 md:gap-24">
+            {/* YouTube */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              className="flex flex-col items-center"
+            >
+              <a
+                href="https://www.youtube.com/@MINITIgnifugos"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex flex-col items-center gap-6 no-underline"
+              >
+                <div className="relative">
+                  <div className="absolute inset-0 bg-[#FF0000]/10 blur-2xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="relative w-40 h-40 bg-white rounded-[2rem] flex items-center justify-center shadow-xl border border-black/5 group-hover:scale-105 transition-all duration-500 overflow-hidden">
+                    <img
+                      src="/Logos/logoYOUTUBE.jpg"
+                      alt="Youtube"
+                      className="w-full h-full object-contain p-2"
+                    />
+                  </div>
+                </div>
+                <div className="text-center">
+                  <span className="text-2xl font-bold text-[#140c03] font-heading italic tracking-tight transition-colors group-hover:text-[#c23b24]">
+                    {t("about.moreVideos")}
+                  </span>
+                  <div className="h-1 w-0 bg-[#c23b24] mx-auto group-hover:w-20 transition-all duration-500 rounded-full mt-1" />
+                </div>
+              </a>
+            </motion.div>
+
+            {/* Instagram */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="flex flex-col items-center"
+            >
+              <a
+                href="https://www.instagram.com/minit_ignifugos"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex flex-col items-center gap-6 no-underline"
+              >
+                <div className="relative">
+                  <div className="absolute inset-0 bg-[#E1306C]/10 blur-2xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="relative w-40 h-40 bg-white rounded-[2rem] flex items-center justify-center shadow-xl border border-black/5 group-hover:scale-105 transition-all duration-500 overflow-hidden">
+                    <img
+                      src="/Logos/logoInstagram4.png"
+                      alt="Instagram"
+                      className="w-full h-full object-contain p-4"
+                    />
+                  </div>
+                </div>
+                <div className="text-center">
+                  <span className="text-2xl font-bold text-[#140c03] font-heading italic tracking-tight transition-colors group-hover:text-[#c23b24]">
+                    {t("about.followInstagram")}
+                  </span>
+                  <div className="h-1 w-0 bg-[#c23b24] mx-auto group-hover:w-20 transition-all duration-500 rounded-full mt-1" />
+                </div>
+              </a>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
 
       <ProductAdvantages />
 

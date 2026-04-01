@@ -39,6 +39,8 @@ export const es = {
   "products.paintings.name": "MINIT Pinturas",
   "products.paintings.desc": "Retardante de fuego para pinturas",
   "products.viewDetails": "Ver Detalles",
+  "about.moreVideos": "Más videos y tutoriales",
+  "about.followInstagram": "Seguinos en Instagram",
   "products.buyOnline": "Compre en Línea",
   "products.technicalSheet": "Ficha Técnica",
   "products.certificates": "Certificados",

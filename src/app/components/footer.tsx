@@ -1,4 +1,5 @@
-import { Flame, Mail, Phone, MapPin } from "lucide-react";
+import { Flame, Mail, Phone, MapPin, Youtube, Instagram } from "lucide-react";
+
 import { Link, useLocation } from "react-router";
 import { useLanguage } from "../context/language-context";
 
@@ -23,8 +24,8 @@ export function Footer() {
           {/* Brand */}
           <div className="md:col-span-1">
             <Link to="/" className="flex items-center gap-2 mb-4">
-              <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-[#140c03] border border-white/10 shadow-sm">
-                <Flame className="w-6 h-6 text-[#c23b24]" />
+              <div className="flex items-center justify-center w-20 h-20 rounded-lg bg-[#140c03] border border-white/10 shadow-sm">
+                <img src="/Logos/minitLogo3.jpeg" alt="MINIT" className="w-full h-full object-contain" />
               </div>
               <span className="text-xl font-bold text-[#fcfaf9]">
                 MINIT
@@ -79,24 +80,45 @@ export function Footer() {
           {/* Contact */}
           <div>
             <h3 className="text-[#fcfaf9] font-bold mb-4 font-heading">{t("footer.getInTouch")}</h3>
-            <ul className="space-y-3">
+            <ul className="space-y-3 mb-6">
+
               <li className="flex items-start gap-3">
                 <Mail className="w-5 h-5 text-[#c23b24] flex-shrink-0 mt-0.5" />
-                <span className="text-[#fcfaf9]/60 font-body">info@minitfire.com</span>
+                <span className="text-[#fcfaf9]/60 font-body">minitargentina@gmail.com</span>
               </li>
               <li className="flex items-start gap-3">
                 <Phone className="w-5 h-5 text-[#c23b24] flex-shrink-0 mt-0.5" />
-                <span className="text-[#fcfaf9]/60 font-body">+1 (555) 123-4567</span>
+                <span className="text-[#fcfaf9]/60 font-body">+54 11 6359-7667</span>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-[#c23b24] flex-shrink-0 mt-0.5" />
                 <span className="text-[#fcfaf9]/60 font-body">
-                  123 Safety Boulevard<br />
-                  Tech City, TC 12345
+                  Buenos Aires,<br />
+                  Argentina
                 </span>
               </li>
             </ul>
+
+            <div className="flex items-center gap-4">
+              <a
+                href="https://www.youtube.com/@MINITIgnifugos"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 bg-white/5 hover:bg-[#FF0000] rounded-lg flex items-center justify-center border border-white/10 hover:border-[#FF0000] text-[#fcfaf9]/40 hover:text-white transition-all duration-300 group"
+              >
+                <Youtube className="w-10 h-10 group-hover:scale-110 transition-transform" />
+              </a>
+              <a
+                href="https://www.instagram.com/minitignifugos/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 bg-white/5 hover:bg-gradient-to-tr hover:from-[#f09433] hover:via-[#dc2743] hover:to-[#bc1888] rounded-lg flex items-center justify-center border border-white/10 hover:border-transparent text-[#fcfaf9]/40 hover:text-white transition-all duration-300 group"
+              >
+                <Instagram className="w-10 h-10 group-hover:scale-110 transition-transform" />
+              </a>
+            </div>
           </div>
+
         </div>
 
         {/* Bottom Bar */}

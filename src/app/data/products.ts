@@ -38,7 +38,7 @@ export const products: Product[] = [
     safetySheet: "/_files/ugd/a6f64e_419101391f5049dd8286218ebbdabfc3.pdf",
     buyOnline: "https://listado.mercadolibre.com.ar/pagina/MINITignifugos/?item_id=MLA1127759488&category_id=MLA413242&client=recoview-selleritems&recos_listing=true",
     detailsEn: {
-      about: "MINIT Wood is a Class A Fire Retardant, made from natural salts, which results in a colorless, odorless liquid that does not leave active fire-fighting agents, dispersants, and penetrants completely absorbent, so it does not modify the toxicity of the smoke of the treated material, only reduces the amount of smoke or reduces fire generation. It prevents fire propagation and at the same time, helps to retard the generation of smoke and gases up to 70%. Does not modify the color or texture of the treated material, only reduces the amount of smoke or reduces the generation of fire. It is a NON-TOXIC product, FRIENDLY WITH THE ENVIRONMENT, BIODEGRADABLE and PET FRIENDLY.",
+      about: "MINIT Wood is a high-performance Class A Fire Retardant and wood preservative, formulated from natural salts. This colorless and odorless solution penetrates deeply into fibers without modifying the material's natural color or texture. Beyond preventing ignition and fire spread, it significantly retards the generation of smoke and toxic gases by up to 70%. 100% biodegradable, non-toxic, and pet-friendly, it stands as the safest and most eco-friendly choice for protecting wood, cellulose, and composite structures.",
       uses: [
         "Wood",
         "Cardboard",
@@ -54,6 +54,7 @@ export const products: Product[] = [
         "Containers: 5 and 10 liters",
       ],
       certifications: [
+        "National institute of tecnology and industry (INTI)",
         "IRAM 11910-3",
         "NBR 9442:1986",
         "ASTM E 162:1994",
@@ -61,7 +62,7 @@ export const products: Product[] = [
       chemicalPresentation: "The chemical comes in a powder inside a bag with the exact amount for its dilution with regular water until the bag is completely filled. (The bag should not be diluted more than indicated on the bag, as it will lose its fire retardant properties).",
     },
     detailsEs: {
-      about: "Acerca de MINIT MADERAS (IGNÍFUGO Y PRESERVADOR). Es Retardante de Fuego Clase A, elaborado a partir de sales naturales, que de como resultado un líquido incoloro, inodoro, no tóxico que posee agentes activos contra el fuego, dispersantes y penetrantes completamente absorbentes, por lo que no modifica la toxicidad del humo del material tratado, solo disminuye la cantidad de humo o reduce la generación de fuego. Evita la propagación del fuego y, al mismo tiempo, contribuye a retardar la generación de humo y gases hasta en un 70%. No modifica el color ni la textura del material tratado, solo disminuye la cantidad de humo o reduce la generación de fuego. Es un producto NO TÓXICO, AMIGABLE CON EL MEDIO AMBIENTE, BIODEGRADABLE y PET FRIENDLY.",
+      about: "MINIT maderas es un potente retardante de fuego Clase A y preservador de maderas, formulado con sales naturales de alta eficacia. Este compuesto incoloro e inodoro penetra profundamente en las fibras sin alterar el aspecto original del material. Su acción avanzada no solo inhibe la ignición y evita la propagación del fuego, sino que reduce la emisión de humos y gases tóxicos hasta en un 70%. Al ser 100% biodegradable, no tóxico y pet-friendly, es la solución más segura y ecológica para la protección de estructuras de madera, celulosa y derivados.",
       uses: [
         "Maderas",
         "Cartón",
@@ -77,7 +78,7 @@ export const products: Product[] = [
         "Bidón: 5 y 10 litros.",
       ],
       certifications: [
-        "Certificado y ensayado por el Instituto Nacional de Tecnología e Industria (INTI) y por laboratorios autorizados en EE. UU. Cumple con los más altos estándares de las siguientes normas:",
+        " Instituto Nacional de Tecnología e Industria (INTI)",
         "IRAM 11910-3",
         "NBR 9442:1986",
         "ASTM E 162:1994",
@@ -278,7 +279,7 @@ export const products: Product[] = [
     safetySheet: "/_files/ugd/a6f64e_419101391f5049dd8286218ebbdabfc3.pdf",
     buyOnline: "https://listado.mercadolibre.com.ar/pagina/MINITignifugos/?item_id=MLA1127759488&category_id=MLA413242&client=recoview-selleritems&recos_listing=true",
     detailsEn: {
-      about: "MINIT Wood is a Class A Fire Retardant, made from natural salts, which results in a colorless, odorless liquid that does not leave active fire-fighting agents, dispersants, and penetrants completely absorbent, so it does not modify the toxicity of the smoke of the treated material, only reduces the amount of smoke or reduces fire generation. It prevents fire propagation and at the same time, helps to retard the generation of smoke and gases up to 70%. Does not modify the color or texture of the treated material, only reduces the amount of smoke or reduces the generation of fire. It is a NON-TOXIC product, FRIENDLY WITH THE ENVIRONMENT, BIODEGRADABLE and PET FRIENDLY.",
+      about: "MINIT Wood is a high-performance Class A Fire Retardant and wood preservative, formulated from natural salts. This colorless and odorless solution penetrates deeply into fibers without modifying the material's natural color or texture. Beyond preventing ignition and fire spread, it significantly retards the generation of smoke and toxic gases by up to 70%. 100% biodegradable, non-toxic, and pet-friendly, it stands as the safest and most eco-friendly choice for protecting wood, cellulose, and composite structures.",
       uses: [
         "Wood",
         "Cardboard",
@@ -301,7 +302,7 @@ export const products: Product[] = [
       chemicalPresentation: "The chemical comes in a powder inside a bag with the exact amount for its dilution with regular water until the bag is completely filled. (The bag should not be diluted more than indicated on the bag, as it will lose its fire retardant properties).",
     },
     detailsEs: {
-      about: "Acerca de MINIT MADERAS (IGNÍFUGO Y PRESERVADOR). Es Retardante de Fuego Clase A, elaborado a partir de sales naturales, que de como resultado un líquido incoloro, inodoro, no tóxico que posee agentes activos contra el fuego, dispersantes y penetrantes completamente absorbentes, por lo que no modifica la toxicidad del humo del material tratado, solo disminuye la cantidad de humo o reduce la generación de fuego. Evita la propagación del fuego y, al mismo tiempo, contribuye a retardar la generación de humo y gases hasta en un 70%. No modifica el color ni la textura del material tratado, solo disminuye la cantidad de humo o reduce la generación de fuego. Es un producto NO TÓXICO, AMIGABLE CON EL MEDIO AMBIENTE, BIODEGRADABLE y PET FRIENDLY.",
+      about: "MINIT Wood es un potente retardante de fuego Clase A y preservador de maderas, formulado con sales naturales de alta eficacia. Este compuesto incoloro e inodoro penetra profundamente en las fibras sin alterar el aspecto original del material. Su acción avanzada no solo inhibe la ignición y evita la propagación del fuego, sino que reduce la emisión de humos y gases tóxicos hasta en un 70%. Al ser 100% biodegradable, no tóxico y pet-friendly, es la solución más segura y ecológica para la protección de estructuras de madera, celulosa y derivados.",
       uses: [
         "Maderas",
         "Cartón",

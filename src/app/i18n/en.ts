@@ -102,7 +102,7 @@ export const en = {
   "contact.success": "Quote request submitted successfully!",
   "contact.successDesc": "We'll get back to you within 24 hours.",
   "contact.whyWorkWithUs": "Why Work With Us?",
-  "contact.reason1": "Fast response time - we reply within 24 hours",
+  "contact.reason1": "Fast response (within 24 hours)",
   "contact.reason2": "Expert consultation to find the right solution",
   "contact.reason3": "Competitive pricing with no hidden costs",
   "contact.reason4": "Ongoing support and technical guidance",

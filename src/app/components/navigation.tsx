@@ -47,7 +47,6 @@ export function Navigation({ forceDark = false }: NavigationProps) {
     { to: "/", label: t("nav.home") },
     { to: "/products", label: t("nav.products") },
     { to: "/about", label: t("nav.about") },
-    { to: "/contact", label: t("nav.contact") },
   ];
 
   return (

@@ -91,7 +91,7 @@ export const es = {
 
   // Contact
   "contact.title": "Solicitar Cotización",
-  "contact.subtitle": "Póngase en contacto con nuestro equipo para obtener más información sobre MINIT Retardante de Fuego y recibir una cotización personalizada para su proyecto.",
+  "contact.subtitle": "Contacte a nuestro equipo para obtener más información sobre MINIT Retardante de Fuego y recibir una cotización personalizada para su proyecto.",
   "contact.name": "Nombre Completó",
   "contact.company": "Empresa",
   "contact.email": "Correo Electrónico",
@@ -102,7 +102,7 @@ export const es = {
   "contact.success": "¡Solicitud de cotización enviada con éxito!",
   "contact.successDesc": "Le responderemos dentro de 24 horas.",
   "contact.whyWorkWithUs": "¿Por Qué Trabajar con Nosotros?",
-  "contact.reason1": "Tiempo de respuesta rápido - respondemos dentro de 24 horas",
+  "contact.reason1": "Respuesta rápida (dentro de las 24 horas)",
   "contact.reason2": "Consulta experta para encontrar la solución adecuada",
   "contact.reason3": "Precios competitivos sin costos ocultos",
   "contact.reason4": "Soporte continuo y orientación técnica",

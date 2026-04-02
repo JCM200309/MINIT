@@ -144,13 +144,14 @@ export function ProductDetailPage() {
                 <div className="w-12 h-12 rounded-2xl bg-[#140c03] flex items-center justify-center mb-8 shadow-sm">
                   <FileText className="w-6 h-6 text-[#fcfaf9]" />
                 </div>
-                <h2 className="text-3xl font-bold text-[#140c03] mb-6 font-heading tracking-tight italic">
+                <h2 className="text-3xl font-bold text-[#140c03] mb-6 font-heading tracking-tight italic text-justify">
                   {t("product.about")}
                 </h2>
                 <div className="prose prose-slate max-w-none">
-                  <p className="text-[#140c03]/80 leading-relaxed text-lg font-body hyphens-auto">
-                    {details.about}
-                  </p>
+                  <p
+                    className="text-[#140c03]/80 leading-relaxed text-lg font-body hyphens-auto text-justify"
+                    dangerouslySetInnerHTML={{ __html: details.about }}
+                  />
                 </div>
               </div>
             </motion.div>

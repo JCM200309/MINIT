@@ -73,9 +73,10 @@ export function HowItWorks() {
           <h2 className="text-4xl md:text-5xl font-bold text-[#fcfaf9] mb-6 font-heading italic">
             {t("howItWorks.title")}
           </h2>
-          <p className="text-xl text-[#fcfaf9]/70 font-body">
-            {t("howItWorks.subtitle")}
-          </p>
+          <p 
+            className="text-xl text-[#fcfaf9]/70 font-body"
+            dangerouslySetInnerHTML={{ __html: t("howItWorks.subtitle") }}
+          />
         </motion.div>
 
         <div className="space-y-32 md:space-y-48 pb-16">
@@ -148,10 +149,10 @@ function StepItem({ step, index }: { step: any, index: number }) {
           <h3 className="text-2xl md:text-3xl font-bold text-[#fcfaf9] mb-4 font-heading tracking-tight italic">
             {step.title}
           </h3>
-          <p className={`text-[#fcfaf9]/60 text-lg leading-relaxed font-body max-w-md mx-auto ${isEven ? "md:ml-0 md:mr-auto" : "md:ml-auto md:mr-0"
-            }`}>
-            {step.description}
-          </p>
+          <p 
+            className={`text-[#fcfaf9]/60 text-lg leading-relaxed font-body max-w-md mx-auto ${isEven ? "md:ml-0 md:mr-auto" : "md:ml-auto md:mr-0"}`}
+            dangerouslySetInnerHTML={{ __html: step.description }}
+          />
 
           {index === 0 && (
             <div className={`mt-6 flex ${isEven ? "justify-start" : "justify-end"}`}>

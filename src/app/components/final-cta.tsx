@@ -68,7 +68,7 @@ export function FinalCTA() {
               variant="outline"
               className="px-10 py-8 text-xl border-[#140c03]/20 text-[#140c03] bg-transparent backdrop-blur-sm rounded-2xl hover:bg-[#140c03]/5 transition-all shadow-none"
             >
-              <Link to="/products">
+              <Link to="/certificates">
                 {t("cta.learnMore")}
               </Link>
             </Button>

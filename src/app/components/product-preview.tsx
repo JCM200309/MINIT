@@ -36,7 +36,7 @@ export function ProductPreview() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
               <Link
-                to={`/products/${product.id}`}
+                to={`/certificates/${product.id}`}
                 className="group block bg-white rounded-xl shadow-sm border border-[#140c03]/10 overflow-hidden hover:shadow-2xl hover:border-[#c23b24]/30 transition-all duration-300"
               >
                 <div className="relative h-48 overflow-hidden bg-[#140c03]/5">
@@ -81,7 +81,7 @@ export function ProductPreview() {
             variant="outline"
             className="border-[#140c03]/10 text-[#140c03] font-semibold hover:bg-[#140c03]/5 transition-all px-8 py-6 rounded-xl"
           >
-            <Link to="/products">
+            <Link to="/certificates">
               {t("overview.viewAll")}
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>

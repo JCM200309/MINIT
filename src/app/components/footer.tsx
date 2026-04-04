@@ -42,7 +42,7 @@ export function Footer() {
             <ul className="space-y-3">
               <li>
                 <Link
-                  to="/products"
+                  to="/certificates"
                   className="text-[#fcfaf9]/60 hover:text-[#fcfaf9] transition-colors font-body"
                 >
                   {t("footer.overview")}

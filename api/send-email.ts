@@ -21,16 +21,25 @@ export default async function handler(req: Request) {
       throw new Error('RECAPTCHA_SECRET_KEY is not configured');
     }
 
+    const verifyParams = new URLSearchParams();
+    verifyParams.append("secret", recaptchaSecret);
+    verifyParams.append("response", captchaToken);
+
     const recaptchaRes = await fetch(
-      `https://www.google.com/recaptcha/api/siteverify?secret=${recaptchaSecret}&response=${captchaToken}`,
-      { method: 'POST' }
+      "https://www.google.com/recaptcha/api/siteverify",
+      { 
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: verifyParams.toString(),
+      }
     );
 
     const recaptchaData = await recaptchaRes.json();
     console.log(recaptchaData)
 
     if (!recaptchaData.success) {
-      return new Response(JSON.stringify({ error: 'Invalid CAPTCHA' }), {
+      const errorCodes = recaptchaData['error-codes'] ? recaptchaData['error-codes'].join(', ') : 'Unknown error';
+      return new Response(JSON.stringify({ error: `Invalid CAPTCHA: ${errorCodes}` }), {
         status: 400,
         headers: { 'Content-Type': 'application/json' },
       });
@@ -72,7 +81,7 @@ ${message}
 
     if (error) {
       console.error('Resend Error:', error);
-      return new Response(JSON.stringify({ error: error.message }), {
+      return new Response(JSON.stringify({ error: `Resend API Error: ${error.message}` }), {
         status: 400,
         headers: { 'Content-Type': 'application/json' },
       });

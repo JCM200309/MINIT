@@ -24,7 +24,7 @@ export function ProductDetailPage() {
         <div className="text-center">
           <h1 className="text-2xl font-bold text-gray-900 mb-4">Product not found</h1>
           <Button asChild>
-            <Link to="/products">Back to Products</Link>
+            <Link to="/certificates">Back to Products</Link>
           </Button>
         </div>
       </div>
@@ -43,7 +43,7 @@ export function ProductDetailPage() {
         <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: "radial-gradient(circle at 1px 1px, #fcfaf9 1px, transparent 0)", backgroundSize: "32px 32px" }} />
         <div className="container mx-auto px-6 relative z-10">
           <Link
-            to="/products"
+            to="/certificates"
             className="inline-flex items-center gap-2 text-[#fcfaf9]/60 hover:text-[#fcfaf9] mb-8 transition-colors"
           >
             <ArrowLeft className="w-4 h-4" />

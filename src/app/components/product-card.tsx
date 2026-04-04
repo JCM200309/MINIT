@@ -123,7 +123,7 @@ export function ProductCard({ product, index }: ProductCardProps) {
               asChild
               className="w-full bg-[#c23b24] hover:bg-[#c23b24]/90 text-white group/btn py-5 text-base rounded-xl shadow-lg shadow-[#c23b24]/20 border-none relative overflow-hidden"
             >
-              <Link to={`/products/${product.id}`}>
+              <Link to={`/certificates/${product.id}`}>
                 <span className="relative z-10 font-bold tracking-wide">{t("products.viewDetails")}</span>
                 <ArrowRight className="ml-2 w-4 h-4 relative z-10 group-hover/btn:translate-x-1 transition-transform" />
               </Link>

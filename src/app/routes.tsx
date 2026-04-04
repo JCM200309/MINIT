@@ -11,11 +11,11 @@ export const router = createBrowserRouter([
     Component: HomePage,
   },
   {
-    path: "/products",
+    path: "/certificates",
     Component: ProductsPage,
   },
   {
-    path: "/products/:id",
+    path: "/certificates/:id",
     Component: ProductDetailPage,
   },
   {

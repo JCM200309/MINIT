@@ -9,7 +9,7 @@ export const es = {
   // Hero
   "hero.badge": "Tecnología Avanzada de Protección contra Incendios",
   "hero.title": "Seguridad para  ",
-  "hero.titleHighlight": ["tu Empresa", "tu Familia", "tu Futuro", "lo que más importa"],
+  "hero.titleHighlight": ["tu Empresa", "tu Familia", "tu Futuro", "lo Importante"],
   "hero.subtitle": "En <strong>MINIT Ignífugos</strong> nos dedicamos a desarrollar soluciones de protección contra incendios de la más alta calidad, respaldadas por certificaciones nacionales e internacionales y el reconocimiento de profesionales, organismos técnicos y clientes en todo el mundo.",
   "hero.requestQuote": "Solicitar Cotización",
   "hero.learnMore": "Más Información",
@@ -25,7 +25,7 @@ export const es = {
 
   //Product characteristics
   "product.characteristics.title": "Nuestras Soluciones Retardantes de Fuego",
-  "product.characteristics.subtitle": "Nuestros productos retardantes de fuego están diseñados para inhibir la ignición y retardar el desarrollo del fuego y propagación del fuego, protegiendo tanto a personas como bienes. ",
+  "product.characteristics.subtitle": "Nuestros productos retardantes de fuego están diseñados para inhibir la ignición y retardar el desarrollo y propagación del fuego, protegiendo tanto a personas como bienes.",
 
   // Products
   "products.title": "Nuestros Productos",
@@ -45,6 +45,7 @@ export const es = {
   "products.technicalSheet": "Ficha Técnica",
   "products.certificates": "Certificados",
   "products.safetySheet": "Hoja de Seguridad",
+  "products.affidavit": "Modelo de Declaración Jurada",
   "products.lacas.name": "MINIT Aditivo Hidro-Lacas",
   "products.lacas.desc": "Convierte hidro-lacas en retardantes de fuego de alto rendimiento.",
 
@@ -85,7 +86,7 @@ export const es = {
   "howItWorks.step2": "Reacción Química",
   "howItWorks.step2.desc": "La fórmula penetra el material y forma enlaces moleculares, <strong>creando una capa protectora </strong>a nivel microscópico.",
   "howItWorks.step3": "Protección contra Incendios",
-  "howItWorks.step3.desc": "Cuando se expone al calor, el retardante crea una barrera aislante que <strong>previene la ignición y detiene la propagación de llamas</strong> quitandole el oxigeno.",
+  "howItWorks.step3.desc": "Cuando se expone al fuego, el retardante crea una barrera protectora que <strong> previene la ignición y retarda la propagación de llamas </strong>eliminando oxigeno y gases.",
   "howItWorks.scienceBacked": "Protección Respaldada por la Ciencia",
   "howItWorks.scienceBacked.desc": "Desarrollado a través de pruebas rigurosas de laboratorio y <strong>validado por organizaciones de seguridad</strong> independientes en todo el mundo.",
 
@@ -139,12 +140,16 @@ export const es = {
   "advantages.feature": "Característica",
   "advantages.MINIT": "MINIT",
   "advantages.traditional": "Tradicional",
-  "advantages.comp1": "Protección duradera",
-  "advantages.comp2": "Aplicación invisible",
-  "advantages.comp3": "Fórmula no tóxica",
-  "advantages.comp4": "Amplia compatibilidad de materiales",
-  "advantages.comp5": "Aplicación rápida",
-  "advantages.comp6": "Sin residuos ni olores",
+  "advantages.comp1": "Retardante Textiles",
+  "advantages.comp2": "Retardante Maderas",
+  "advantages.comp3": "Retardantes de otros materiales",
+  "advantages.comp4": "Durabilidad",
+  "advantages.comp5": "Mayor cantidad de Certificados",
+  "advantages.comp6": "No mancha y no deja olores",
+  "advantages.comp7": "Fórmulas no tóxicas sin amoniaco",
+  "advantages.comp8": "Pet friendly",
+  "advantages.comp9": "Alto rendimiento",
+  "advantages.comp10": "Fácil traslado, menos peso sin derrames y seguridad de almacenamiento",
   "advantages.card1.title": "Protección Superior",
   "advantages.card1.desc": "Alta efectividad certificada en el retardo de ignición y propagación de llamas en materiales probados.",
   "advantages.card2.title": "Fórmula Ecológica",

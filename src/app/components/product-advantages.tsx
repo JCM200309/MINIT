@@ -9,12 +9,12 @@ export function ProductAdvantages() {
     {
       feature: t("advantages.comp1"),
       minit: true,
-      traditional: false,
+      traditional: true,
     },
     {
       feature: t("advantages.comp2"),
       minit: true,
-      traditional: false,
+      traditional: true,
     },
     {
       feature: t("advantages.comp3"),
@@ -33,6 +33,26 @@ export function ProductAdvantages() {
     },
     {
       feature: t("advantages.comp6"),
+      minit: true,
+      traditional: false,
+    },
+    {
+      feature: t("advantages.comp7"),
+      minit: true,
+      traditional: false,
+    },
+    {
+      feature: t("advantages.comp8"),
+      minit: true,
+      traditional: false,
+    },
+    {
+      feature: t("advantages.comp9"),
+      minit: true,
+      traditional: false,
+    },
+    {
+      feature: t("advantages.comp10"),
       minit: true,
       traditional: false,
     },

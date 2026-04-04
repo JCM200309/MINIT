@@ -60,7 +60,7 @@ export function HeroSection() {
               </span>
             </h1>
 
-            <p 
+            <p
               className="text-xl text-[#fcfaf9]/80 leading-relaxed max-w-xl font-body"
               dangerouslySetInnerHTML={{ __html: t("hero.subtitle") }}
             />
@@ -94,38 +94,15 @@ export function HeroSection() {
             transition={{ duration: 1, delay: 0.2 }}
             className="lg:col-span-5 relative"
           >
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-white/10 group hover:shadow-[0_0_80px_-20px_rgba(246,217,75,0.25)] hover:border-[#f6d94b]/40 transition-all duration-700">
+            <div className="relative ">
               <img
-                src="/Logos/minitLogo3.jpeg"
+                src="/Logos/minitLogo3.png"
                 alt="Fire Protection Technology"
-                className="w-full h-auto transition-all duration-700 scale-105 group-hover:scale-100"
+                className="w-[80%] h-[80%] transition-all duration-700 scale-105 group-hover:scale-100"
               />
-
-              {/* Glass Overlay for Image 
-              <div className="absolute inset-0 border border-white/10 rounded-3xl pointer-events-none group-hover:border-[#f6d94b]/20 transition-colors duration-700" />*/}
             </div>
 
-            {/* Floating Stats - Dark Premium Glass Base 
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="absolute -bottom-30 left-0 right-0 lg:-left-20 lg:right-auto bg-[#140c03]/90 backdrop-blur-2xl border border-white/10 rounded-2xl shadow-[0_20px_40px_-10px_rgba(20,12,3,0.5)] p-6 lg:p-8 grid grid-cols-3 gap-4 lg:gap-8 min-w-full lg:min-w-[400px] z-20"
-            >
-              <div className="text-center group/stat hover:-translate-y-1 transition-transform cursor-default">
-                <div className="text-2xl lg:text-3xl font-bold text-[#c23b24] font-heading italic group-hover:text-[#c23b24]/90 transition-colors">99.9%</div>
-                <div className="text-[10px] lg:text-xs uppercase tracking-widest text-white/50 font-semibold mt-2">{t("hero.stat1")}</div>
-              </div>
-              <div className="text-center border-x border-white/10 px-2 lg:px-4 group/stat hover:-translate-y-1 transition-transform cursor-default">
-                <div className="text-2xl lg:text-3xl font-bold text-[#c23b24] font-heading italic group-hover:text-[#c23b24]/90 transition-colors">24h</div>
-                <div className="text-[10px] lg:text-xs uppercase tracking-widest text-white/50 font-semibold mt-2">{t("hero.stat2")}</div>
-              </div>
-              <div className="text-center group/stat hover:-translate-y-1 transition-transform cursor-default">
-                <div className="text-2xl lg:text-3xl font-bold text-[#c23b24] font-heading italic group-hover:text-[#c23b24]/90 transition-colors">100+</div>
-                <div className="text-[10px] lg:text-xs uppercase tracking-widest text-white/50 font-semibold mt-2">{t("hero.stat3")}</div>
-              </div>
-            </motion.div>*/}
+
           </motion.div>
         </div>
       </div>

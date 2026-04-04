@@ -8,20 +8,22 @@ export function Certifications() {
     {
       name: t("products.certificates"),
       fullName: "International Organization for Standardization",
-      desc: "ISO 9001 / 14001",
       image: "/certificados/logoISO.png"
     },
     {
       name: "IRAM",
       fullName: "Instituto Argentino de Normalización y Certificación",
-      desc: "Normas 11910-3",
       image: "/certificados/logoIRAM2.png"
     },
     {
       name: "ASTM",
       fullName: "American Society for Testing and Materials",
-      desc: "E 162:1994",
       image: "/certificados/logoASTM.png"
+    },
+    {
+      name: t("memberships.nfa.name"),
+      fullName: t("memberships.nfa.fullName"),
+      image: "/certificados/LogoNFPA.jpg"
     }
   ];
 
@@ -29,13 +31,11 @@ export function Certifications() {
     {
       name: t("memberships.cemera.name"),
       fullName: t("memberships.cemera.fullName"),
-      desc: t("memberships.cemera.desc"),
       image: "/certificados/logoCEMERA.jpg"
     },
     {
       name: t("memberships.nfa.name"),
       fullName: t("memberships.nfa.fullName"),
-      desc: t("memberships.nfa.desc"),
       image: "/certificados/LogoNFPA.jpg"
     }
   ];
@@ -106,7 +106,7 @@ export function Certifications() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 max-w-5xl mx-auto mb-32">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 md:gap-12 max-w-5xl mx-auto mb-32">
           {certs.map((cert, index) => (
             <LogoCard key={cert.name} item={cert} index={index} />
           ))}

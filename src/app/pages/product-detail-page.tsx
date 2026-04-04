@@ -102,7 +102,7 @@ export function ProductDetailPage() {
                 </a>
               </div>
 
-              <div className="grid grid-cols-2 gap-4 pt-6 border-t border-white/10">
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-4 pt-6 border-t border-white/10">
                 <a
                   href={product.certificateSheet}
                   target="_blank"
@@ -120,6 +120,15 @@ export function ProductDetailPage() {
                 >
                   <FileText className="w-4 h-4 text-[#c23b24]" />
                   <span>{t("products.safetySheet")}</span>
+                </a>
+                <a
+                  href={product.affidavitSheet}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-sm text-[#fcfaf9]/70 hover:text-[#fcfaf9] transition-colors font-medium"
+                >
+                  <FileText className="w-4 h-4 text-[#c23b24]" />
+                  <span>{t("products.affidavit")}</span>
                 </a>
               </div>
             </motion.div>
@@ -210,8 +219,8 @@ export function ProductDetailPage() {
                       <h4 className="text-sm font-bold uppercase tracking-wider text-[#140c03]/40">
                         {t("product.chemicalPresentation")}
                       </h4>
-                      <p className="text-[#140c03]/70 text-sm leading-relaxed italic">
-                        {details.chemicalPresentation}
+                      <p className="text-[#140c03]/70 text-sm leading-relaxed italic"
+                        dangerouslySetInnerHTML={{ __html: details.chemicalPresentation }}>
                       </p>
                     </div>
                   </div>

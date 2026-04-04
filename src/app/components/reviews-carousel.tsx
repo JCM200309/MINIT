@@ -1,15 +1,16 @@
 import { motion, AnimatePresence } from "motion/react";
-import { Star } from "lucide-react";
-import { useState, useEffect, useRef } from "react";
+import { Star, ChevronLeft, ChevronRight } from "lucide-react";
+import { useState, useEffect } from "react";
 import { useLanguage } from "../context/language-context";
-import { useScroll } from "motion/react";
 
 interface Review {
   id: number;
   name: string;
   rating: number;
   text: string;
+  textEn: string;
   date: string;
+  dateEn: string;
   avatar?: string;
 }
 
@@ -19,15 +20,19 @@ const reviews: Review[] = [
     name: "Diego Vargas",
     rating: 5,
     text: "Todo excelente. Muy buena atención y excelente producto",
+    textEn: "Everything excellent. Very good service and excellent product",
     date: "Hace 4 años",
+    dateEn: "4 years ago",
     avatar: "DV"
   },
   {
     id: 2,
     name: "Juan Cruz Montero",
     rating: 5,
-    text: "Excelente servicio. Tenía dudas sobre qué producto necesitaba y me asesoraron súper bien desde el primer momento. Se nota que saben del tema y trabajan con materiales de calidad. Cumplieron con los tiempos y todo llegó perfecto. Muy recomendable.",
+    text: "Excelente servicio. Tenía dudas sobre qué producto necesitaba y me asesoraron súper bien desde el primer momento. Se nota que saben del tema y trabajan con materiales de calidad. Cumplieron con los tiempos y todo llegó perfecto.",
+    textEn: "Excellent service. I had doubts about what product I needed and they advised me very well from the first moment. You can tell they know the subject and work quality materials. They met deadlines and everything arrived perfectly.",
     date: "Hace 1 mes",
+    dateEn: "1 month ago",
     avatar: "JCM"
   },
   {
@@ -35,7 +40,9 @@ const reviews: Review[] = [
     name: "Abril Sztamfater",
     rating: 5,
     text: "Excelente atención y producto!",
+    textEn: "Excellent service and product!",
     date: "Hace 3 semanas",
+    dateEn: "3 weeks ago",
     avatar: "AS"
   },
   {
@@ -43,7 +50,9 @@ const reviews: Review[] = [
     name: "Raúl Stocker",
     rating: 5,
     text: "Muy bueno. Lo use para hacer el tratamiento ignífugo de cortinas !!",
+    textEn: "Very good. I used it to do the fire retardant treatment on curtains !!",
     date: "Hace 4 años",
+    dateEn: "4 years ago",
     avatar: "RS"
   },
   {
@@ -51,17 +60,17 @@ const reviews: Review[] = [
     name: "Jose Raul Correa",
     rating: 5,
     text: "excelente atención!",
+    textEn: "excellent service!",
     date: "Hace 3 años",
+    dateEn: "3 years ago",
     avatar: "JRC"
   }
 ];
 
 export function ReviewsCarousel() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [itemsToShow, setItemsToShow] = useState(3);
-  const [isDragging, setIsDragging] = useState(false);
-  const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleResize = () => {
@@ -79,22 +88,12 @@ export function ReviewsCarousel() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  useEffect(() => {
-    if (isDragging) return;
-    const timer = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % (reviews.length - itemsToShow + 1));
-    }, 5000);
-    return () => clearInterval(timer);
-  }, [isDragging, itemsToShow]);
+  const nextSlide = () => {
+    if (currentIndex < reviews.length - itemsToShow) setCurrentIndex(prev => prev + 1);
+  };
 
-  const handleDragEnd = (_: any, info: any) => {
-    setIsDragging(false);
-    const threshold = 50;
-    if (info.offset.x < -threshold && currentIndex < reviews.length - itemsToShow) {
-      setCurrentIndex(prev => prev + 1);
-    } else if (info.offset.x > threshold && currentIndex > 0) {
-      setCurrentIndex(prev => prev - 1);
-    }
+  const prevSlide = () => {
+    if (currentIndex > 0) setCurrentIndex(prev => prev - 1);
   };
 
   return (
@@ -121,31 +120,38 @@ export function ReviewsCarousel() {
           </p>
         </motion.div>
 
-        <div className="relative">
-          <div className="relative overflow-hidden cursor-grab active:cursor-grabbing px-4 -mx-4 h-[420px] pt-4">
+        <div className="relative px-2 md:px-16">
+          {/* Previous Button */}
+          <button
+            onClick={prevSlide}
+            disabled={currentIndex === 0}
+            className="absolute left-0 top-1/2 -translate-y-1/2 -mt-4 z-20 w-10 h-10 md:w-12 md:h-12 bg-white rounded-full flex items-center justify-center shadow-lg border border-[#140c03]/10 text-[#c23b24] disabled:opacity-50 disabled:cursor-not-allowed hover:bg-[#fcfaf9] hover:scale-105 transition-all focus:outline-none"
+            aria-label="Anterior"
+          >
+            <ChevronLeft className="w-5 h-5 md:w-6 md:h-6" />
+          </button>
+
+          <div className="relative overflow-hidden px-2 -mx-2 h-[440px] pt-4">
             <motion.div
-              drag="x"
-              dragConstraints={{ left: 0, right: 0 }} // We handle movement with animate and current index
-              onDragStart={() => setIsDragging(true)}
-              onDragEnd={handleDragEnd}
-              animate={{ x: `calc(-${currentIndex * (100 / itemsToShow)}%)` }}
+              animate={{ x: `-${(currentIndex * 100) / reviews.length}%` }}
               transition={{ type: "spring", stiffness: 300, damping: 30 }}
-              className="flex gap-6 h-full"
+              className="flex h-[380px]"
+              style={{ width: `${(reviews.length / itemsToShow) * 100}%` }}
             >
               {reviews.map((review) => (
                 <div
                   key={review.id}
                   className="flex-shrink-0"
-                  style={{ width: `calc(${100 / itemsToShow}% - ${(itemsToShow - 1) * 1.5 / itemsToShow}rem)` }}
+                  style={{ width: `${100 / reviews.length}%`, padding: "0 0.75rem" }}
                 >
-                  <div className="bg-white p-8 rounded-2xl border border-[#140c03]/10 shadow-sm hover:shadow-md hover:border-[#c23b24]/40 transition-all relative group h-full flex flex-col">
+                  <div className="bg-white p-8 rounded-2xl border border-[#140c03]/10 shadow-sm hover:shadow-md hover:border-[#c23b24]/40 transition-all relative group h-full flex flex-col select-none">
                     <div className="flex items-center gap-4 mb-6">
                       <div className="w-12 h-12 rounded-full bg-[#140c03]/5 border border-[#140c03]/10 flex items-center justify-center text-[#c23b24] font-bold text-lg shadow-sm">
                         {review.avatar}
                       </div>
                       <div>
                         <h4 className="font-bold text-[#140c03]">{review.name}</h4>
-                        <p className="text-sm text-[#140c03]/50">{review.date}</p>
+                        <p className="text-xs lg:text-lg text-[#140c03]/50">{language === "en" ? review.dateEn : review.date}</p>
                       </div>
                     </div>
 
@@ -153,14 +159,13 @@ export function ReviewsCarousel() {
                       {[...Array(5)].map((_, i) => (
                         <Star
                           key={i}
-                          className={`w-4 h-4 ${i < review.rating ? "fill-[#c23b24] text-[#c23b24]" : "text-[#140c03]/20"
-                            }`}
+                          className={`w-4 h-4 ${i < review.rating ? "fill-[#c23b24] text-[#c23b24]" : "text-[#140c03]/20"}`}
                         />
                       ))}
                     </div>
 
                     <p className="text-[#140c03]/80 leading-relaxed italic font-medium flex-grow">
-                      "{review.text}"
+                      "{language === "en" ? review.textEn : review.text}"
                     </p>
 
                     <div className="absolute top-6 right-8 opacity-[0.03] group-hover:opacity-10 transition-opacity">
@@ -174,7 +179,7 @@ export function ReviewsCarousel() {
             </motion.div>
 
             {/* Dots Indicator */}
-            <div className="flex justify-center gap-2 mt-12">
+            <div className="flex justify-center gap-2 mt-8">
               {[...Array(reviews.length - itemsToShow + 1)].map((_, i) => (
                 <button
                   key={i}
@@ -186,6 +191,16 @@ export function ReviewsCarousel() {
               ))}
             </div>
           </div>
+
+          {/* Next Button */}
+          <button
+            onClick={nextSlide}
+            disabled={currentIndex >= reviews.length - itemsToShow}
+            className="absolute right-0 top-1/2 -translate-y-1/2 -mt-4 z-20 w-10 h-10 md:w-12 md:h-12 bg-white rounded-full flex items-center justify-center shadow-lg border border-[#140c03]/10 text-[#c23b24] disabled:opacity-50 disabled:cursor-not-allowed hover:bg-[#fcfaf9] hover:scale-105 transition-all focus:outline-none"
+            aria-label="Siguiente"
+          >
+            <ChevronRight className="w-5 h-5 md:w-6 md:h-6" />
+          </button>
         </div>
       </div>
     </section>

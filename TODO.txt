@@ -4,15 +4,21 @@ Links y QR:
 2) Poner las nuevas fichas tecnicas y demas documento
 
 Cosas que faltan:
-1) Integrar mails automaticos
-2) Modificar el texto dentro de los productos
-3) Configurar mensaje de WPP
+1) Integrar mails automaticoscer
 
 
-Textos Pablo:
+Falta Textos Pablo:
 
-1) Ofrecemos productos con garantía de calidad, documentación técnica y asesoramiento especializado para tus proyectos. (Este texto donde va? abajo del hero?)
-2) Cambie En MINIT Ignífugos no solo te ofrecemos productos retardantes de fuego de alta calidad, sino también una experiencia completa de servicio y asesoramiento al cliente para sus proyectos. Nuestra visión está enfocada en acompañar a  nuestros clientes con soluciones integrales, soporte técnico experto y consultoría personalizada. por "En MINIT Ignífugos combinamos productos de alta calidad con asesoramiento experto y soluciones integrales para proteger cada uno de tus proyectos."
-3) Proteccion contra incendios en "Como funciona" (Por que otra cosa lo cambio?)
-4) Preguntar cuadro comparativo dentro de Nosotros 
-5) Falta toda la informacion de hidrolacas
+1) Falta toda la informacion de hidrolacas
+
+Cambios nuevos:
+1) Modelo de declaracion jurada bien visible la seccion de productos y en cada uno de los productos (LISTO)
+2) Cambiar dentro de los productos las siglas de los certificados, no hay que poner los numeros. Poner por ejemplo IRAM, NFPA, etc, pero no poner UL (LISTO)
+3) Cambiar la presentacion del quimico de MINIT Total y sus usos (LISTO)
+4) Cambiar la presentacion del quimico de MINIT Textiles (LISTO)
+5) Corregir el link de mercado libre (LISTO)
+6) El texto abajo de "Nuestras soluciones retardantes de fuego" cambiar (LISTO)
+7) Cambiar el texto abajo de Proteccion contra incendios (LISTO)
+8) Agregar NFPA en la parte de certificaciones al lado de ASTM e IRAM y sacar los numeros de los certificados (LISTO)
+9) Cambiar cuadro comparativo dentro de Nosotros (LISTO)
+

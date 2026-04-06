@@ -60,7 +60,7 @@ export const products: Product[] = [
         "ASTM",
         "ISO",
       ],
-      chemicalPresentation: "The chemical comes in a powder inside a bag with the exact amount for its dilution with regular water until the bag is completely filled. (The bag should not be diluted more than indicated on the bag, as it will lose its fire retardant properties).",
+      chemicalPresentation: "The impregnating chemical comes in powder form in a container with the precise amount needed for dilution with regular water until the container is full. The 25 kg powder format offers maximum flexibility and cost-effectiveness for large-scale applications. Dilution ratio: <strong>1 kg of powder to 10 liters of water</strong>.",
     },
     detailsEs: {
       about: "<strong>MINIT maderas</strong> es un retardante de fuego <strong>Clase A</strong> y preservador a base de sales naturales. Este producto no tóxico, incoloro e inodoro, penetra sin alterar la textura o color del material. <br> Además de prevenir la ignición y propagación del fuego, reduce la emisión de <strong> humos y gases tóxicos </strong>hasta un 70%. Al ser <strong>100% biodegradable, no tóxico y pet-friendly</strong>, es la solución ecológica ideal para proteger madera, celulosa y derivados. <br> En el caso del uso en madera, también previene la presencia de <strong>hongos</strong>, <strong>bacterias</strong> e <strong>insectos</strong> (polillas y termitas).",
@@ -83,7 +83,7 @@ export const products: Product[] = [
         "ASTM",
         "ISO",
       ],
-      chemicalPresentation: "El químico se presenta en polvo dentro de un envase con la cantidad justa para su dilución con agua regular hasta completar el envase. (No se debe diluir más de lo indicado por el envase, ya que perderá sus propiedades retardantes).",
+      chemicalPresentation: "El químico impregnante se presenta en polvo dentro de un envase con la cantidad justa para su dilución con agua regular hasta completar el envase. El formato en polvo de 25 kg proporciona máxima flexibilidad y rentabilidad para aplicaciones a gran escala. Relación de dilución: <strong>1 kilo de polvo a 10 litros de agua</strong>.",
     },
   },
   {
@@ -263,8 +263,8 @@ export const products: Product[] = [
     nameKey: "products.lacas.name",
     descKey: "products.lacas.desc",
     image: "/Bidones/aditivo.png",
-    categoryEn: "Varnished Wood Protection",
-    categoryEs: "Protección de Madera barnizada",
+    categoryEn: "Protection with Lacquers",
+    categoryEs: "Protección con Lacas",
     technicalSheet: "/documentos/Laca/fichaTecnicaLaca.pdf",
     certificateSheet: "/documentos/Laca/certificadoLaca.pdf",
     safetySheet: "/documentos/Laca/hojaSeguridadLaca.pdf",

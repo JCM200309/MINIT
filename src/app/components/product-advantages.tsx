@@ -107,34 +107,34 @@ export function ProductAdvantages() {
           className="max-w-4xl mx-auto mb-16"
         >
           <div className="bg-white rounded-2xl shadow-sm overflow-hidden border border-[#140c03]/10">
-            <div className="grid grid-cols-3 gap-4 p-6 bg-[#140c03] border-b border-[#140c03]/10">
-              <div className="text-[#fcfaf9] font-bold text-lg font-heading tracking-wider uppercase">{t("advantages.feature")}</div>
-              <div className="text-[#c23b24] font-bold text-lg text-center font-heading tracking-wider uppercase">{t("advantages.MINIT")}</div>
-              <div className="text-[#fcfaf9]/70 font-bold text-lg text-center font-heading tracking-wider uppercase">{t("advantages.traditional")}</div>
+            <div className="grid grid-cols-[2fr_1fr_1fr] md:grid-cols-3 gap-2 md:gap-4 p-4 md:p-6 bg-[#140c03] border-b border-[#140c03]/10">
+              <div className="text-[#fcfaf9] font-bold text-xs sm:text-sm md:text-lg font-heading tracking-wider uppercase flex items-center">{t("advantages.feature")}</div>
+              <div className="text-[#c23b24] font-bold text-xs sm:text-sm md:text-lg text-center font-heading tracking-wider uppercase flex items-center justify-center">{t("advantages.MINIT")}</div>
+              <div className="text-[#fcfaf9]/70 font-bold text-[10px] sm:text-sm md:text-lg text-center font-heading tracking-wider uppercase flex items-center justify-center">{t("advantages.traditional")}</div>
             </div>
             {comparisons.map((item, index) => (
               <div
                 key={index}
-                className={`grid grid-cols-3 gap-4 p-6 items-center ${index % 2 === 0 ? "bg-white" : "bg-[#140c03]/[0.02]"
+                className={`grid grid-cols-[2fr_1fr_1fr] md:grid-cols-3 gap-2 md:gap-4 p-4 md:p-6 items-center ${index % 2 === 0 ? "bg-white" : "bg-[#140c03]/[0.02]"
                   }`}
               >
-                <div className="text-[#140c03] font-semibold text-sm md:text-base font-body">{item.feature}</div>
+                <div className="text-[#140c03] font-semibold text-xs sm:text-sm md:text-base font-body">{item.feature}</div>
                 <div className="flex justify-center">
                   {item.minit ? (
-                    <div className="w-8 h-8 rounded-full bg-[#140c03]/5 flex items-center justify-center border border-[#140c03]/10">
-                      <Check className="w-5 h-5 text-[#c23b24]" strokeWidth={3} />
+                    <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-[#140c03]/5 flex items-center justify-center border border-[#140c03]/10">
+                      <Check className="w-3 h-3 sm:w-5 sm:h-5 text-[#c23b24]" strokeWidth={3} />
                     </div>
                   ) : (
-                    <X className="w-5 h-5 text-[#140c03]/20" />
+                    <X className="w-4 h-4 sm:w-5 sm:h-5 text-[#140c03]/20" />
                   )}
                 </div>
                 <div className="flex justify-center">
                   {item.traditional ? (
-                    <div className="w-8 h-8 rounded-full bg-[#140c03]/5 flex items-center justify-center border border-[#140c03]/10">
-                      <Check className="w-5 h-5 text-[#140c03]/50" strokeWidth={3} />
+                    <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-[#140c03]/5 flex items-center justify-center border border-[#140c03]/10">
+                      <Check className="w-3 h-3 sm:w-5 sm:h-5 text-[#140c03]/50" strokeWidth={3} />
                     </div>
                   ) : (
-                    <X className="w-5 h-5 text-[#140c03]/20" />
+                    <X className="w-4 h-4 sm:w-5 sm:h-5 text-[#140c03]/20" />
                   )}
                 </div>
               </div>

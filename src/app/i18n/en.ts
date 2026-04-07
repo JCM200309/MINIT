@@ -45,7 +45,7 @@ export const en = {
   "products.technicalSheet": "Technical Sheet",
   "products.certificates": "Certificates",
   "products.safetySheet": "Safety Sheet",
-  "products.affidavit": "Affidavit Model",
+  "products.affidavit": "Affidavit template",
   "products.lacas.name": "MINIT Hydro-lacquer additive",
   "products.lacas.desc": "It converts water-based lacquers into high-performance fire retardants.",
 
@@ -92,7 +92,7 @@ export const en = {
 
   // Contact
   "contact.title": "Request a Quote",
-  "contact.subtitle": "Get in touch with our team to learn more about MINIT Fire Retardant and receive a customized quote for your project.",
+  "contact.subtitle": "Request a quote for application products and services",
   "contact.name": "Full Name",
   "contact.company": "Company",
   "contact.email": "Email Address",
@@ -137,7 +137,7 @@ export const en = {
   // Advantages
   "advantages.title": "Why Choose MINIT?",
   "advantages.subtitle": "Advanced technology and superior performance set MINIT Fire Retardant apart from traditional solutions.",
-  "advantages.feature": "Feature",
+  "advantages.feature": "Features",
   "advantages.MINIT": "MINIT",
   "advantages.traditional": "Traditional",
   "advantages.comp1": "Textile Retardant",

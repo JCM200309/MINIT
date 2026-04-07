@@ -92,7 +92,7 @@ export const es = {
 
   // Contact
   "contact.title": "Solicitar Cotización",
-  "contact.subtitle": "Contacte a nuestro equipo para obtener más información sobre MINIT Retardante de Fuego y recibir una cotización personalizada para su proyecto.",
+  "contact.subtitle": "Pedí cotización para productos y servicio de aplicación",
   "contact.name": "Nombre Completó",
   "contact.company": "Empresa",
   "contact.email": "Correo Electrónico",
@@ -137,7 +137,7 @@ export const es = {
   // Advantages
   "advantages.title": "¿Por qué elegir MINIT?",
   "advantages.subtitle": "La tecnología avanzada y el rendimiento superior diferencian a MINIT de las soluciones tradicionales.",
-  "advantages.feature": "Característica",
+  "advantages.feature": "Características",
   "advantages.MINIT": "MINIT",
   "advantages.traditional": "Tradicional",
   "advantages.comp1": "Retardante Textiles",

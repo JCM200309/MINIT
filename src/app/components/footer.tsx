@@ -24,8 +24,8 @@ export function Footer() {
           {/* Brand */}
           <div className="md:col-span-1">
             <Link to="/" className="flex items-center gap-2 mb-4">
-              <div className="flex items-center justify-center w-20 h-20 rounded-lg bg-[#140c03] border border-white/10 shadow-sm">
-                <img src="/Logos/minitLogo3.jpeg" alt="MINIT" className="w-full h-full object-contain" />
+              <div className="flex items-center justify-center w-20 h-20">
+                <img src="/Logos/MinitLogo2.png" alt="MINIT" className="w-full h-full object-contain" />
               </div>
               <span className="text-xl font-bold text-[#fcfaf9]">
                 MINIT
@@ -125,7 +125,7 @@ export function Footer() {
         <div className="pt-8 border-t border-white/5">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-[#fcfaf9]/60 text-sm font-body">
-              © 2026 MiniT Fire Retardant. {t("footer.allRights")}
+              © 2026 MINIT Fire Retardant. {t("footer.allRights")}
             </p>
 
           </div>

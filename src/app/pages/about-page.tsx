@@ -92,7 +92,7 @@ export function AboutPage() {
               className="flex flex-col items-center"
             >
               <a
-                href="https://www.instagram.com/minit_ignifugos"
+                href="https://www.instagram.com/minitignifugos/?hl=es-la"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group flex flex-col items-center gap-6 no-underline"

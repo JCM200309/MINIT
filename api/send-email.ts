@@ -1,8 +1,4 @@
-import { Resend } from 'resend';
-
-export const config = {
-  runtime: 'edge',
-};
+import nodemailer from 'nodemailer';
 
 export default async function handler(req: Request) {
   if (req.method !== 'POST') {
@@ -35,7 +31,7 @@ export default async function handler(req: Request) {
     );
 
     const recaptchaData = await recaptchaRes.json();
-    console.log(recaptchaData)
+    console.log(recaptchaData);
 
     if (!recaptchaData.success) {
       const errorCodes = recaptchaData['error-codes'] ? recaptchaData['error-codes'].join(', ') : 'Unknown error';
@@ -45,21 +41,28 @@ export default async function handler(req: Request) {
       });
     }
 
-    // 2. Send Email with Resend
-    const resendApiKey = process.env.RESEND_API_KEY;
+    // 2. Send Email with Nodemailer
+    const emailUser = process.env.SMTP_EMAIL;
+    const emailPass = process.env.SMTP_PASSWORD;
     const destEmail = process.env.CONTACT_DESTINATION_EMAIL;
 
-    if (!resendApiKey || !destEmail) {
-      throw new Error('Resend configuration is missing');
+    if (!emailUser || !emailPass || !destEmail) {
+      throw new Error('SMTP configuration is missing');
     }
 
-    const resend = new Resend(resendApiKey);
+    const transporter = nodemailer.createTransport({
+      service: 'gmail',
+      auth: {
+        user: emailUser,
+        pass: emailPass,
+      },
+    });
 
-    const { data, error } = await resend.emails.send({
-      from: 'MINIT Contact <onboarding@resend.dev>', // You can change this once domain is verified
-      to: [destEmail],
-      subject: `Nuevo mensaje de contacto de ${name}`,
+    const mailOptions = {
+      from: `"MINIT Website Form" <${emailUser}>`,
+      to: destEmail,
       replyTo: email,
+      subject: `Nuevo mensaje de contacto de ${name}`,
       text: `
 Nombre: ${name}
 Empresa: ${company}
@@ -71,23 +74,18 @@ ${message}
       html: `
         <h2>Nuevo mensaje de contacto</h2>
         <p><strong>Nombre:</strong> ${name}</p>
-        <p><strong>Empresa:</strong> ${company}</p>
+        <p><strong>Empresa:</strong> ${company} </p>
         <p><strong>Email:</strong> ${email}</p>
         <br>
         <p><strong>Mensaje:</strong></p>
         <p>${message.replace(/\n/g, '<br>')}</p>
       `,
-    });
+    };
 
-    if (error) {
-      console.error('Resend Error:', error);
-      return new Response(JSON.stringify({ error: `Resend API Error: ${error.message}` }), {
-        status: 400,
-        headers: { 'Content-Type': 'application/json' },
-      });
-    }
+    const info = await transporter.sendMail(mailOptions);
+    console.log('Message sent: %s', info.messageId);
 
-    return new Response(JSON.stringify({ success: true, data }), {
+    return new Response(JSON.stringify({ success: true, messageId: info.messageId }), {
       status: 200,
       headers: { 'Content-Type': 'application/json' },
     });

@@ -1,15 +1,13 @@
+import type { VercelRequest, VercelResponse } from '@vercel/node';
 import nodemailer from 'nodemailer';
 
-export default async function handler(req: Request) {
+export default async function handler(req: VercelRequest, res: VercelResponse) {
   if (req.method !== 'POST') {
-    return new Response(JSON.stringify({ error: 'Method not allowed' }), {
-      status: 405,
-      headers: { 'Content-Type': 'application/json' },
-    });
+    return res.status(405).json({ error: 'Method not allowed' });
   }
 
   try {
-    const { name, company, email, message, captchaToken } = await req.json();
+    const { name, company, email, message, captchaToken } = req.body;
 
     // 1. Validate reCAPTCHA
     const recaptchaSecret = process.env.RECAPTCHA_SECRET_KEY;
@@ -35,10 +33,7 @@ export default async function handler(req: Request) {
 
     if (!recaptchaData.success) {
       const errorCodes = recaptchaData['error-codes'] ? recaptchaData['error-codes'].join(', ') : 'Unknown error';
-      return new Response(JSON.stringify({ error: `Invalid CAPTCHA: ${errorCodes}` }), {
-        status: 400,
-        headers: { 'Content-Type': 'application/json' },
-      });
+      return res.status(400).json({ error: `Invalid CAPTCHA: ${errorCodes}` });
     }
 
     // 2. Send Email with Nodemailer
@@ -85,15 +80,9 @@ ${message}
     const info = await transporter.sendMail(mailOptions);
     console.log('Message sent: %s', info.messageId);
 
-    return new Response(JSON.stringify({ success: true, messageId: info.messageId }), {
-      status: 200,
-      headers: { 'Content-Type': 'application/json' },
-    });
+    return res.status(200).json({ success: true, messageId: info.messageId });
   } catch (err: any) {
     console.error('Handler Error:', err);
-    return new Response(JSON.stringify({ error: err.message || 'Internal server error' }), {
-      status: 500,
-      headers: { 'Content-Type': 'application/json' },
-    });
+    return res.status(500).json({ error: err.message || 'Internal server error' });
   }
 }

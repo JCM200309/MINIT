@@ -92,7 +92,7 @@ export const es = {
 
   // Contact
   "contact.title": "Solicitar Cotización",
-  "contact.subtitle": "Pedí cotización para productos y servicio de aplicación",
+  "contact.subtitle": "Pida cotización para productos y servicio de aplicación",
   "contact.name": "Nombre Completó",
   "contact.company": "Empresa",
   "contact.companyPlaceholder": "Nombre de la Empresa",
@@ -105,7 +105,7 @@ export const es = {
   "contact.successDesc": "Le responderemos dentro de 24 horas.",
   "contact.whyWorkWithUs": "¿Por Qué Trabajar con Nosotros?",
   "contact.reason1": "Respuesta rápida (dentro de las 24 horas)",
-  "contact.reason2": "Consulta experta para encontrar la solución adecuada",
+  "contact.reason2": "Consulte a un experto para encontrar la solución adecuada",
   "contact.reason3": "Precios competitivos sin costos ocultos",
   "contact.reason4": "Soporte continuo y orientación técnica",
 

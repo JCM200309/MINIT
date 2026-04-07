@@ -95,6 +95,7 @@ export const es = {
   "contact.subtitle": "Pedí cotización para productos y servicio de aplicación",
   "contact.name": "Nombre Completó",
   "contact.company": "Empresa",
+  "contact.companyPlaceholder": "Nombre de la Empresa",
   "contact.email": "Correo Electrónico",
   "contact.message": "Detalles del Proyecto",
   "contact.messagePlaceholder": "Cuéntenos sobre su proyecto y necesidades de protección contra incendios...",

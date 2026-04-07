@@ -24,7 +24,7 @@ export function ContactForm() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     const captchaToken = recaptchaRef.current?.getValue();
     if (!captchaToken) {
       toast.error(t("contact.captchaRequired") || "Please verify the CAPTCHA");
@@ -58,7 +58,7 @@ export function ContactForm() {
           email: "",
           message: "",
         });
-        
+
         recaptchaRef.current?.reset();
       } else {
         toast.error(t("contact.error") || "Error sending message", {
@@ -141,7 +141,7 @@ export function ContactForm() {
                     value={formData.company}
                     onChange={handleChange}
                     className="pl-10 border-white/20 focus-visible:ring-[#c23b24] bg-white/5 text-[#fcfaf9] placeholder:text-[#fcfaf9]/30"
-                    placeholder="Nombre de la Empresa"
+                    placeholder={t("contact.companyPlaceholder")}
                     required
                   />
                 </div>

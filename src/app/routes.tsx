@@ -24,7 +24,15 @@ export const router = createBrowserRouter([
         Component: ProductsPage,
       },
       {
+        path: "/es/certificates",
+        Component: ProductsPage,
+      },
+      {
         path: "/certificates/:id",
+        Component: ProductDetailPage,
+      },
+      {
+        path: "/es/certificates/:id",
         Component: ProductDetailPage,
       },
       {

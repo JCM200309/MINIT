@@ -95,6 +95,7 @@ export const en = {
   "contact.subtitle": "Request a quote for application products and services",
   "contact.name": "Full Name",
   "contact.company": "Company",
+  "contact.companyPlaceholder": "Company Name",
   "contact.email": "Email Address",
   "contact.message": "Project Details",
   "contact.messagePlaceholder": "Tell us about your project and fire protection needs...",

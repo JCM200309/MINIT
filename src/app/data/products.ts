@@ -37,7 +37,7 @@ export const products: Product[] = [
     technicalSheet: "/documentos/Maderas/fichaTecnicaMadera.pdf",
     certificateSheet: "/documentos/Maderas/certificadoMadera.pdf",
     safetySheet: "/documentos/Maderas/hojaSeguridadMadera.pdf",
-    affidavitSheet: "/documentos/declaracionJurada.pdf",
+    affidavitSheet: "/documentos/declaracion de aplicacion.pdf",
     buyOnline: "https://www.mercadolibre.com.ar/pagina/minitignifugos#client=SEARCH&component_id=menu_home&component=menu_home&label=Inicio&tracking_id=4e609e7cdcf849750f9376d5069a6a19&global_position=1",
     detailsEn: {
       about: "<strong>MINIT Woods</strong> is a <strong>Class A</strong> fire retardant and wood preservative made from natural salts. This non toxic product, colorless and odorless, penetrates deeply without altering the material's natural color or texture. <br> Besides preventing ignition and fire spread, it <strong>reduces smoke and toxic gas</strong> emissions by up to 70%. Being <strong>100% biodegradable, non-toxic, and pet-friendly</strong>, it is the safest, eco-friendly solution for protecting wood, cellulose, and composite structures.<br> When used on wood, it also prevents the presence of <strong>fungi</strong>, <strong>bacteria</strong> and <strong>insects</strong> (moths and termites).",
@@ -96,7 +96,7 @@ export const products: Product[] = [
     technicalSheet: "/documentos/Textiles/fichaTecnicaTextil.pdf",
     certificateSheet: "/documentos/Textiles/certificadoTextil.pdf",
     safetySheet: "/documentos/Textiles/hojaSeguridadTextil.pdf",
-    affidavitSheet: "/documentos/declaracionJurada.pdf",
+    affidavitSheet: "/documentos/declaracion de aplicacion.pdf",
     buyOnline: "https://www.mercadolibre.com.ar/pagina/minitignifugos#client=SEARCH&component_id=menu_home&component=menu_home&label=Inicio&tracking_id=4e609e7cdcf849750f9376d5069a6a19&global_position=1",
     detailsEn: {
       about: "<strong>MINIT Textile</strong> is a <strong>Class A </strong>fire retardant made from natural salts. It is a colorless, odorless, and non-toxic liquid featuring highly absorbent active penetrating agents, providing <strong>highly effective fire-inhibiting protection</strong>.<br> It prevents fire spread and <strong>reduces smoke and gas generation by up to 70%</strong>. It does not alter the toxicity of the smoke; rather, it decreases the overall amount of smoke by suppressing the fire. <br> The product is <strong>100% biodegradable, non-toxic, and pet-friendly</strong>, offering the safest, eco-friendly solution for protecting fabrics.",
@@ -153,7 +153,7 @@ export const products: Product[] = [
     technicalSheet: "/documentos/Total/fichaTecnicaTotal.pdf",
     certificateSheet: "/documentos/Total/certificadoTotal.pdf",
     safetySheet: "/documentos/Total/hojaSeguridadTotal.pdf",
-    affidavitSheet: "/documentos/declaracionJurada.pdf",
+    affidavitSheet: "/documentos/declaracion de aplicacion.pdf",
     buyOnline: "https://www.mercadolibre.com.ar/pagina/minitignifugos#client=SEARCH&component_id=menu_home&component=menu_home&label=Inicio&tracking_id=4e609e7cdcf849750f9376d5069a6a19&global_position=1",
     detailsEn: {
       about: "<strong>MINIT Total</strong> is a <strong>Class A </strong>fire retardant made from natural salts. It is a colorless, odorless, and non-toxic liquid featuring highly absorbent active penetrating agents, providing <strong>highly effective fire-inhibiting protection</strong>.<br> It prevents fire spread and <strong>reduces smoke and gas generation by up to 70%</strong>. It does not alter the toxicity of the smoke; rather, it decreases the overall amount of smoke by suppressing the fire. <br> The product is <strong>100% biodegradable, non-toxic, and pet-friendly</strong>, offering the safest, eco-friendly solution for protecting for all types of materials.",
@@ -213,7 +213,7 @@ export const products: Product[] = [
     technicalSheet: "/documentos/Aditivo/fichaTecnicaAditivo.pdf",
     certificateSheet: "/documentos/Aditivo/certificadoAditivo.pdf",
     safetySheet: "/documentos/Aditivo/hojaSeguridadAditivo.pdf",
-    affidavitSheet: "/documentos/declaracionJurada.pdf",
+    affidavitSheet: "/documentos/declaracion de aplicacion.pdf",
     buyOnline: "https://www.mercadolibre.com.ar/pagina/minitignifugos#client=SEARCH&component_id=menu_home&component=menu_home&label=Inicio&tracking_id=4e609e7cdcf849750f9376d5069a6a19&global_position=1",
     detailsEn: {
       about: "<strong>MINIT FR936 Fire Retardant, Thermal Insulator, and Intumescent Additive</strong> is a transparent, water-based product. It can be applied as an additive to any water-soluble paint or coating (preferably water-based enamel or latex), turning them into a <strong>highly effective fire retardant and thermal insulator</strong>.<br> It delays fire propagation and produces low thermal conductivity. In the presence of fire, it acts as a thermal insulating barrier with low intumescence that, thanks to its refractory nano-particles, <strong>resists temperatures up to 960ºC</strong>. Additionally, its fire-retardant action decreases smoke emission.",
@@ -268,7 +268,7 @@ export const products: Product[] = [
     technicalSheet: "/documentos/Laca/fichaTecnicaLaca.pdf",
     certificateSheet: "/documentos/Laca/certificadoLaca.pdf",
     safetySheet: "/documentos/Laca/hojaSeguridadLaca.pdf",
-    affidavitSheet: "/documentos/declaracionJurada.pdf",
+    affidavitSheet: "/documentos/declaracion de aplicacion.pdf",
     buyOnline: "https://www.mercadolibre.com.ar/pagina/minitignifugos#client=SEARCH&component_id=menu_home&component=menu_home&label=Inicio&tracking_id=4e609e7cdcf849750f9376d5069a6a19&global_position=1",
     detailsEn: {
       about: "<strong>MINIT Hydro-lacquer Additive</strong> is a transparent, water-based product. It can be applied as an additive to any water-based lacquer, turning them into a <strong>highly effective fire retardant</strong>.<br> It delays fire propagation and produces low thermal conductivity, protecting the treated surface from the effects of fire. While it acts as an external protective coating, its fire-retardant action also significantly <strong>decreases smoke emissions</strong>.",

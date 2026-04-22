@@ -1,0 +1,20 @@
+# MINIT Ignífugos
+> MINIT Ignífugos es una empresa dedicada a desarrollar soluciones de protección contra incendios de la más alta calidad (productos retardantes de fuego / ignífugos), respaldadas por certificaciones nacionales e internacionales como CEMERA y NFPA.
+
+## Productos Principales
+- **MINIT Maderas**: Retardante de fuego y biocida (preservador), impregnante para todo tipo de maderas.
+- **MINIT Textil**: Retardante de fuego, impregnante para todo tipo de textiles.
+- **MINIT Total**: Retardante de fuego, impregnante para textiles, maderas, goma espuma y otros materiales.
+- **MINIT Aditivo Pinturas**: Convierte pinturas al agua en retardantes de fuego y aislante térmico.
+- **MINIT Aditivo Hidro-Lacas**: Convierte hidro-lacas en retardantes de fuego de alto rendimiento.
+
+## Ventajas y Características Competitivas
+- **Fórmula Ecológica**: Fórmula no tóxica, sin amoníaco. Es segura para el medio ambiente y además "Pet friendly" (segura para mascotas).
+- **Estética intacta**: No mancha los materiales y no deja olores tras su aplicación.
+- **Facilidad y Rentabilidad**: Alto rendimiento del químico, aplicación fácil (no requiere maquinaria compleja) y facilidad de traslado/almacenamiento.
+- **Seguridad Comprobada**: Múltiples certificados que avalan el retardo de la propagación de llamas y la eliminación de gases tóxicos en caso de incendio.
+
+## Servicios y Venta
+A través de la plataforma, los clientes pueden informarse, ver certificaciones, hojas de seguridad y **solicitar presupuestos/cotizaciones**. Minit ofrece cotizaciones tanto por sus productos envasados como por **servicios de aplicación** especializados por parte de su equipo.
+
+*Este archivo es una referencia inicial para proporcionar contexto de negocio sobre MINIT a los modelos de lenguaje o asistentes de IA.*

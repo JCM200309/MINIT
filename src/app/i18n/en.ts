@@ -36,8 +36,8 @@ export const en = {
   "products.textile.desc": "Fire retardant, impregnating agent for all types of textiles.",
   "products.total.name": "MINIT Total",
   "products.total.desc": "Fire retardant, impregnating agent for textiles, wood, foam rubber and other materials.",
-  "products.paintings.name": "MINIT Paint Additive",
-  "products.paintings.desc": "Convert water-based paints into fire retardants and thermal insulators.",
+  "products.intumescente.name": "MINIT Intumescent",
+  "products.intumescente.desc": "Highly effective fire retardant and thermal insulator",
   "products.viewDetails": "View Details",
   "about.moreVideos": "More videos and tutorials",
   "about.followInstagram": "Follow us on Instagram",
@@ -46,8 +46,10 @@ export const en = {
   "products.certificates": "Certificates",
   "products.safetySheet": "Safety Sheet",
   "products.affidavit": "Affidavit template",
-  "products.lacas.name": "MINIT Hydro-lacquer additive",
-  "products.lacas.desc": "It converts water-based lacquers into high-performance fire retardants.",
+  "products.lacas.name": "MINIT Hydro-lacquer",
+  "products.lacas.desc": "Water-based fire retardant additive for lacquers",
+  "products.latex.name": "MINIT Latex",
+  "products.latex.desc": "Fire retardant, thermal insulator and intumescent with water base.",
 
   // Product Details
   "product.about": "About this product",

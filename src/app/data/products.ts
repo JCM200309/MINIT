@@ -204,65 +204,10 @@ export const products: Product[] = [
     },
   },
   {
-    id: "MINIT-Pinturas",
-    nameKey: "products.paintings.name",
-    descKey: "products.paintings.desc",
-    image: "/Bidones/pinturas.png",
-    categoryEn: "Painting Protection",
-    categoryEs: "Protección de Pinturas",
-    technicalSheet: "/documentos/Aditivo/fichaTecnicaAditivo.pdf",
-    certificateSheet: "/documentos/Aditivo/certificadoAditivo.pdf",
-    safetySheet: "/documentos/Aditivo/hojaSeguridadAditivo.pdf",
-    affidavitSheet: "/documentos/declaracion de aplicacion.pdf",
-    buyOnline: "https://www.mercadolibre.com.ar/pagina/minitignifugos#client=SEARCH&component_id=menu_home&component=menu_home&label=Inicio&tracking_id=4e609e7cdcf849750f9376d5069a6a19&global_position=1",
-    detailsEn: {
-      about: "<strong>MINIT FR936 Fire Retardant, Thermal Insulator, and Intumescent Additive</strong> is a transparent, water-based product. It can be applied as an additive to any water-soluble paint or coating (preferably water-based enamel or latex), turning them into a <strong>highly effective fire retardant and thermal insulator</strong>.<br> It delays fire propagation and produces low thermal conductivity. In the presence of fire, it acts as a thermal insulating barrier with low intumescence that, thanks to its refractory nano-particles, <strong>resists temperatures up to 960ºC</strong>. Additionally, its fire-retardant action decreases smoke emission.",
-      uses: [
-        "Wood, iron, and metals",
-        "All types of metal sheets",
-        "Floors, columns, and ceilings",
-        "Furniture",
-        "Scenery and stages"
-      ],
-      packaging: [
-        "Bottle: 1 liter (powder for hydration)",
-        "Container: 5 liters (powder for hydration)"
-      ],
-      certifications: [
-        "IRAM",
-        "NFPA",
-        "ASTM",
-        "ISO",
-      ],
-      chemicalPresentation: "Supplied as a powder to be hydrated inside the container. Mixing ratio: 1 liter of additive for every 4 liters of water-based paint (enamel or latex). Apply with a brush or roller on surfaces completely free of grease, rust, and dust. If using a spray gun, thin the prepared paint with water until the desired density is reached.",
-    },
-    detailsEs: {
-      about: "<strong>El Aditivo Ignífugo, Aislante Térmico e Intumescente MINIT FR936</strong> es de base acuosa y transparente. Se aplica como aditivo en cualquier pintura o revestimiento soluble en agua (recomendable esmalte o látex al agua), convirtiéndolas en un <strong>retardante ignífugo y aislante térmico muy efectivo</strong>.<br> Demora la velocidad de propagación del fuego y produce una baja conductividad térmica. En presencia de fuego, actúa como una barrera aislante térmica con baja intumescencia que, gracias a sus nano-partículas refractarias, <strong>resiste temperaturas de hasta 960ºC</strong>. Además, su acción ignífuga disminuye la emisión de humos.",
-      uses: [
-        "Maderas, hierro y metales",
-        "Todo tipo de chapas",
-        "Pisos, columnas y techos",
-        "Muebles",
-        "Escenografías y escenarios"
-      ],
-      packaging: [
-        "Botella: 1 litro (polvo para hidratar)",
-        "Bidón: 5 litros (polvo para hidratar)"
-      ],
-      certifications: [
-        "IRAM",
-        "NFPA",
-        "ASTM",
-        "ISO",
-      ],
-      chemicalPresentation: "En polvo dentro del envase para hidratar. Mezcla: 1 litro de aditivo por cada 4 litros de pintura esmalte al agua (hidroesmalte) o látex, hasta quedar homogéneo. Se aplica con pincel o rodillo sobre superficies libres de grasas, óxido y polvo. Si va a usar soplete, diluya la mezcla con agua hasta alcanzar la densidad deseada.",
-    },
-  },
-  {
     id: "MINIT-lacas",
     nameKey: "products.lacas.name",
     descKey: "products.lacas.desc",
-    image: "/Bidones/aditivo.png",
+    image: "/Bidones/hidrolaca.png",
     categoryEn: "Protection with Lacquers",
     categoryEs: "Protección con Lacas",
     technicalSheet: "/documentos/Laca/fichaTecnicaLaca.pdf",
@@ -271,7 +216,7 @@ export const products: Product[] = [
     affidavitSheet: "/documentos/declaracion de aplicacion.pdf",
     buyOnline: "https://www.mercadolibre.com.ar/pagina/minitignifugos#client=SEARCH&component_id=menu_home&component=menu_home&label=Inicio&tracking_id=4e609e7cdcf849750f9376d5069a6a19&global_position=1",
     detailsEn: {
-      about: "<strong>MINIT Hydro-lacquer Additive</strong> is a transparent, water-based product. It can be applied as an additive to any water-based lacquer, turning them into a <strong>highly effective fire retardant</strong>.<br> It delays fire propagation and produces low thermal conductivity, protecting the treated surface from the effects of fire. While it acts as an external protective coating, its fire-retardant action also significantly <strong>decreases smoke emissions</strong>.",
+      about: "<strong>MINIT Fire-Retardant Hydro-Lacquer</strong> is a highly effective, transparent, water-based fire retardant. It slows the rate of fire spread and produces low thermal conductivity, protecting the treated surface from the effects of fire. In addition to its excellent surface coating protection, its fire-retardant action significantly <strong>reduces smoke emissions</strong>.",
       uses: [
         "Wood surfaces",
         "Floors and Decks",
@@ -280,7 +225,7 @@ export const products: Product[] = [
         "Sceneries and Stages"
       ],
       packaging: [
-        "Containers: 1 and 5 liters (powder for hydration)"
+        "Containers: 1 and 5 liters"
       ],
       certifications: [
         "IRAM",
@@ -288,10 +233,10 @@ export const products: Product[] = [
         "ASTM",
         "ISO",
       ],
-      chemicalPresentation: "Supplied as a powder to be hydrated inside the container. Fill the container with regular water and shake until completely hydrated. Mixing ratio: <strong>1 liter of additive for every 4 liters of water-based lacquer</strong>. Apply with a brush or roller on surfaces completely free of grease, rust, and dust.",
+      chemicalPresentation: "Apply with a brush or roller to surfaces <strong>free of grease, rust, and dust</strong>. If using a spray gun, dilute the mixture with water to achieve the desired consistency.",
     },
     detailsEs: {
-      about: "El <strong>Aditivo Ignífugo MINIT para hidrolacas</strong> es un producto transparente y de base acuosa. Se aplica como aditivo para lacas al agua, convirtiéndolas en un <strong>retardante ignífugo muy efectivo</strong>.<br> Demora la velocidad de propagación del fuego y produce una baja conductividad térmica protegiendo la superficie tratada de la acción del fuego. Además de su excelente protección de recubrimiento superficial, su acción ignífuga <strong>disminuye notablemente la emisión de humos</strong>.",
+      about: "<strong>MINIT Hidro-Laca Ignífuga</strong> es un retardante de fuego transparente y de base acuosa muy efectivo. Demora la velocidad de propagación del fuego y produce una baja conductividad térmica protegiendo la superficie tratada de la acción del fuego. Además de su excelente protección de recubrimiento superficial, su acción ignífuga <strong>disminuye notablemente la emisión de humos</strong>.",
       uses: [
         "Maderas",
         "Pisos",
@@ -300,7 +245,7 @@ export const products: Product[] = [
         "Escenografías y Escenarios"
       ],
       packaging: [
-        "Envases: Botellas de 1 litro y Bidones de 5 litros (polvo para hidratar)"
+        "Envases: Botellas de 1 litro y Bidones de 5 litros"
       ],
       certifications: [
         "IRAM",
@@ -308,7 +253,113 @@ export const products: Product[] = [
         "ASTM",
         "ISO",
       ],
-      chemicalPresentation: "Se presenta en polvo dentro del envase para hidratar. Completar con agua común el envase y agitar hasta que esté completamente hidratado. Mezcla: <strong>1 litro de aditivo por cada 4 litros de laca al agua (Hidrolaca)</strong>. Se aplica con pincel o rodillo sobre la superficie completamente libre de grasas, óxido y polvo.",
+      chemicalPresentation: "Se aplica con pincel o rodillo sobre superficies <strong>libres de grasas, óxido y polvo</strong>. Si va a usar soplete, diluya la mezcla con agua hasta alcanzar la densidad deseada.",
+    },
+  },
+  {
+    id: "MINIT-Latex",
+    nameKey: "products.latex.name",
+    descKey: "products.latex.desc",
+    image: "/Bidones/latex.png",
+    categoryEn: "Protection of Latex",
+    categoryEs: "Protección de Latex",
+    technicalSheet: "/documentos/Latex/fichaTecnicaLatex.pdf",
+    certificateSheet: "/documentos/Latex/certificadoLatex.pdf",
+    safetySheet: "/documentos/Latex/hojaSeguridadLatex.pdf",
+    affidavitSheet: "/documentos/declaracion de aplicacion.pdf",
+    buyOnline: "https://www.mercadolibre.com.ar/pagina/minitignifugos#client=SEARCH&component_id=menu_home&component=menu_home&label=Inicio&tracking_id=4e609e7cdcf849750f9376d5069a6a19&global_position=1",
+    detailsEn: {
+      about: "<strong>MINIT Latex FR936 </strong> is a highly effective water-based thermal and intumescent insulator and fire retardant. It is applied like any other paint and is a very effective fire retardant and thermal insulator. It slows the rate of fire spread and produces low thermal conductivity. In the presence of fire, it acts as a low-intumescent thermal insulating barrier that, thanks to its refractory nanoparticles, <strong>withstands temperatures up to 960°C</strong>. Furthermore, its fire-retardant properties reduce smoke emissions.",
+      uses: [
+        "Wood, iron and metals",
+        "All types of metal sheets",
+        "Floors, columns and roofs",
+        "Furniture",
+        "Sceneries and stages"
+      ],
+      packaging: [
+        "Containers: 1,4,10 and 20 liters"
+      ],
+      certifications: [
+        "IRAM",
+        "NFPA",
+        "ASTM",
+        "ISO",
+      ],
+      chemicalPresentation: "Apply with a brush or roller to surfaces <strong>free of grease, rust, and dust</strong>. If using a spray gun, dilute the mixture with water to achieve the desired consistency.",
+    },
+    detailsEs: {
+      about: "<strong>MINIT Latex FR936 </strong> es un aislante térmico e intumescente de base acuosa y retardante de fuego muy efectivo. Se aplica como  cualquier pintura otra pintura, es un retardante ignífugo y aislante térmico muy efectivo. Demora la velocidad de propagación del fuego y produce una baja conductividad térmica. En presencia de fuego, actúa como una barrera aislante térmica con baja intumescencia que, gracias a sus nano-partículas refractarias, <strong>resiste temperaturas de hasta 960°C</strong>. Además, su acción ignífuga disminuye la emisión de humos.",
+      uses: [
+        "Maderas, hierro y metales",
+        "Todo tipo de chapas",
+        "Pisos, columnas y techos",
+        "Muebles",
+        "Escenografías y escenarios"
+      ],
+      packaging: [
+        "Envases: 1,4, 10 y 20 litros"
+      ],
+      certifications: [
+        "IRAM",
+        "NFPA",
+        "ASTM",
+        "ISO",
+      ],
+      chemicalPresentation: "Se aplica con pincel o rodillo sobre superficies <strong>libres de grasas, óxido y polvo</strong>. Si va a usar soplete, diluya la mezcla con agua hasta alcanzar la densidad deseada.",
+    },
+  },
+  {
+    id: "MINIT-Intumescente",
+    nameKey: "products.intumescente.name",
+    descKey: "products.intumescente.desc",
+    image: "/Bidones/intumescente.png",
+    categoryEn: "Protection with Intumescent",
+    categoryEs: "Protección con Intumescente",
+    technicalSheet: "/documentos/Intumescente/fichaTecnicaIntumescente.pdf",
+    certificateSheet: "/documentos/Intumescente/certificadoIntumescente.pdf",
+    safetySheet: "/documentos/Intumescente/hojaSeguridadIntumescente.pdf",
+    affidavitSheet: "/documentos/declaracion de aplicacion.pdf",
+    buyOnline: "https://www.mercadolibre.com.ar/pagina/minitignifugos#client=SEARCH&component_id=menu_home&component=menu_home&label=Inicio&tracking_id=4e609e7cdcf849750f9376d5069a6a19&global_position=1",
+    detailsEn: {
+      about: "<strong>MINIT Intumescent FR936 </strong> is a highly effective fire retardant and thermal insulator. It slows the rate of fire spread and produces low thermal conductivity. In the presence of fire, it acts as a high-intumescent thermal insulating barrier that, thanks to its refractory nanoparticles, <strong>withstands temperatures up to 960°C</strong>. Furthermore, its fire-retardant properties reduce smoke emission.",
+      uses: [
+        "Wood, iron and metals",
+        "All types of metal sheets",
+        "Floors, columns and roofs",
+        "Furniture",
+        "Sceneries and stages"
+      ],
+      packaging: [
+        "Containers: 1,4,10 and 20 liters"
+      ],
+      certifications: [
+        "IRAM",
+        "NFPA",
+        "ASTM",
+        "ISO",
+      ],
+      chemicalPresentation: "Apply with a brush or roller to surfaces <strong>free of grease, rust, and dust</strong>. If using a spray gun, dilute the mixture with water to achieve the desired consistency.",
+    },
+    detailsEs: {
+      about: "<strong>MINIT Intumescente FR936 </strong> Es un retardante ignífugo y aislante térmico muy efectivo. Demora la velocidad de propagación del fuego y produce una baja conductividad térmica. En presencia de fuego, actúa como una barrera aislante térmica con alta intumescencia que, gracias a sus nano-partículas refractarias, <strong>resiste temperaturas de hasta 960°C</strong>. Además, su acción ignífuga disminuye la emisión de humos.",
+      uses: [
+        "Maderas, hierro y metales",
+        "Todo tipo de chapas",
+        "Pisos, columnas y techos",
+        "Muebles",
+        "Escenografías y escenarios"
+      ],
+      packaging: [
+        "Envases: 1,4, 10 y 20 litros"
+      ],
+      certifications: [
+        "IRAM",
+        "NFPA",
+        "ASTM",
+        "ISO",
+      ],
+      chemicalPresentation: "Se aplica con pincel o rodillo sobre superficies <strong>libres de grasas, óxido y polvo</strong>. Si va a usar soplete, diluya la mezcla con agua hasta alcanzar la densidad deseada.",
     },
   },
 ];

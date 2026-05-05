@@ -36,8 +36,8 @@ export const es = {
   "products.textile.desc": "Retardante fuego, impregnante para todo tipo de textiles.",
   "products.total.name": "MINIT Total",
   "products.total.desc": "Retardante de fuego, impregnante para Textiles, Maderas, Goma espuma y otros materiales.",
-  "products.paintings.name": "MINIT Aditivo Pinturas",
-  "products.paintings.desc": "Convierte Pinturas al agua en retardantes de fuego y aislante térmico.",
+  "products.intumescente.name": "MINIT Intumescente",
+  "products.intumescente.desc": "Retardante ignífugo y aislante termico muy efectivo",
   "products.viewDetails": "Ver Detalles",
   "about.moreVideos": "Más videos y tutoriales",
   "about.followInstagram": "Seguinos en Instagram",
@@ -46,8 +46,10 @@ export const es = {
   "products.certificates": "Certificados",
   "products.safetySheet": "Hoja de Seguridad",
   "products.affidavit": "Modelo de Declaración Jurada",
-  "products.lacas.name": "MINIT Aditivo Hidro-Lacas",
-  "products.lacas.desc": "Convierte hidro-lacas en retardantes de fuego de alto rendimiento.",
+  "products.lacas.name": "MINIT Hidro-Laca Ignífuga",
+  "products.lacas.desc": "Retardante de fuego transparte de base acuosa para lacas",
+  "products.latex.name": "MINIT Latex",
+  "products.latex.desc": "Ignífugo, aislante térmico e intumescente de base acuosa.",
 
   // Product Details
   "product.about": "Acerca de este producto",

@@ -23,7 +23,7 @@ export function ProductCard({ product, index }: ProductCardProps) {
     >
       <div className="flex flex-col p-6 flex-grow">
         {/* Product Image */}
-        <div className="relative rounded-xl overflow-hidden bg-[#140c03]/5 border border-[#140c03]/5 flex items-center justify-center p-6 group/img">
+        <div className="relative rounded-xl overflow-hidden bg-[#140c03]/5 border border-[#140c03]/5 flex items-center justify-center p-6 group/img aspect-square">
           <img
             src={product.image}
             alt={t(product.nameKey)}

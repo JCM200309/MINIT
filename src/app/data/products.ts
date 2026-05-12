@@ -322,13 +322,13 @@ export const products: Product[] = [
     affidavitSheet: "/documentos/declaracion de aplicacion.pdf",
     buyOnline: "https://www.mercadolibre.com.ar/pagina/minitignifugos#client=SEARCH&component_id=menu_home&component=menu_home&label=Inicio&tracking_id=4e609e7cdcf849750f9376d5069a6a19&global_position=1",
     detailsEn: {
-      about: "<strong>MINIT Intumescent FR936 </strong> is a highly effective fire retardant and thermal insulator. It slows the rate of fire spread and produces low thermal conductivity. In the presence of fire, it acts as a high-intumescent thermal insulating barrier that, thanks to its refractory nanoparticles, <strong>withstands temperatures up to 960°C</strong>. Furthermore, its fire-retardant properties reduce smoke emission.",
+      about: "<strong>MINIT Latex</strong> is a water-based, fire-retardant paint. It is applied like any other paint and is a highly effective fire retardant. It slows the spread of fire and has low thermal conductivity. In the presence of fire, it acts as a barrier with low intumescence and, thanks to its refractory nanoparticles, <strong>withstands temperatures up to 960°C</strong>. Furthermore, its fire-retardant properties reduce smoke emissions.",
       uses: [
-        "Wood, iron and metals",
-        "All types of metal sheets",
-        "Floors, columns and roofs",
-        "Furniture",
-        "Sceneries and stages"
+        "Wood and masonry",
+        "Cementitious slabs",
+        "Walls, columns and roofs",
+        "Durlock boards",
+        "Sceneries and stands"
       ],
       packaging: [
         "Containers: 1,4,10 and 20 liters"
@@ -342,13 +342,13 @@ export const products: Product[] = [
       chemicalPresentation: "Apply with a brush or roller to surfaces <strong>free of grease, rust, and dust</strong>. If using a spray gun, dilute the mixture with water to achieve the desired consistency.",
     },
     detailsEs: {
-      about: "<strong>MINIT Intumescente FR936 </strong> Es un retardante ignífugo y aislante térmico muy efectivo. Demora la velocidad de propagación del fuego y produce una baja conductividad térmica. En presencia de fuego, actúa como una barrera aislante térmica con alta intumescencia que, gracias a sus nano-partículas refractarias, <strong>resiste temperaturas de hasta 960°C</strong>. Además, su acción ignífuga disminuye la emisión de humos.",
+      about: "<strong>MINIT Latex</strong> es una pintura ignífuga de base acuosa. Se aplica como cualquier otra pintura, es un retardante ignífugo muy efectivo. Demora la velocidad de propagación del fuego y produce una baja conductividad térmica. En presencia de fuego, actúa como una barrera con baja intumescencia y gracias a sus nano-partículas refractarias, <strong>resiste temperaturas de hasta 960°C</strong>. Además, su acción ignífuga disminuye la emisión de humos.",
       uses: [
-        "Maderas, hierro y metales",
-        "Todo tipo de chapas",
-        "Pisos, columnas y techos",
-        "Muebles",
-        "Escenografías y escenarios"
+        "Maderas y Mampostería",
+        "Placas de cementicias",
+        "Paredes, columnas y techos",
+        "Placas de durlock",
+        "Escenografías y stands"
       ],
       packaging: [
         "Envases: 1,4, 10 y 20 litros"

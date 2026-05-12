@@ -49,7 +49,7 @@ export const es = {
   "products.lacas.name": "MINIT Hidro-Laca Ignífuga",
   "products.lacas.desc": "Retardante de fuego transparte de base acuosa para lacas",
   "products.latex.name": "MINIT Latex",
-  "products.latex.desc": "Ignífugo, aislante térmico e intumescente de base acuosa.",
+  "products.latex.desc": "Pintura ignífuga de base acuosa.",
 
   // Product Details
   "product.about": "Acerca de este producto",

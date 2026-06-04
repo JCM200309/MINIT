@@ -50,6 +50,8 @@ export const en = {
   "products.lacas.desc": "Water-based fire retardant additive for lacquers",
   "products.latex.name": "MINIT Latex",
   "products.latex.desc": "Water-based fire retardant paint.",
+  "products.hidroEsmalte.name": "MINIT Hydro Enamel",
+  "products.hidroEsmalte.desc": "Water-based fire retardant paint.",
 
   // Product Details
   "product.about": "About this product",

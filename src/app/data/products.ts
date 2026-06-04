@@ -362,4 +362,56 @@ export const products: Product[] = [
       chemicalPresentation: "Se aplica con pincel o rodillo sobre superficies <strong>libres de grasas, óxido y polvo</strong>. Si va a usar soplete, diluya la mezcla con agua hasta alcanzar la densidad deseada.",
     },
   },
+  {
+    id: "MINIT-HidroEsmalte",
+    nameKey: "products.hidroEsmalte.name",
+    descKey: "products.hidroEsmalte.desc",
+    image: "/Bidones/hidroEsmalte.png",
+    categoryEn: "Water-based fire retardant paint",
+    categoryEs: "Pintura ignífuga de base acuosa",
+    technicalSheet: "/documentos/HidroEsmalte/fichaTecnicaHidroEsmalte.pdf",
+    certificateSheet: "/documentos/HidroEsmalte/certificadoHidroEsmalte.pdf",
+    safetySheet: "/documentos/HidroEsmalte/hojaSeguridadHidroEsmalte.pdf",
+    affidavitSheet: "/documentos/declaracion de aplicacion.pdf",
+    buyOnline: "https://www.mercadolibre.com.ar/pagina/minitignifugos#client=SEARCH&component_id=menu_home&component=menu_home&label=Inicio&tracking_id=4e609e7cdcf849750f9376d5069a6a19&global_position=1",
+    detailsEn: {
+      about: "<strong>MINIT Hidro Esmalte </strong> is a water-based fire retardant paint. It is applied like any other paint, and is a very effective fire retardant. It slows the rate of fire spread and produces low thermal conductivity. In the presence of fire, it acts as a barrier with low intumescence and thanks to its refractory nanoparticles, <strong> withstands temperatures of up to 960°C</strong>. Furthermore, its fire-retardant properties reduce smoke emission.",
+      uses: [
+        "Wood and Masonry",
+        "Walls, columns and roofs",
+        "Pladur and Cementitious boards",
+        "Stages and stands"
+      ],
+      packaging: [
+        "Containers: 1,4,10 and 20 liters"
+      ],
+      certifications: [
+        "IRAM",
+        "NFPA",
+        "ASTM",
+        "ISO",
+      ],
+      chemicalPresentation: "Apply with a brush or roller to surfaces <strong>free of grease, rust, and dust</strong>. If using a spray gun, dilute the mixture with water to achieve the desired consistency.",
+    },
+    detailsEs: {
+      about: "<strong>MINIT Hidro Esmalte </strong> es una pintura ignifuga de base acuosa. Se aplica como cualquier otra pintura, es un retardante ignífugo muy efectivo. Demora la velocidad de propagación del fuego y produce una baja conductividad térmica. En presencia de fuego, actúa como una barrera con baja intumescencia y gracias a sus nano-partículas refractarias, <strong> resiste temperaturas de hasta 960°C </strong>. Además, su acción ignífuga disminuye la emisión de humos.",
+      uses: [
+        "Maderas y Mampostería",
+        "Paredes, columnas y techos",
+        "Placas de Durlock",
+        "Placas de Cemeticias",
+        "Escenografías y stands"
+      ],
+      packaging: [
+        "Envases: 1,4, 10 y 20 litros"
+      ],
+      certifications: [
+        "IRAM",
+        "NFPA",
+        "ASTM",
+        "ISO",
+      ],
+      chemicalPresentation: "Se aplica con pincel o rodillo sobre superficies <strong>libres de grasas, óxido y polvo</strong>. Si va a usar soplete, diluya la mezcla con agua hasta alcanzar la densidad deseada.",
+    },
+  }
 ];
